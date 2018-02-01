@@ -6,6 +6,7 @@ import objects.SpriteRenderer as spriteRenderer
 class GameEngine:
     def __init__(self):
         pygame.init()
+        self.all_sprites = pygame.sprite.Group()
         cnf = config.Config()
         self.fps = float(cnf.get("fps"))
         self.size = int(cnf.get("width")), int(cnf.get("height"))
@@ -16,6 +17,13 @@ class GameEngine:
         self.clock = pygame.time.Clock()
         self.running = True
         self.load_level()
+        self.sr = spriteRenderer.SpriteRenderer(os.path.join(os.getcwd(), "resources", "images", "sprites", "waccused.png"),
+                                           self.all_sprites)
+        self.sr.selectImage(0)
+        self.sr.rect = self.sr.image.get_rect()
+        self.sr.x = 10
+        self.sr.y = 10
+        self.i = 0
 
     def load_level(self):
         self.playGround = playground.Playground(
@@ -25,16 +33,14 @@ class GameEngine:
         pass
 
     def on_render(self):
-
-
-
-
-
         self.screen.fill((0, 0, 0))
         self.playGround.render(self.screen)
-        sr = spriteRenderer.SpriteRenderer(os.path.join(os.getcwd(), "resources", "images", "sprites", "waccused.png"))
-        sr.render(self.screen,20,20)
+        self.i +=1
+        self.sr.selectImage(self.i)
+        self.all_sprites.draw(self.screen)
+        self.all_sprites.update()
         pygame.display.flip()
+        pygame.display.update()
 
     def on_cleanup(self):
         pygame.quit()
