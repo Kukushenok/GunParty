@@ -1,5 +1,7 @@
 import pygame
 import os
+from objects.Global import RESOURCES
+import objects.Ground as ground
 import tools.config as config
 import objects.Playground as playground
 import objects.SpriteRenderer as spriteRenderer
@@ -17,17 +19,17 @@ class GameEngine:
         self.clock = pygame.time.Clock()
         self.running = True
         self.load_level()
-        self.sr = spriteRenderer.SpriteRenderer(os.path.join(os.getcwd(), "resources", "images", "sprites", "waccused.png"),
-                                           self.all_sprites)
-        self.sr.selectImage(0)
-        self.sr.rect = self.sr.image.get_rect()
-        self.sr.x = 10
-        self.sr.y = 10
-        self.i = 0
 
     def load_level(self):
+        self.i = 0
+        self.ground =ground.Ground(pygame.transform.scale(RESOURCES["soil.png"],(self.size[0],self.size[1])))
+        self.sr = spriteRenderer.SpriteRenderer(RESOURCES["wwalk.png"],self.all_sprites, self.ground)
+        self.sr.selectImage(0)
+        self.sr.rect = self.sr.image.get_rect()
+        self.sr.left = 1600
+        self.sr.y = 10
         self.playGround = playground.Playground(
-            [os.path.join(os.getcwd(), "resources","images","masks","soil.png"), os.path.join(os.getcwd(),"resources","images","skies","space.png"), os.path.join(os.getcwd(),"resources","images","grounds","stones.jpg")])
+            [RESOURCES["soil.png"], RESOURCES["space.png"], RESOURCES["stones.jpg"]])
 
     def on_loop(self):
         pass
