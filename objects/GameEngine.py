@@ -1,5 +1,7 @@
 import pygame
 import os
+from objects.Global import GAMECFG
+from objects.Global import LEVELS
 from objects.Global import RESOURCES
 import objects.Ground as ground
 import tools.config as config
@@ -18,18 +20,23 @@ class GameEngine:
             self.screen = pygame.display.set_mode(self.size)
         self.clock = pygame.time.Clock()
         self.running = True
+        GAMECFG.screenwidth, GAMECFG.screenheight = self.size
+        GAMECFG.fullscreen = cnf.get("fullscreen")!=0
+        GAMECFG.fps = self.fps
         self.load_level()
 
+
     def load_level(self):
+        LEVELS.loadLevel("level_1")
         self.i = 0
-        self.ground =ground.Ground(pygame.transform.scale(RESOURCES["soil.png"],(self.size[0],self.size[1])))
-        self.sr = spriteRenderer.SpriteRenderer(RESOURCES["wwalk.png"],self.all_sprites, self.ground)
+        self.sr = spriteRenderer.SpriteRenderer(RESOURCES["wwalk.png"],self.all_sprites)
         self.sr.selectImage(0)
         self.sr.rect = self.sr.image.get_rect()
         self.sr.left = 1600
         self.sr.y = 10
         self.playGround = playground.Playground(
-            [RESOURCES["soil.png"], RESOURCES["space.png"], RESOURCES["stones.jpg"]])
+            [LEVELS.currlevel.resources["soil.png"], LEVELS.currlevel.resources["space.png"],
+             LEVELS.currlevel.resources["stones.jpg"]])
 
     def on_loop(self):
         pass
@@ -40,7 +47,7 @@ class GameEngine:
         self.i +=1
         self.sr.selectImage(self.i)
         self.all_sprites.draw(self.screen)
-        self.all_sprites.update()
+        self.all_sprites.update(1/self.fps)
         pygame.display.flip()
         pygame.display.update()
 

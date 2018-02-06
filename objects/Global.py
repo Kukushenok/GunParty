@@ -1,7 +1,10 @@
 import objects.Resources as resources
-import objects.Ground as ground
-import pygame
+import objects.Levels as levels
+import objects.GameCFG as gameconfig
+import os
 
-RESOURCES = resources.Resources().resources
+GAMECFG = gameconfig.GameCFG()
+LEVELS = levels.Levels()
+RESOURCES = resources.Resources(os.path.join(os.getcwd(),"resources","images")).resources
 
 

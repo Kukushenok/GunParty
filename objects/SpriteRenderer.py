@@ -1,14 +1,15 @@
 import pygame
+from objects.Global import LEVELS
 class SpriteRenderer(pygame.sprite.Sprite):
-    def __init__(self,image,group,groundCollide):
+    def __init__(self,image,group):
         super().__init__(group)
         self.group = group
         self.load(image)
-    def load(self):
+    def load(self,image):
         self.image = pygame.Surface([60,60])
         self.loadedImage = image
         self.maxIndex = self.loadedImage.get_rect().height // 60
-        self.groundCollide = groundCollide
+        self.groundCollide = LEVELS.currlevel.resources["GROUNDMASK"]
 
     def selectImage(self,index):
         index = index % self.maxIndex
@@ -17,7 +18,7 @@ class SpriteRenderer(pygame.sprite.Sprite):
         self.image.set_colorkey((0,255,0,0))
         self.mask = pygame.mask.from_surface(self.image)
 
-    def update(self):
+    def update(self,dt):
 
         offset_x, offset_y = self.rect.left,self.rect.top
         if (self.groundCollide.mask.overlap(self.mask, (offset_x, offset_y)) == None):

@@ -5,820 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e80b2a16-7a71-4573-870e-9524c089005d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/masks/soil2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/grenade.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/missile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wbaz.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wbazbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wbazd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wbazu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wgrnbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wgrnbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wgrnbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wgrnlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wgrnlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wgrnlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wjump.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wjumpd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wjumpu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wroll.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshgbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshgbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshgbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshglnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshglnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshglnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshotf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshotfd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshotfu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshotg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshotgd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshotgu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshotp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshotpd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wshotpu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wthrgrn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wthrgrnd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wthrgrnu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/images/sprites/wwalk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/Weapons/grenade.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/Weapons/missile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/grenade.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/missile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/waccused.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wbaz.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wbazbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wbazd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wbazu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wgrnbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wgrnbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wgrnbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wgrnlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wgrnlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wgrnlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wjump.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wjumpd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wjumpu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wroll.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshgbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshgbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshgbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshglnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshglnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshglnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshotf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshotfd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshotfu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshotg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshotgd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshotgu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshotp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshotpd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wshotpu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wthrgrn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wthrgrnd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/new/wthrgrnu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/waccused.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/waccused2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wbaz.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wbazbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wbazd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wbazu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wgrnbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wgrnbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wgrnbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wgrnlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wgrnlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wgrnlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wjump.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wjumpd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wjumpu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wroll.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshgbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshgbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshgbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshglnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshglnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshglnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshotf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshotfd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshotfu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshotg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshotgd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshotgu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshotp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshotpd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wshotpu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wthrgrn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wthrgrnd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wthrgrnu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/old/wwalk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/airjetb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/airjetg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/airjeto.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/airmisl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/aquashp1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/aquashp2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow00.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow05.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow06.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow07.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow08.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow09.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow17.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow18.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow19.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow20.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow21.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow22.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow23.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow24.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow25.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow26.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow27.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow28.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow29.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow30.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/arrow31.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/banana.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/bible.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/bullet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/canoff.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/canon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/carpet1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/carpet2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/clonewlk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/cluster.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/clustlet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/cowjump.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/cowwalk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/cpttruck.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/donkey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/drill.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/dynamite.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/fireball.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grdl0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grdl1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grdl2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grdl3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grdl4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grdl5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grdl6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grdl7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grdl8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grds0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grds1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grds2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grds3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grds4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grds5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grds6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grds7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grds8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/grenade.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/hairmsl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/hcluster.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/hclustlt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/hgrenade.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/hmissil1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/hmissil2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/letter1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/letter2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/lshpwlk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/mbbomb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/meteor.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/mineoff.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/mineon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/missile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/moledig1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/moledig2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/moledig3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/moledive.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/molewalk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/mortar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/petrolbm.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/pigeonr0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/pigeonr1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/pigeonr2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/pigeonr3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/postbox.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/ropecuff.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/ropetip.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/sally.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/sbanana.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/sheepbrn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/sheepfal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/sheeplau.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/sheepwlk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/shotcase.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/shptruck.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/skunk1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/skunk2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/spsheep1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/spsheep2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/tamborin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/uzicase.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/vase.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/vasebit1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/vasebit2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/vasebit3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/Weapons/woman.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waccuse.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waccused.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waccuseu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wairbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wairbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wairbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wairlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wairlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wairlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wairtlk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wairtlkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wairtlku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxebak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxebakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxebaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxebk2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxebk2d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxebk2u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxelk2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxelk2d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxelk2u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxelnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxelnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxelnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxeswn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxeswnd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/waxeswnu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbackflp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbanbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbanbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbanbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbanlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbanlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbanlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbataim.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbataimd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbataimu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbatbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbatbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbatbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbatbk2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbatbk2d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbatbk2u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbatfrd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbatfrdd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbatfrdu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbatlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbatlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbatlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbatrope.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbaz.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbaz2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbaz2d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbaz2u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbaz3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbaz3d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbaz3u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbazbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbazbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbazbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbazd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbazlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbazlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbazlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbazu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbghead.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbgheadd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbgheadu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblink1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblink1d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblink1u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblink2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblink2d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblink2u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblowa.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblowad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblowau.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblowbk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblowbkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblowbku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblowlk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblowlkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblowlku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbloww.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblowwd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wblowwu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbndbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbndbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbndbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbndlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbndlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbndlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowbk2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowbk2d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowbk2u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowfd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowfu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowpd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowpu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbowu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbrth1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbrth1d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbrth1u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbrth2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbrth2d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbrth2u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsbaim.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsbaimd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsbaimu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsbbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsbbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsbbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsbbk2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsbbk2d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsbbk2u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsblnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsblnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsblnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsbswn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsbswnd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbsbswnu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbungee.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbz2bak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbz2bakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbz2baku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbz2lnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbz2lnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbz2lnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbz3bak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbz3bakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbz3baku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbz3lnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbz3lnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wbz3lnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcanbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcanbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcanbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcanlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcanlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcanlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wclnbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wclnbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wclnbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wclnlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wclnlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wclnlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wclsbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wclsbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wclsbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wclslnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wclslnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wclslnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcough.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcoughd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcoughu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcowbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcowbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcowbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcowlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcowlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wcowlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wdie.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wdrill.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wdrlbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wdrlbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wdrlbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wdrllnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wdrllnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wdrllnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wdynbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wdynbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wdynbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wdynlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wdynlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wdynlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfall.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfalldn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfirair.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfirbl1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfirbl1d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfirbl1u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfirbl2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfirbl2d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfirbl2u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfist.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfistd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfistu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wflm.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wflmbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wflmbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wflmbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wflmd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wflmlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wflmlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wflmlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wflmu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfly1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfly2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wfly3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wflydn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wflylnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wflyup.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wglnce1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wglnce1d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wglnce1u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wglnce2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wglnce2d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wglnce2u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wgrnbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wgrnbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wgrnbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wgrnlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wgrnlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wgrnlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whandf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whandfd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whandfu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whandg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whandgd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whandgu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whatbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whatbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whatbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whatlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whatlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whatlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whclbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whclbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whclbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whcllnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whcllnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whcllnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whgnbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whgnbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whgnbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whgnlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whgnlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whgnlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whgrbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whgrbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whgrbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whgrlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whgrlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/whgrlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wicebak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wicebakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wicebaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wiceblnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wiceglnt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wicelk2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wicelk2d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wicelk2u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wicelk3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wicelk3d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wicelk3u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wicelnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wicelnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wicelnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wicelook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wicestnd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjapbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjapbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjapbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjetbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjetbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjetbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjetflmb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjetflmd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjetfly1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjetfly2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjetfly3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjetfly4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjetlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjetlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjetlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjump.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjumpd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wjumpu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wkambmr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wkambmrd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wkambmru.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wkami1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wkami2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wkami3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wkami4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wkami5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wkamjmp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wkamlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wkamlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wkamlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wland1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wland1d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wland1u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wland2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wland2d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wland2u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wlazy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wlazyd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wlazyu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmgnbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmgnbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmgnbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmgnlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmgnlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmgnlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wminbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wminbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wminbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmini.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wminid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wminif.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wminifd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wminifu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wminiu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wminlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wminlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wminlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmolbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmolbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmolbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmollnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmollnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmollnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmunch.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmunchd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wmunchu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wnukebk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wnukebkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wnukebku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wnukelk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wnukelkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wnukelku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wolook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wolookd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wolooku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wparacht.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wparalnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wparbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wparbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wparbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpbmbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpbmbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpbmbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpbmlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpbmlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpbmlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpbrth.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpbrthd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpbrthu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpbrtlk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpbrtlkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpbrtlku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpeek.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpeekd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpeeku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpncbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpncbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpncbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpnclnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpnclnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpnclnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpnctop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wpncup.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wprdbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wprdbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wprdbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wprdbk2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wprdbk2d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wprdbk2u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wprdlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wprdlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wprdlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wprod.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wprodd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wprodu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wroll.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wscarey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wscareyd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wscareyu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wscrtch.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wscrtchd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wscrtchu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wselbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wselbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wselbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wselect.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wselectd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wselectu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsellnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsellnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsellnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshgbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshgbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshgbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshglnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshglnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshglnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshotf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshotfd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshotfu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshotg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshotgd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshotgu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshotp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshotpd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshotpu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshpbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshpbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshpbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshplnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshplnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wshplnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wskipgo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wskipgod.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wskipgou.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsknbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsknbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsknbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsknlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsknlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsknlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wskpbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wskpbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wskpbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wskplnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wskplnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wskplnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsldlk1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsldlk1d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsldlk1u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsldlk2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsldlk2d.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsldlk2u.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wslide.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wslided.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wslideu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsurbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsurbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsurbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsurlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsurlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsurlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsurndr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsurndrd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsurndru.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvb.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvbd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvblnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvblnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvblnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvbu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvcd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvclnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvclnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvclnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvcu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvgd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvglnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvglnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvglnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvgu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvpd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvplnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvplnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvplnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvpu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvrd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvrlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvrlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvrlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvru.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvyd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvylnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvylnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvylnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wsvyu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wtache.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wtached.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wtacheu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wtelbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wtelbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wtelbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wteldsv.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wteldsvd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wteldsvu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wtellnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wtellnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wtellnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wteltlk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wteltlkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wteltlku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrban.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrband.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrbanu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrcls.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrclsd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrclsu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrgrn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrgrnd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrgrnu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrhcl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrhcld.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrhclu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrhgr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrhgrd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrhgru.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrowd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrowu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrpbm.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrpbmd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wthrpbmu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wtwang.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wtwangd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wtwangu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wulook.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wulookd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wulooku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wutlbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wutlbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wutlbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wutllnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wutllnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wutllnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wuzi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wuzibak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wuzibakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wuzibaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wuzid.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wuzif.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wuzifd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wuzifu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wuzilnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wuzilnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wuzilnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wuziu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wvasbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wvasbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wvasbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wvaslnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wvaslnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wvaslnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwalk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwalkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwalku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwinner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwmn2bk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwmn2bkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwmn2bku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwmn2lk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwmn2lkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwmn2lku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwmnbak.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwmnbakd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwmnbaku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwmnlnk.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwmnlnkd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/iconFolders/tmp/wwmnlnku.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/objects/Global.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/objects/Ground.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/objects/Resources.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/images/sprites/waccused.png" afterPath="$PROJECT_DIR$/resources/images/sprites/waccused.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/objects/GameCFG.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/objects/GameObject.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/objects/Level.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/objects/Levels.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/objects/StateMashine.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/grounds/stones.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/grounds/stones2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/grounds/stones3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/masks/soil.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/masks/soil2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/skies/space.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/skies/space.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.ini" afterPath="$PROJECT_DIR$/config.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/GameEngine.py" afterPath="$PROJECT_DIR$/objects/GameEngine.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/Playground.py" afterPath="$PROJECT_DIR$/objects/Playground.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/Global.py" afterPath="$PROJECT_DIR$/objects/Global.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/Resources.py" afterPath="$PROJECT_DIR$/objects/Resources.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/objects/SpriteRenderer.py" afterPath="$PROJECT_DIR$/objects/SpriteRenderer.py" />
     </list>
     <ignored path="GunParty.iws" />
@@ -836,7 +39,7 @@
     <SUITE FILE_PATH="coverage/GunParty$GameEngine.coverage" NAME="GameEngine Coverage Results" MODIFIED="1517074139882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/resources/objects" />
     <SUITE FILE_PATH="coverage/GunParty$GameEngine__1_.coverage" NAME="GameEngine (1) Coverage Results" MODIFIED="1517131187672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/objects" />
     <SUITE FILE_PATH="coverage/GunParty$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1517733378877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="P:/Personal Win10/Ilya/Desktop/Илья/PYC" />
-    <SUITE FILE_PATH="coverage/GunParty$main.coverage" NAME="main Coverage Results" MODIFIED="1517851851241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GunParty$main.coverage" NAME="main Coverage Results" MODIFIED="1517927436908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -847,41 +50,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="132">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.ini" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.ini">
+      <file leaf-file-name="GameObject.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objects/GameObject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+            <state relative-caret-position="264">
+              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ground.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/objects/Ground.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameEngine.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameEngine.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/objects/GameEngine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+            <state relative-caret-position="660">
+              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -889,29 +82,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpriteRenderer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/objects/SpriteRenderer.py">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+            <state relative-caret-position="198">
+              <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="waccused.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/images/sprites/waccused.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Playground.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/objects/Playground.py">
+      <file leaf-file-name="SpriteRenderer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objects/SpriteRenderer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="8" column="67" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="67" />
-              <folding />
+            <state relative-caret-position="330">
+              <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -919,8 +107,52 @@
       <file leaf-file-name="Resources.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/objects/Resources.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+            <state relative-caret-position="0">
+              <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Level.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objects/Level.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="6" column="44" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Global.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objects/Global.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameCFG.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objects/GameCFG.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Levels.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objects/Levels.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -948,14 +180,20 @@
         <option value="$PROJECT_DIR$/resources/objects/Sky.py" />
         <option value="$PROJECT_DIR$/resources/objects/GameEngine.py" />
         <option value="$PROJECT_DIR$/resources/objects/Playground.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/objects/Resources.py" />
-        <option value="$PROJECT_DIR$/objects/Global.py" />
         <option value="P:/Personal Win10/Ilya/Desktop/Илья/PYC/main.py" />
         <option value="$PROJECT_DIR$/objects/Playground.py" />
         <option value="$PROJECT_DIR$/objects/Ground.py" />
         <option value="$PROJECT_DIR$/config.ini" />
         <option value="$PROJECT_DIR$/tmp/objects/StartGround.py" />
+        <option value="$PROJECT_DIR$/objects/GameObject.py" />
+        <option value="$PROJECT_DIR$/objects/StateMashine.py" />
+        <option value="$PROJECT_DIR$/objects/Level.py" />
+        <option value="$PROJECT_DIR$/objects/Levels.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/objects/GameConfig.py" />
+        <option value="$PROJECT_DIR$/objects/GameCFG.py" />
+        <option value="$PROJECT_DIR$/objects/Global.py" />
+        <option value="$PROJECT_DIR$/objects/Resources.py" />
         <option value="$PROJECT_DIR$/objects/GameEngine.py" />
         <option value="$PROJECT_DIR$/objects/SpriteRenderer.py" />
       </list>
@@ -998,6 +236,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1013,6 +252,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="GunParty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GunParty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GunParty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1066,7 +319,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="Levels" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1086,7 +339,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1430,7 +682,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984003" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3640375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3640375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1477,7 +729,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -1487,55 +739,18 @@
         <watch expression="c = {NameError}name 'c' is not defined" />
         <watch expression="screen.get_rect()" language="Python" />
         <watch expression="self.image" language="Python" />
+        <watch expression="self.resources" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objects/GameEngine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/objects/SpriteRenderer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1543,7 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1555,11 +769,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/images/skies/space.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/images/skies/space.jpg" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -1578,7 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1596,7 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1608,11 +816,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/images/skies/space.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/images/skies/space.jpg" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -1633,7 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1657,7 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1679,11 +881,7 @@
     <entry file="file://$PROJECT_DIR$/resources/objects/Sky.py" />
     <entry file="file://$PROJECT_DIR$/resources/objects/GameEngine.py" />
     <entry file="file://$PROJECT_DIR$/resources/objects/Playground.py" />
-    <entry file="file://$PROJECT_DIR$/resources/images/skies/space.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/images/skies/space.jpg" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_simple.zip/simple.py" />
     <entry file="file://P:/Personal Win10/Ilya/Desktop/Илья/PYC/main.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1692,20 +890,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/config.py">
+    <entry file="file://$PROJECT_DIR$/config.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="99">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/objects/Global.py">
+    <entry file="file://$PROJECT_DIR$/tmp/objects/Playground.py" />
+    <entry file="file://$PROJECT_DIR$/tmp/objects/StartGround.py" />
+    <entry file="file://$PROJECT_DIR$/tmp/objects/SpriteRenderer.py" />
+    <entry file="file://$PROJECT_DIR$/tmp/config.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/Playground.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="67" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/images/sprites/waccused.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/images/sprites/waccused2.png" />
+    <entry file="file://$PROJECT_DIR$/resources/images/sprites/wwalk.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/StateMashine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/Ground.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1716,110 +946,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/objects/Resources.py">
+    <entry file="file://$PROJECT_DIR$/objects/Levels.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        <state relative-caret-position="363">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/objects/Playground.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/objects/StartGround.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/objects/SpriteRenderer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objects/Playground.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="8" column="67" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/images/sprites/waccused.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/images/sprites/waccused2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/images/sprites/wwalk.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objects/Ground.py">
+    <entry file="file://$PROJECT_DIR$/tools/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/GameCFG.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/Level.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/GameObject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/Global.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/GameEngine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objects/Resources.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/objects/SpriteRenderer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objects/GameEngine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        <state relative-caret-position="330">
+          <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
