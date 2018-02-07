@@ -8,3 +8,8 @@ class GameObject:
         self.abilities[abilityName] = ability
     def GetAbility(self,name):
         return self.abilities[name]
+    def get_event(self,event):
+        for element in self.abilities.values():
+            get_event = getattr(element, "get_event", None)
+            if callable(get_event):
+                element.get_event(event)

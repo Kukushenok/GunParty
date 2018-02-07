@@ -1,8 +1,8 @@
 import pygame
 import objects.SpriteRenderer as spriteRenderer
 class StateMashine:
-    def __init__(self,*args):
-        self.spriteRenderer = None
+    def __init__(self,gameO,*args):
+        self.gameObject = gameO
         self.states = {}
         for e in args:
             self.AddState(e[0],e[1])
@@ -19,8 +19,3 @@ class StateMashine:
 
     def SetState(self,name):
         self.current_state = self.states[name]
-        if self.spriteRenderer:
-            self.spriteRenderer.load()
-
-    def SetSpriteRenderer(self,spriteRenderer):
-        self.spriteRenderer = spriteRenderer
