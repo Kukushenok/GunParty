@@ -3,6 +3,8 @@ import objects.SpriteRenderer as spriteRenderer
 import objects.StateMashine as stateMashine
 import objects.State as state
 import objects.PlayerControl as pControl
+import objects.Physics as physics
+from objects.Global import OBJECTMANAGER
 import pygame
 class Factory:
     def __init__(self,resources,group):
@@ -46,7 +48,10 @@ class Factory:
             sp = cobject.GetAbility("spriteRenderer")
             sp.selectImage(0)
             sp.rect = sp.image.get_rect()
-            sp.rect.x = x
-            sp.rect.y = y
+            cobject.pos = [x,y]
             cobject.AddAbility("playerControl",pControl.PlayerControl(cobject,args[0]))
+            ph = physics.Physics(cobject)
+            ph.SetGravity(True)
+            cobject.AddAbility("physics",ph)
+        OBJECTMANAGER.AddObject(cobject)
         return cobject

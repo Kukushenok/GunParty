@@ -6,7 +6,7 @@ from objects.Global import RESOURCES
 import objects.Factory as factory
 import tools.config as config
 import objects.Playground as playground
-import objects.SpriteRenderer as spriteRenderer
+from objects.Global import OBJECTMANAGER
 class GameEngine:
     def __init__(self):
         pygame.init()
@@ -39,16 +39,14 @@ class GameEngine:
              LEVELS.currlevel.resources["stones.jpg"]])
 
     def on_loop(self):
-        pass
+        OBJECTMANAGER.update(1/self.fps)
 
     def on_render(self):
-
         self.screen.fill((0, 0, 0))
         self.playGround.render(self.screen)
-        self.i +=1
-        self.sr.selectImage(self.i)
-        self.sr2.selectImage(self.i)
-
+    #    self.i +=1
+     #   self.sr.selectImage(self.i)
+      #  self.sr2.selectImage(self.i)
         self.all_sprites.draw(self.screen)
         self.all_sprites.update(1/self.fps)
 
@@ -63,8 +61,7 @@ class GameEngine:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
-                self.player.get_event(event)
-                self.player2.get_event(event)
+                OBJECTMANAGER.get_event(event)
             self.clock.tick(self.fps)
 
             self.on_loop()

@@ -1,0 +1,58 @@
+from objects.Global import LEVELS
+from objects.Global import GAMECFG
+class Physics:
+
+    def __init__(self,gameO):
+        self.gameObject = gameO
+        self.groundCollide = LEVELS.currlevel.resources["GROUNDMASK"]
+        self.M = 10
+        self.G = 3
+        self.coeff = 1
+        self.AirRo = 1.2
+        self.Sx = 1
+        self.Sy = 3
+        self.CurrForce = [0,0]
+        self.V = [0,0]
+        self.ScaleMx = GAMECFG.screenwidth/20
+        self.ScaleMy = GAMECFG.screenheight/10
+        self.onGround = False
+        self.walkSpeed = 1
+
+    def SetGravity(self,gr):
+        if gr: self.CurrForce = [0,self.M*self.G]
+        else: self.CurrForce = [0,0]
+
+    def update(self,dt):
+        self.AirForse = [0.5*self.coeff*self.AirRo*self.Sy*self.V[0]**2,0.5*self.coeff*self.AirRo*self.Sx*self.V[1]**2]
+        dsx = self.V[0]*dt*self.ScaleMx
+        dsy = self.V[1]*dt*self.ScaleMy
+        self.V[1] = ((self.CurrForce[1] - self.AirForse[1]) / self.M) * dt + self.V[1]
+        self.V[0] = ((self.CurrForce[0] - self.AirForse[0]) / self.M) * dt + self.V[0]
+        self.gameObject.pos[0] += dsx
+        self.gameObject.pos[1] += dsy
+        offset_x, offset_y = self.gameObject.pos
+        if (self.groundCollide.mask.overlap(self.gameObject.GetAbility("spriteRenderer").mask, (int(offset_x), int(offset_y))) != None):
+            self.onGround = True
+            self.gameObject.pos[0] -= dsx
+            self.gameObject.pos[1] -= dsy
+            self.V = [0,0]
+        else:
+            self.onGround = False
+
+    def GroundCollide(self,futpos):
+        offset_x, offset_y = futpos
+        if (self.groundCollide.mask.overlap(self.gameObject.GetAbility("spriteRenderer").mask, (int(offset_x), int(offset_y))) != None):
+            return True
+        return False
+
+    def AddForce(self,forse,dt,grnNeed = False):
+        if not grnNeed or (self.onGround and grnNeed):
+            self.V[0] += (forse[0] /self.M) * dt
+            self.V[1] += (forse[1] / self.M) * dt
+    def Walk(self,dt,right = True):
+        tryWalkPos = [self.gameObject.pos[0] +self.walkSpeed*self.ScaleMx*dt if right else self.gameObject.pos[0]-self.walkSpeed*self.ScaleMx*dt,self.gameObject.pos[1]]
+        if self.GroundCollide(tryWalkPos): tryWalkPos[1]-=1
+        if self.GroundCollide(tryWalkPos): tryWalkPos[1]-=1
+        if self.GroundCollide(tryWalkPos): tryWalkPos[1]-=1
+        if self.GroundCollide(tryWalkPos): return None
+        self.gameObject.pos = tryWalkPos

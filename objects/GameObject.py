@@ -2,6 +2,7 @@ import pygame
 class GameObject:
     def __init__(self,*args):
         self.abilities = {}
+        self.pos = [0,0]
         for e in args:
             self.AddAbility(e[0],e[1])
     def AddAbility(self,abilityName,ability):
@@ -15,6 +16,6 @@ class GameObject:
                 element.get_event(event)
     def update(self,dt):
         for element in self.abilities.values():
-            get_event = getattr(dt, "update", None)
-            if callable(get_event):
+            update = getattr(element, "update", None)
+            if callable(update):
                 element.update(dt)
