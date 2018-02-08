@@ -13,3 +13,8 @@ class GameObject:
             get_event = getattr(element, "get_event", None)
             if callable(get_event):
                 element.get_event(event)
+    def update(self,dt):
+        for element in self.abilities.values():
+            get_event = getattr(dt, "update", None)
+            if callable(get_event):
+                element.update(dt)

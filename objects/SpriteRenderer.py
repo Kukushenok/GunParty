@@ -22,11 +22,10 @@ class SpriteRenderer(pygame.sprite.Sprite):
     def update(self,dt):
         offset_x, offset_y = self.rect.left,self.rect.top
         if (self.groundCollide.mask.overlap(self.mask, (offset_x, offset_y)) == None):
-            self.rect = self.rect.move(0,1)
+            self.rect = self.rect.move(0,3)
         else:
             self.rect = self.rect.move(0, 0)
-
-        # #if not pygame.sprite.collide_mask(self, self.groundCollide):
-        # if len(pygame.sprite.spritecollide(self,self.group,False)) == 1:
-        #     self.rect = self.rect.move(1, 1)
-        # print(pygame.sprite.spritecollide(self,self.group,False))
+        try:
+            if self.gameObject.GetAbility("playerControl").right_pressed: self.rect = self.rect.move(2,0)
+            if self.gameObject.GetAbility("playerControl").left_pressed: self.rect = self.rect.move(-2,0)
+        except Exception: pass

@@ -30,9 +30,9 @@ class GameEngine:
         self.factory = factory.Factory(RESOURCES,self.all_sprites)
         LEVELS.loadLevel("level_1")
         self.i = 0
-        self.player = self.factory.Get("player",10,10,{"left":pygame.K_LEFT,"right":pygame.K_RIGHT})
+        self.player = self.factory.Get("player",10,10,{"left":pygame.K_LEFT,"right":pygame.K_RIGHT,"up":pygame.K_UP,"down":pygame.K_DOWN})
         self.sr = self.player.GetAbility("spriteRenderer")
-        self.player2 = self.factory.Get("player",60,30,{"left":pygame.K_a,"right":pygame.K_d})
+        self.player2 = self.factory.Get("player",60,30,{"left":pygame.K_a,"right":pygame.K_d,"up":pygame.K_w,"down":pygame.K_s})
         self.sr2 = self.player2.GetAbility("spriteRenderer")
         self.playGround = playground.Playground(
             [LEVELS.currlevel.resources["soil.png"], LEVELS.currlevel.resources["space.png"],
@@ -42,11 +42,13 @@ class GameEngine:
         pass
 
     def on_render(self):
+
         self.screen.fill((0, 0, 0))
         self.playGround.render(self.screen)
         self.i +=1
         self.sr.selectImage(self.i)
         self.sr2.selectImage(self.i)
+
         self.all_sprites.draw(self.screen)
         self.all_sprites.update(1/self.fps)
 
@@ -64,6 +66,8 @@ class GameEngine:
                 self.player.get_event(event)
                 self.player2.get_event(event)
             self.clock.tick(self.fps)
+
             self.on_loop()
             self.on_render()
+
         self.on_cleanup()
