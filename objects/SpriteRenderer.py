@@ -7,20 +7,33 @@ class SpriteRenderer(pygame.sprite.Sprite):
         super().__init__(group)
         self.group = group
         self.gameObject = gameO
-        self.speed = 10
-        self.load(gameO.GetAbility("stateMashine").CurrentState().currstate)
+        self.speed = 20
+        self.image = pygame.Surface([60, 60])
+        self.load(gameO.GetAbility("stateMashine").CurrentState().currstate,gameO.GetAbility("stateMashine").current_state.spd,True)
         self.frameCounter = 0
         self.i = 0
+        self.loop = True
+        self.played=False
 
-    def load(self,image):
-        self.image = pygame.Surface([60,60])
+
+    def load(self,image,speed,loop):
+        self.loop = loop
+        self.speed = speed
+        self.played=False
+        self.frameCounter = 0
+        self.i = 0
+        #self.image = pygame.Surface([60,60])
         self.loadedImage = image
         self.maxIndex = self.loadedImage.get_rect().height // 60
 
 
     def selectImage(self,index):
-        index = index % self.maxIndex
-        self.image = pygame.Surface([60,60])
+        if self.loop: index = index % self.maxIndex
+        elif index >= self.maxIndex:
+            index = self.maxIndex-1
+            self.played = True
+        else: self.played = False
+        self.image = pygame.Surface([60, 60])
         self.image.blit(self.loadedImage, (0, 0), pygame.Rect(0, index * 60, 60, 60))
         self.image.set_colorkey((0,255,0,0))
         self.mask = pygame.mask.from_surface(self.image)

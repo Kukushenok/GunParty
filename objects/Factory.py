@@ -41,6 +41,32 @@ class Factory:
             s.AddSurface("n", pygame.transform.flip(self.resources["wblink1.png"], True, False))
 
             st.AddState("blinkr", s)
+
+            s = state.State(cobject)
+            s.AddSurface("u",self.resources["wjumpu.png"])
+            s.AddSurface("d", self.resources["wjumpd.png"])
+            s.AddSurface("n", self.resources["wjump.png"])
+            s.SetCurrentState("n")
+            s.loop = False
+            st.AddState("jumpl",s)
+
+            s =state.State(cobject)
+            s.AddSurface("u",pygame.transform.flip(self.resources["wjumpu.png"], True, False))
+            s.AddSurface("d", pygame.transform.flip(self.resources["wjumpd.png"], True, False))
+            s.AddSurface("n", pygame.transform.flip(self.resources["wjump.png"], True, False))
+            s.loop = False
+            st.AddState("jumpr", s)
+            s = state.State(cobject)
+            s.AddSurface("n", self.resources["wflylnk.png"])
+            s.SetCurrentState("n")
+            s.spd = 30
+            st.AddState("flyl",s)
+
+            s =state.State(cobject)
+            s.AddSurface("n", pygame.transform.flip(self.resources["wflylnk.png"], True, False))
+            s.spd = 30
+            st.AddState("flyr", s)
+
             st.SetState("blinkl")
             cobject.AddAbility("stateMashine",st)
 

@@ -44,11 +44,8 @@ class GameEngine:
     def on_render(self):
         self.screen.fill((0, 0, 0))
         self.playGround.render(self.screen)
-    #    self.i +=1
-     #   self.sr.selectImage(self.i)
-      #  self.sr2.selectImage(self.i)
         self.all_sprites.draw(self.screen)
-        self.all_sprites.update(1/self.fps)
+        #self.all_sprites.update(1/self.fps)
 
         pygame.display.flip()
         pygame.display.update()
