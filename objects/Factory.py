@@ -59,12 +59,14 @@ class Factory:
             s = state.State(cobject)
             s.AddSurface("n", self.resources["wflylnk.png"])
             s.SetCurrentState("n")
-            s.spd = 30
+            s.spd = 10
+            s.loop = False
             st.AddState("flyl",s)
 
             s =state.State(cobject)
             s.AddSurface("n", pygame.transform.flip(self.resources["wflylnk.png"], True, False))
-            s.spd = 30
+            s.spd = 10
+            s.loop = False
             st.AddState("flyr", s)
 
             st.SetState("blinkl")

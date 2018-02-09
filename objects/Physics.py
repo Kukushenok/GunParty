@@ -5,9 +5,9 @@ class Physics:
     def __init__(self,gameO):
         self.gameObject = gameO
         self.groundCollide = LEVELS.currlevel.resources["GROUNDMASK"]
-        self.M = 10
-        self.G = 3
-        self.coeff = 1
+        self.M = 5
+        self.G = 9.8
+        self.coeff = 0.5
         self.AirRo = 1.2
         self.Sx = 1
         self.Sy = 3
@@ -32,11 +32,11 @@ class Physics:
         return ""
 
     def update(self,dt):
-        self.AirForse = [0.5*self.coeff*self.AirRo*self.Sy*self.V[0]**2,0.5*self.coeff*self.AirRo*self.Sx*self.V[1]**2]
+        self.AirForse = [0.5*self.coeff*self.AirRo*self.Sy*self.V[0]**2*(-1 if self.V[0]>0 else 1),0.5*self.coeff*self.AirRo*self.Sx*self.V[1]**2 * (-1 if self.V[1] > 0 else 1)]
         dsx = self.V[0]*dt*self.ScaleMx
         dsy = self.V[1]*dt*self.ScaleMy
-        self.V[1] = ((self.CurrForce[1] - self.AirForse[1]) / self.M) * dt + self.V[1]
-        self.V[0] = ((self.CurrForce[0] - self.AirForse[0]) / self.M) * dt + self.V[0]
+        self.V[1] = ((self.CurrForce[1] + self.AirForse[1]) / self.M) * dt + self.V[1]
+        self.V[0] = ((self.CurrForce[0] + self.AirForse[0]) / self.M) * dt + self.V[0]
         self.gameObject.pos[0] += dsx
         self.gameObject.pos[1] += dsy
         if self.TouchBorders([self.gameObject.pos[0]+30,self.gameObject.pos[0]+30]):
@@ -52,9 +52,11 @@ class Physics:
             self.onGround = True
             self.gameObject.pos[0] -= dsx
             self.gameObject.pos[1] -= dsy
+         #   self.CurrForce=[0,0]
             self.V = [0,0]
-        else:
-            self.onGround = False
+        # else:
+        #     self.onGround = False
+        #     self.CurrForce = [0, self.M * self.G]
 
     def GroundCollide(self,futpos):
         offset_x, offset_y = futpos
@@ -70,6 +72,7 @@ class Physics:
         if not grnNeed or (self.onGround and grnNeed):
             self.V[0] += (forse[0] /self.M) * dt
             self.V[1] += (forse[1] / self.M) * dt
+
     def Walk(self,dt,right = True):
         tryWalkPos = [self.gameObject.pos[0] +self.walkSpeed*self.ScaleMx*dt if right else self.gameObject.pos[0]-self.walkSpeed*self.ScaleMx*dt,self.gameObject.pos[1]]
         if self.WalkCheck(tryWalkPos): tryWalkPos[1]-=1
@@ -77,3 +80,12 @@ class Physics:
         if self.WalkCheck(tryWalkPos): tryWalkPos[1]-=1
         if self.WalkCheck(tryWalkPos): return None
         self.gameObject.pos = tryWalkPos
+
+    def Jump(self, dt, dir="up"):
+        xForse = 0
+        if dir=="right":
+            xForse = 450
+        elif dir=="left":
+            xForse = -450
+        self.AddForce([xForse, -700], 1 / 30, True)
+        self.onGround = False

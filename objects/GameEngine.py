@@ -32,8 +32,8 @@ class GameEngine:
         self.i = 0
         self.player = self.factory.Get("player",10,10,{"left":pygame.K_LEFT,"right":pygame.K_RIGHT,"up":pygame.K_UP,"down":pygame.K_DOWN})
         self.sr = self.player.GetAbility("spriteRenderer")
-        self.player2 = self.factory.Get("player",60,30,{"left":pygame.K_a,"right":pygame.K_d,"up":pygame.K_w,"down":pygame.K_s})
-        self.sr2 = self.player2.GetAbility("spriteRenderer")
+        # self.player2 = self.factory.Get("player",60,30,{"left":pygame.K_a,"right":pygame.K_d,"up":pygame.K_w,"down":pygame.K_s})
+        # self.sr2 = self.player2.GetAbility("spriteRenderer")
         self.playGround = playground.Playground(
             [LEVELS.currlevel.resources["soil.png"], LEVELS.currlevel.resources["space.png"],
              LEVELS.currlevel.resources["stones.jpg"]])

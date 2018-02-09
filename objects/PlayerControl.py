@@ -9,36 +9,43 @@ class PlayerControl:
         self.down_pressed = False
         self.jump = 0
         self.left = False
+        self.block_anim = False
     def get_event(self,event):
-        if self.jump: return None
         if event.type == pygame.KEYDOWN:
             if event.key == self.scheme["left"] and not self.right_pressed:
-                self.gameObject.GetAbility("stateMashine").SetState("movel")
-                self.gameObject.GetAbility("stateMashine").current_state.SetCurrentState("n")
-                self.left_pressed = True
                 self.left = True
+                if not self.block_anim:
+                    self.gameObject.GetAbility("stateMashine").SetState("movel")
+                    self.gameObject.GetAbility("stateMashine").current_state.SetCurrentState("n")
+                    self.left_pressed = True
             if event.key == self.scheme["right"] and not self.left_pressed:
-                self.gameObject.GetAbility("stateMashine").SetState("mover")
-                self.gameObject.GetAbility("stateMashine").current_state.SetCurrentState("n")
-                self.right_pressed = True
+                if not self.block_anim:
+                    self.gameObject.GetAbility("stateMashine").SetState("mover")
+                    self.gameObject.GetAbility("stateMashine").current_state.SetCurrentState("n")
+                    self.right_pressed = True
                 self.left = False
             if event.key == self.scheme["up"]:
-                self.jump = 1
-                self.gameObject.GetAbility("stateMashine").SetState("jumpl" if self.left else "jumpr")
-                self.gameObject.GetAbility("stateMashine").current_state.SetCurrentState("n")
+                if not self.block_anim:
+                    self.gameObject.GetAbility("stateMashine").SetState("jumpl" if self.left else "jumpr")
+                    self.gameObject.GetAbility("stateMashine").current_state.SetCurrentState("n")
+                    self.block_anim = True
+                    self.jump = 1
                 self.up_pressed = True
+
             if event.key == self.scheme["down"]:
                 self.down_pressed = True
 
         if event.type == pygame.KEYUP:
             if event.key == self.scheme["left"]:
-                self.gameObject.GetAbility("stateMashine").SetState("blinkl")
-                self.gameObject.GetAbility("stateMashine").current_state.SetCurrentState("n")
-                self.left_pressed = False
+                if not self.block_anim:
+                    self.gameObject.GetAbility("stateMashine").SetState("blinkl")
+                    self.gameObject.GetAbility("stateMashine").current_state.SetCurrentState("n")
+                    self.left_pressed = False
             if event.key == self.scheme["right"]:
-                self.gameObject.GetAbility("stateMashine").SetState("blinkr")
-                self.gameObject.GetAbility("stateMashine").current_state.SetCurrentState("n")
-                self.right_pressed = False
+                if not self.block_anim:
+                    self.gameObject.GetAbility("stateMashine").SetState("blinkr")
+                    self.gameObject.GetAbility("stateMashine").current_state.SetCurrentState("n")
+                    self.right_pressed = False
             if event.key == self.scheme["up"]:
                 self.up_pressed = False
             if event.key == self.scheme["down"]:
@@ -47,12 +54,14 @@ class PlayerControl:
         if self.right_pressed and not self.jump: self.gameObject.GetAbility("physics").Walk(dt,True)
         if self.left_pressed and not self.jump: self.gameObject.GetAbility("physics").Walk(dt, False)
         if self.jump==1 and self.gameObject.GetAbility("spriteRenderer").played:
-            xForse = 0
-            if self.right_pressed: xForse = 450
-            elif self.left_pressed: xForse = -450
-            self.gameObject.GetAbility("physics").AddForce([xForse, -700], 1 / 30, True)
+            dir="up"
+            if(self.left_pressed):
+                dir="left"
+            if(self.right_pressed):
+                dir="right"
+            self.gameObject.GetAbility("physics").Jump(1 / 30, dir)
             self.jump = 2
-            self.gameObject.pos[1]-=5
+            self.gameObject.pos[1]-=10
             self.gameObject.GetAbility("stateMashine").SetState("flyl" if self.left else "flyr")
             self.gameObject.GetAbility("stateMashine").current_state.SetCurrentState("n")
             self.right_pressed = False
@@ -63,5 +72,6 @@ class PlayerControl:
                 self.gameObject.GetAbility("stateMashine").SetState("blinkl" if self.left else "blinkr")
                 self.gameObject.GetAbility("stateMashine").current_state.SetCurrentState("n")
                 self.jump = 0
+                self.block_anim = False
         elif self.jump == 2: self.wasOn = False
 
