@@ -11,7 +11,7 @@ class Physics:
         self.AirRo = 1.2
         self.Sx = 1
         self.Sy = 3
-
+        self.KFriction = 0.95
         self.GRNDFriction = [0,0]
         self.CurrForce = [0,0]
         self.V = [0,0]
@@ -34,11 +34,14 @@ class Physics:
         return ""
 
     def update(self,dt):
-        self.AirForse = [0.5*self.coeff*self.AirRo*self.Sy*self.V[0]**2*(-1 if self.V[0]>0 else 1),0.5*self.coeff*self.AirRo*self.Sx*self.V[1]**2 * (-1 if self.V[1] > 0 else 1)]
+        self.AirForse = [0.5 * self.coeff * self.AirRo * self.Sy * self.V[0] ** 2 * (-1 if self.V[0] > 0 else 1),
+                         0.5 * self.coeff * self.AirRo * self.Sx * self.V[1] ** 2 * (-1 if self.V[1] > 0 else 1)]
+        self.GRNDFriction = [abs(self.GRNDFriction[0]) * (-1 if self.V[0] > 0 else 1),
+                             abs(self.GRNDFriction[1]) * (-1 if self.V[1] > 0 else 1)]
         dsx = self.V[0]*dt*self.ScaleMx
         dsy = self.V[1]*dt*self.ScaleMy
-        self.V[1] = ((self.CurrForce[1] + self.AirForse[1]) / self.M) * dt + self.V[1]
-        self.V[0] = ((self.CurrForce[0] + self.AirForse[0]) / self.M) * dt + self.V[0]
+        self.V[1] = ((self.CurrForce[1] + self.AirForse[1]+ self.GRNDFriction[1]) / self.M) * dt + self.V[1]
+        self.V[0] = ((self.CurrForce[0] + self.AirForse[0]+ self.GRNDFriction[0]) / self.M) * dt + self.V[0]
         self.gameObject.pos[0] += dsx
         self.gameObject.pos[1] += dsy
         if self.TouchBorders([self.gameObject.pos[0]+30,self.gameObject.pos[0]+30]):
@@ -52,14 +55,10 @@ class Physics:
 
         if self.GroundCollide(self.gameObject.pos):
             self.onGround = True
+            self.GRNDFriction = [self.M * self.G * self.KFriction, self.M * self.G]
             self.gameObject.pos[0] -= dsx
             self.gameObject.pos[1] -= dsy
-            self.GRNDFriction=[0,0]
-         #   self.CurrForce=[0,0]
             self.V = [0,0]
-        # else:
-        #     self.onGround = False
-        #     self.CurrForce = [0, self.M * self.G]
 
     def GroundCollide(self,futpos):
         offset_x, offset_y = futpos
