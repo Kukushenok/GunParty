@@ -9,9 +9,9 @@ class SpriteRenderer(pygame.sprite.Sprite):
         self.gameObject = gameO
         self.speed = 20
         self.image = pygame.Surface([60, 60])
-        self.load(gameO.GetAbility("stateMashine").CurrentState().currstate,gameO.GetAbility("stateMashine").current_state.spd,True)
+        self.load(gameO.GetAbility("stateMashine").CurrentState().currSurface,gameO.GetAbility("stateMashine").current_state.spd,True)
         self.frameCounter = 0
-        self.i = 0
+        self.frameIndex = 0
         self.loop = True
         self.played=False
 
@@ -19,9 +19,9 @@ class SpriteRenderer(pygame.sprite.Sprite):
     def load(self,image,speed,loop):
         self.loop = loop
         self.speed = speed
-        self.played=False
+        self.played = False
         self.frameCounter = 0
-        self.i = 0
+        self.frameIndex = 0
         #self.image = pygame.Surface([60,60])
         self.loadedImage = image
         self.maxIndex = self.loadedImage.get_rect().height // 60
@@ -42,6 +42,6 @@ class SpriteRenderer(pygame.sprite.Sprite):
         self.rect.x ,self.rect.y = self.gameObject.pos
         self.frameCounter+= 1
         if self.frameCounter%(int)((1/dt)/self.speed)==0:
-            self.i +=1
-        self.selectImage(self.i)
+            self.frameIndex +=1
+        self.selectImage(self.frameIndex)
 

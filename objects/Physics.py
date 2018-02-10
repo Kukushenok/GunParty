@@ -54,11 +54,23 @@ class Physics:
             self.TouchingBorders = ""
 
         if self.GroundCollide(self.gameObject.pos):
-            self.onGround = True
-            self.GRNDFriction = [self.M * self.G * self.KFriction, self.M * self.G]
+            self.SetOnGround(True)
             self.gameObject.pos[0] -= dsx
             self.gameObject.pos[1] -= dsy
             self.V = [0,0]
+
+    def SetOnGround(self, ground ):
+        self.onGround = ground
+        if self.onGround:
+            self.GRNDFriction = [self.M * self.G * self.KFriction, self.M * self.G*0.1]
+        else:
+            self.GRNDFriction = [0, 0]
+
+    def CheckTail(self):
+        check = [self.groundCollide.mask.get_at((int(self.gameObject.pos[0]+20), int(self.gameObject.pos[1] + 50))),
+             self.groundCollide.mask.get_at((int(self.gameObject.pos[0]+30), int(self.gameObject.pos[1] + 50))),
+             self.groundCollide.mask.get_at((int(self.gameObject.pos[0]+40), int(self.gameObject.pos[1] + 50)))]
+        return check
 
     def GroundCollide(self,futpos):
         offset_x, offset_y = futpos
@@ -90,4 +102,4 @@ class Physics:
         elif dir=="left":
             xForse = -450
         self.AddForce([xForse, -700], 1 / 30, True)
-        self.onGround = False
+        self.SetOnGround(False)
