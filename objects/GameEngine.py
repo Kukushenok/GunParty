@@ -23,6 +23,7 @@ class GameEngine:
         GAMECFG.screenwidth, GAMECFG.screenheight = self.size
         GAMECFG.fullscreen = cnf.get("fullscreen")!=0
         GAMECFG.fps = self.fps
+        self.cnf = cnf
         self.load_level()
 
 
@@ -30,7 +31,7 @@ class GameEngine:
         self.factory = factory.Factory(RESOURCES,self.all_sprites)
         LEVELS.loadLevel("level_1")
         self.i = 0
-        self.player = self.factory.Get("player",10,10,{"left":pygame.K_LEFT,"right":pygame.K_RIGHT,"up":pygame.K_UP,"down":pygame.K_DOWN})
+        self.player = self.factory.Get("player",10,10,self.cnf.getAsDict("player2KeyScheme"))
         self.sr = self.player.GetAbility("spriteRenderer")
         # self.player2 = self.factory.Get("player",60,30,{"left":pygame.K_a,"right":pygame.K_d,"up":pygame.K_w,"down":pygame.K_s})
         # self.sr2 = self.player2.GetAbility("spriteRenderer")
