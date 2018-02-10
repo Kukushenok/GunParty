@@ -11,6 +11,8 @@ class Physics:
         self.AirRo = 1.2
         self.Sx = 1
         self.Sy = 3
+
+        self.GRNDFriction = [0,0]
         self.CurrForce = [0,0]
         self.V = [0,0]
         self.ScaleMx = GAMECFG.screenwidth/20
@@ -52,6 +54,7 @@ class Physics:
             self.onGround = True
             self.gameObject.pos[0] -= dsx
             self.gameObject.pos[1] -= dsy
+            self.GRNDFriction=[0,0]
          #   self.CurrForce=[0,0]
             self.V = [0,0]
         # else:
