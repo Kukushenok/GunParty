@@ -1,10 +1,10 @@
-import objects.GameObject as gameObject
-import objects.SpriteRenderer as spriteRenderer
-import objects.StateMashine as stateMashine
-import objects.State as state
-import objects.PlayerControl as pControl
-import objects.Physics as physics
-from objects.Global import OBJECTMANAGER
+import objects.engine.GameObject as gameObject
+import objects.abilities.SpriteRenderer as spriteRenderer
+import objects.abilities.StateMashine as stateMashine
+import objects.abilities.State as state
+import objects.abilities.PlayerControl as pControl
+import objects.abilities.Physics as physics
+from objects.engine.Global import OBJECTMANAGER
 import pygame
 class Factory:
     def __init__(self,resources,group):

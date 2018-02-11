@@ -1,7 +1,7 @@
 import os
 import pygame
-import objects.Ground as ground
-import objects.Global
+import objects.level.Ground as ground
+import objects.engine.Global
 class Resources():
     def __init__(self,rootdir):
         self.resources={}
@@ -9,5 +9,5 @@ class Resources():
             for i in files:
                 self.resources[i] = pygame.image.load(os.path.join(d,i))
         if self.resources.get("soil.png"):self.resources["GROUNDMASK"] = ground.Ground(
-            pygame.transform.scale(self.resources["soil.png"], (objects.Global.GAMECFG.screenwidth,
-                                                                objects.Global.GAMECFG.screenheight)))
+            pygame.transform.scale(self.resources["soil.png"], (objects.engine.Global.GAMECFG.screenwidth,
+                                                                objects.engine.Global.GAMECFG.screenheight)))

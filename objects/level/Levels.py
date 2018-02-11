@@ -1,5 +1,5 @@
 import os
-import objects.Level as level
+import objects.level.Level as level
 class Levels:
     def __init__(self):
         self.levels = {}

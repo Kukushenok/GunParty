@@ -1,5 +1,5 @@
-from objects.Global import LEVELS
-from objects.Global import GAMECFG
+from objects.engine.Global import LEVELS
+from objects.engine.Global import GAMECFG
 class Physics:
 
     def __init__(self,gameO):

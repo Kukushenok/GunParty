@@ -1,5 +1,5 @@
 import pygame
-import objects.Resources as resources
+import objects.level.Resources as resources
 class Level:
     def __init__(self, path):
         self.path = path

@@ -1,6 +1,6 @@
 import pygame
-from objects.Global import LEVELS
-from objects.Global import GAMECFG
+from objects.engine.Global import LEVELS
+from objects.engine.Global import GAMECFG
 class SpriteRenderer(pygame.sprite.Sprite):
 
     def __init__(self,group,gameO):

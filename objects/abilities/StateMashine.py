@@ -1,5 +1,5 @@
 import pygame
-import objects.SpriteRenderer as spriteRenderer
+import objects.abilities.SpriteRenderer as spriteRenderer
 class StateMashine:
     def __init__(self,gameO,*args):
         self.gameObject = gameO

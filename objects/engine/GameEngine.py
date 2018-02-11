@@ -1,12 +1,12 @@
 import pygame
 import os
-from objects.Global import GAMECFG
-from objects.Global import LEVELS
-from objects.Global import RESOURCES
-import objects.Factory as factory
+from objects.engine.Global import GAMECFG
+from objects.engine.Global import LEVELS
+from objects.engine.Global import RESOURCES
+import objects.engine.Factory as factory
 import tools.config as config
-import objects.Playground as playground
-from objects.Global import OBJECTMANAGER
+import objects.level.Playground as playground
+from objects.engine.Global import OBJECTMANAGER
 class GameEngine:
     def __init__(self):
         pygame.init()
