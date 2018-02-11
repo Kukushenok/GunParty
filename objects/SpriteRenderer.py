@@ -15,7 +15,6 @@ class SpriteRenderer(pygame.sprite.Sprite):
         self.loop = True
         self.played=False
 
-
     def load(self,image,speed,loop):
         self.loop = loop
         self.speed = speed

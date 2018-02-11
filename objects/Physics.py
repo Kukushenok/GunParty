@@ -19,18 +19,20 @@ class Physics:
         self.ScaleMy = GAMECFG.screenheight/10
         self.onGround = False
         self.walkSpeed = 1
-        self.xborders = [0,GAMECFG.screenwidth]
-        self.yborder = 0
+        self.xborders = [0, GAMECFG.screenwidth]
+        self.yborder = [0, GAMECFG.screenheight]
 
     def SetGravity(self,gr):
         if gr: self.CurrForce = [0,self.M*self.G]
         else: self.CurrForce = [0,0]
 
     def TouchBorders(self,futpos):
-        if futpos[0] > self.xborders[1] or futpos[0] < self.xborders[0] or futpos[1]<self.yborder:
-            if all([futpos[0] > self.xborders[1] or futpos[0] < self.xborders[0],futpos[1]<self.yborder]):
+        if futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0] or futpos[1]<=self.yborder[0] or \
+                        futpos[1]+60 >= self.yborder[1]:
+            if all([futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0],futpos[1]<=self.yborder[0] or
+                            futpos[1]+60 >= self.yborder[1]]):
                 return "xy"
-            return "x" if futpos[0] > self.xborders[1] or futpos[0] < self.xborders[0] else "y"
+            return "x" if futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0] else "y"
         return ""
 
     def update(self,dt):
@@ -44,12 +46,14 @@ class Physics:
         self.V[0] = ((self.CurrForce[0] + self.AirForse[0]+ self.GRNDFriction[0]) / self.M) * dt + self.V[0]
         self.gameObject.pos[0] += dsx
         self.gameObject.pos[1] += dsy
-        if self.TouchBorders([self.gameObject.pos[0]+30,self.gameObject.pos[0]+30]):
+        if self.TouchBorders([self.gameObject.pos[0],self.gameObject.pos[1]]):
             self.TouchingBorders = self.TouchBorders(self.gameObject.pos)
             if "x" in self.TouchingBorders:
                 self.V[0]*=-1
+                self.gameObject.pos[0] -= dsx
             if "y" in self.TouchingBorders:
                 self.V[1]*=-1
+                self.gameObject.pos[1] -= dsy
         else:
             self.TouchingBorders = ""
 
@@ -67,9 +71,12 @@ class Physics:
             self.GRNDFriction = [0, 0]
 
     def CheckTail(self):
-        check = [self.groundCollide.mask.get_at((int(self.gameObject.pos[0]+20), int(self.gameObject.pos[1] + 50))),
-             self.groundCollide.mask.get_at((int(self.gameObject.pos[0]+30), int(self.gameObject.pos[1] + 50))),
-             self.groundCollide.mask.get_at((int(self.gameObject.pos[0]+40), int(self.gameObject.pos[1] + 50)))]
+        try:
+            check = [self.groundCollide.mask.get_at((int(self.gameObject.pos[0]+20), int(self.gameObject.pos[1] + 50))),
+                 self.groundCollide.mask.get_at((int(self.gameObject.pos[0]+30), int(self.gameObject.pos[1] + 50))),
+                 self.groundCollide.mask.get_at((int(self.gameObject.pos[0]+40), int(self.gameObject.pos[1] + 50)))]
+        except:
+            return [0,0,0]
         return check
 
     def GroundCollide(self,futpos):
@@ -79,7 +86,7 @@ class Physics:
         return False
 
     def WalkCheck(self,futpos):
-        if self.GroundCollide(futpos) or self.TouchBorders([futpos[0]+30,futpos[1]+30]): return True
+        if self.GroundCollide(futpos) or self.TouchBorders([futpos[0],futpos[1]]): return True
         return False
 
     def AddForce(self,forse,dt,grnNeed = False):

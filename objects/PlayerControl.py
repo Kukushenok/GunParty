@@ -1,5 +1,6 @@
 import pygame
 class PlayerControl:
+
     def __init__(self,gameO,scheme):
         self.scheme = scheme
         self.gameObject= gameO
@@ -10,6 +11,7 @@ class PlayerControl:
         self.jump = 0
         self.left = False
         self.block_anim = False
+
     def get_event(self,event):
         if event.type == pygame.KEYDOWN:
             if event.key == self.scheme["left"] and not self.right_pressed:
@@ -50,6 +52,7 @@ class PlayerControl:
                 self.up_pressed = False
             if event.key == self.scheme["down"]:
                 self.down_pressed = False
+
     def update(self,dt):
         if self.right_pressed and not self.jump: self.gameObject.GetAbility("physics").Walk(dt,True)
         if self.left_pressed and not self.jump: self.gameObject.GetAbility("physics").Walk(dt, False)
