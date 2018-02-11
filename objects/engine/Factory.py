@@ -4,6 +4,9 @@ import objects.abilities.StateMashine as stateMashine
 import objects.abilities.State as state
 import objects.abilities.PlayerControl as pControl
 import objects.abilities.Physics as physics
+import objects.gui.GUI as gui
+import objects.gui.Slot as slot
+from objects.engine.Global import GAMECFG
 from objects.engine.Global import OBJECTMANAGER
 import pygame
 class Factory:
@@ -85,5 +88,10 @@ class Factory:
             ph = physics.Physics(cobject)
             ph.SetGravity(True)
             cobject.AddAbility("physics",ph)
+        elif type == "gui":
+            cobject = gui.GUI(args[0])
+            for i in range(3):
+                slt = slot.Slot(cobject)
+                slt.pos[0]+=i*(self.resources["guislot.png"].get_rect()[3]*GAMECFG.GetScreenCoeff()[0]+3)
         OBJECTMANAGER.AddObject(cobject)
         return cobject
