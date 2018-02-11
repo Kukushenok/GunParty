@@ -9,7 +9,7 @@ class SpriteRenderer(pygame.sprite.Sprite):
         self.gameObject = gameO
         self.speed = 20
         self.image = pygame.Surface([60, 60])
-        self.load(gameO.GetAbility("stateMashine").CurrentState().currSurface,gameO.GetAbility("stateMashine").current_state.spd,True)
+        self.load(gameO.GetAbility("stateMashine").CurrentState().currSurface,gameO.GetAbility("stateMashine").current_state.speed,True)
         self.frameCounter = 0
         self.frameIndex = 0
         self.loop = True
@@ -22,7 +22,13 @@ class SpriteRenderer(pygame.sprite.Sprite):
         self.played = False
         self.frameCounter = 0
         self.frameIndex = 0
-        #self.image = pygame.Surface([60,60])
+        self.loadedImage = image
+        self.maxIndex = self.loadedImage.get_rect().height // 60
+
+    def loadOption(self,image, speed, loop):
+        self.loop = loop
+        self.speed = speed
+        self.played = False
         self.loadedImage = image
         self.maxIndex = self.loadedImage.get_rect().height // 60
 

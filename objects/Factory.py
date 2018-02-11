@@ -32,7 +32,7 @@ class Factory:
             s.AddSurface("u",self.resources["wblink1u.png"])
             s.AddSurface("d", self.resources["wblink1d.png"])
             s.AddSurface("n", self.resources["wblink1.png"])
-            s.SetCurrentOption("n")
+            s.SetCurrentOption("n",True)
             st.AddState("blinkl",s)
 
             s =state.State(cobject)
@@ -46,7 +46,7 @@ class Factory:
             s.AddSurface("u",self.resources["wjumpu.png"])
             s.AddSurface("d", self.resources["wjumpd.png"])
             s.AddSurface("n", self.resources["wjump.png"])
-            s.SetCurrentOption("n")
+            s.SetCurrentOption("n", True)
             s.loop = False
             st.AddState("jumpl",s)
 
@@ -60,8 +60,8 @@ class Factory:
             s.AddSurface("n", self.resources["wflylnk.png"])
             s.AddSurface("u", self.resources["wflylnk.png"])
             s.AddSurface("d", self.resources["wflylnk.png"])
-            s.SetCurrentOption("n")
-            s.spd = 10
+            s.SetCurrentOption("n", True)
+            s.speed = 10
             s.loop = False
             st.AddState("flyl",s)
 
@@ -69,7 +69,7 @@ class Factory:
             s.AddSurface("n", pygame.transform.flip(self.resources["wflylnk.png"], True, False))
             s.AddSurface("u", pygame.transform.flip(self.resources["wflylnk.png"], True, False))
             s.AddSurface("d", pygame.transform.flip(self.resources["wflylnk.png"], True, False))
-            s.spd = 10
+            s.speed = 10
             s.loop = False
             st.AddState("flyr", s)
 
