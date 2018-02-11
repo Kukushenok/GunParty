@@ -36,8 +36,8 @@ class GameEngine:
         # self.player2 = self.factory.Get("player",60,30,{"left":pygame.K_a,"right":pygame.K_d,"up":pygame.K_w,"down":pygame.K_s})
         # self.sr2 = self.player2.GetAbility("spriteRenderer")
         self.playGround = playground.Playground(
-            [LEVELS.currlevel.resources["soil.png"], LEVELS.currlevel.resources["space.png"],
-             LEVELS.currlevel.resources["stones.jpg"]])
+            [pygame.transform.scale(LEVELS.currlevel.resources["soil.png"],self.size), pygame.transform.scale(LEVELS.currlevel.resources["space.png"],self.size),
+             pygame.transform.scale(LEVELS.currlevel.resources["stones.jpg"],self.size)])
 
     def on_loop(self):
         OBJECTMANAGER.update(1/self.fps)
