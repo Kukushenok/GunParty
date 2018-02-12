@@ -2,7 +2,7 @@ import pygame
 class GUI:
     def __init__(self,keymask):
         self.slots = []
-        self.selected=-1
+        self.selected=2
         self.keymask = keymask
     def AddSlot(self,obj):
         self.slots.append(obj)

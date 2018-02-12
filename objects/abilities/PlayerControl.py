@@ -4,6 +4,7 @@ class PlayerControl:
     def __init__(self,gameO,scheme):
         self.scheme = scheme
         self.gameObject= gameO
+        self.gui = None
         self.right_pressed = False
         self.left_pressed = False
         self.up_pressed = False
@@ -11,8 +12,17 @@ class PlayerControl:
         self.jump = 0
         self.left = False
         self.block_anim = False
+        self.block = False
+        self.currweaponname = None
+        self.weapon = 0
 
     def get_event(self,event):
+        if self.block:
+            self.right_pressed=False
+            self.left_pressed=False
+            self.up_pressed = False
+            self.down_pressed = False
+            return None
         if event.type == pygame.KEYDOWN:
             if event.key == self.scheme["left"] and not self.right_pressed:
                 self.left = True
@@ -52,8 +62,29 @@ class PlayerControl:
                 self.up_pressed = False
             if event.key == self.scheme["down"]:
                 self.down_pressed = False
-
+    def LoadWeapon(self,name):
+        if self.currweaponname:
+            self.gameObject.GetAbility("stateMashine").SetState(self.currweaponname + ("bakr" if self.left else "bakl"))
+            self.gameObject.GetAbility("stateMashine").current_state.SetCurrentOption("n", True)
+            return None
+        self.block = True
+        try:
+            self.gameObject.GetAbility("stateMashine").SetState("bazlnkl" if self.left else "bazlnkr")
+            self.gameObject.GetAbility("stateMashine").current_state.SetCurrentOption("n", True)
+            self.weapon = 1
+        except Exception:pass
+        self.currweaponname = name
     def update(self,dt):
+        if self.gui.selected == 0 and self.currweaponname != "baz" and not self.jump:
+            self.LoadWeapon("baz")
+        if self.gui.selected == 1 and self.currweaponname != "grn" and not self.jump:
+            self.LoadWeapon("grn")
+        if self.gui.selected == 2 and self.currweaponname != "shg" and not self.jump:
+            self.LoadWeapon("shg")
+        if self.weapon == 1 and self.gameObject.GetAbility("spriteRenderer").played:
+            self.gameObject.GetAbility("stateMashine").SetState(self.currweaponname+"l" if self.left else self.currweaponname+"r")
+            self.gameObject.GetAbility("stateMashine").current_state.SetCurrentOption("n", True)
+            self.block = False
         if self.right_pressed and not self.jump: self.gameObject.GetAbility("physics").Walk(dt,True)
         if self.left_pressed and not self.jump: self.gameObject.GetAbility("physics").Walk(dt, False)
         if self.jump==1 and self.gameObject.GetAbility("spriteRenderer").played:

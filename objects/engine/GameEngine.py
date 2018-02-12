@@ -33,6 +33,7 @@ class GameEngine:
         self.i = 0
         self.player = self.factory.Get("player",10,10,self.cnf.getAsDict("player2KeyScheme"))
         self.gui = self.factory.Get("gui",10,10,self.cnf.getAsDict("player2KeyScheme"))
+        self.player.GetAbility("playerControl").gui = self.gui
         self.sr = self.player.GetAbility("spriteRenderer")
         # self.player2 = self.factory.Get("player",60,30,{"left":pygame.K_a,"right":pygame.K_d,"up":pygame.K_w,"down":pygame.K_s})
         # self.sr2 = self.player2.GetAbility("spriteRenderer")
