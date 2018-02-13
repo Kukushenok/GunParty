@@ -7,4 +7,5 @@ import os
 GAMECFG = gameconfig.GameCFG()
 LEVELS = levels.Levels()
 RESOURCES = resources.Resources(os.path.join(os.getcwd(),"resources","images")).resources
+SFX = resources.Resources(os.path.join(os.getcwd(),"resources","sfx")).resources
 OBJECTMANAGER = objectManager.ObjectManager()
