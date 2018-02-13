@@ -24,8 +24,14 @@ class SpriteRenderer(pygame.sprite.Sprite):
     def selectImage(self,index):
         if self.selectedState.loop: index = index % self.maxIndex
         elif index >= self.maxIndex:
-            index = self.maxIndex-1
-            self.played = True
+            if(self.selectedState.nextState):
+                self.gameObject.GetAbility("stateMashine").SetStateAsIs(self.selectedState.nextState, self.selectedState.currentOption)
+                tmpState = self.selectedState
+                self.load(self.selectedState.nextState)
+                tmpState.nextState = None
+            else:
+                index = self.maxIndex-1
+                self.played = True
         else: self.played = False
         self.image = pygame.Surface([60, 60])
         self.image.blit(self.loadedImage, (0, 0), pygame.Rect(0, index * 60, 60, 60))
@@ -33,7 +39,6 @@ class SpriteRenderer(pygame.sprite.Sprite):
         self.mask = pygame.mask.from_surface(self.image)
 
     def update(self,dt):
-
         currentState = self.gameObject.GetAbility("stateMashine").CurrentState()
         if currentState!=self.selectedState:
             self.load(currentState);

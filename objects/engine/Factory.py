@@ -45,6 +45,25 @@ class Factory:
 
             st.AddState("blinkr", s)
 
+# Прыжок
+            s = state.State(cobject)
+            s.AddSurface("n", self.resources["wflylnk.png"])
+            s.AddSurface("u", self.resources["wflylnk.png"])
+            s.AddSurface("d", self.resources["wflylnk.png"])
+            s.SetCurrentOption("n")
+            s.speed = 10
+            s.loop = False
+            st.AddState("flyl", s)
+
+            s = state.State(cobject)
+            s.AddSurface("n", pygame.transform.flip(self.resources["wflylnk.png"], True, False))
+            s.AddSurface("u", pygame.transform.flip(self.resources["wflylnk.png"], True, False))
+            s.AddSurface("d", pygame.transform.flip(self.resources["wflylnk.png"], True, False))
+            s.speed = 10
+            s.loop = False
+            st.AddState("flyr", s)
+
+# Приседание
             s = state.State(cobject)
             s.AddSurface("u",self.resources["wjumpu.png"])
             s.AddSurface("d", self.resources["wjumpd.png"])
@@ -60,23 +79,7 @@ class Factory:
             s.loop = False
             st.AddState("jumpr", s)
 
-            s = state.State(cobject)
-            s.AddSurface("n", self.resources["wflylnk.png"])
-            s.AddSurface("u", self.resources["wflylnk.png"])
-            s.AddSurface("d", self.resources["wflylnk.png"])
-            s.SetCurrentOption("n")
-            s.speed = 10
-            s.loop = False
-            st.AddState("flyl",s)
-
-            s =state.State(cobject)
-            s.AddSurface("n", pygame.transform.flip(self.resources["wflylnk.png"], True, False))
-            s.AddSurface("u", pygame.transform.flip(self.resources["wflylnk.png"], True, False))
-            s.AddSurface("d", pygame.transform.flip(self.resources["wflylnk.png"], True, False))
-            s.speed = 10
-            s.loop = False
-            st.AddState("flyr", s)
-                                                                                #Оружия.Базука
+#Оружия.Базука
             s = state.State(cobject)
             s.AddSurface("n", self.resources["wbazbak.png"])
             s.AddSurface("u", self.resources["wbazbaku.png"])
@@ -127,7 +130,7 @@ class Factory:
             s.speed = 20
             s.loop = False
             st.AddState("bazl", s)
-                                                                    # Оружия.Граната
+# Оружия.Граната
             s = state.State(cobject)
             s.AddSurface("n", self.resources["wgrnbak.png"])
             s.AddSurface("u", self.resources["wgrnbaku.png"])
@@ -179,7 +182,7 @@ class Factory:
             s.loop = False
             st.AddState("grnl", s)
 
-                                                                    # Оружия.Ружьё
+# Оружия.Ружьё
             s = state.State(cobject)
             s.AddSurface("n", self.resources["wshgbak.png"])
             s.AddSurface("u", self.resources["wshgbaku.png"])
@@ -247,7 +250,7 @@ class Factory:
             s.speed = 20
             s.loop = False
             st.AddState("shgfl", s)
-                                                                                    # Оружия.Стоп
+# Оружия.Стоп
             st.SetState("blinkl")
             cobject.AddAbility("stateMashine",st)
 

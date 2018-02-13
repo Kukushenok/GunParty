@@ -13,36 +13,46 @@ class PlayerControl:
         self.left = False
         self.block_anim = False
         self.block = False
-        self.currweaponname = None
-        self.weapon = 0
+        self.currweaponname = ""
+        self.weapon = -1
+        self.armed = False
 
-    def get_event(self,event):
-        if self.block:
-            self.right_pressed=False
-            self.left_pressed=False
-            self.up_pressed = False
-            self.down_pressed = False
-            return None
+    def WalkControl(self, event):
         if event.type == pygame.KEYDOWN:
+
             if event.key == self.scheme["left"] and not self.right_pressed:
                 self.left = True
                 if not self.block_anim:
                     self.gameObject.GetAbility("stateMashine").SetState("movel")
                 self.left_pressed = True
+
             if event.key == self.scheme["right"] and not self.left_pressed:
                 if not self.block_anim:
                     self.gameObject.GetAbility("stateMashine").SetState("mover")
                 self.right_pressed = True
                 self.left = False
+            if (self.left_pressed or self.right_pressed) and self.armed:
+                self.LoadWeapon()
+
+    def get_event(self,event):
+        self.WalkControl(event)
+        if event.type == pygame.KEYDOWN:
             if event.key == self.scheme["up"]:
                 if not self.block_anim:
                     self.gameObject.GetAbility("stateMashine").SetState("jumpl" if self.left else "jumpr")
                     self.block_anim = True
                     self.jump = 1
-                self.up_pressed = True
 
+                self.up_pressed = True
             if event.key == self.scheme["down"]:
                 self.down_pressed = True
+            if event.key == self.scheme["switchweaponl"] or event.key == self.scheme["switchweaponr"]:
+                if self.gui.selected == 0 and self.currweaponname != "baz" and not self.block_anim:
+                    self.LoadWeapon("baz", self.gui.selected)
+                if self.gui.selected == 1 and self.currweaponname != "grn" and not self.block_anim:
+                    self.LoadWeapon("grn", self.gui.selected)
+                if self.gui.selected == 2 and self.currweaponname != "shg" and not self.block_anim:
+                    self.LoadWeapon("shg", self.gui.selected)
 
         if event.type == pygame.KEYUP:
             if event.key == self.scheme["left"]:
@@ -57,26 +67,34 @@ class PlayerControl:
                 self.up_pressed = False
             if event.key == self.scheme["down"]:
                 self.down_pressed = False
-    def LoadWeapon(self,name):
-        if self.currweaponname:
+
+    def LoadWeapon(self,name="",idx=-1):
+        if self.weapon==-1 and self.currweaponname!="" and name!="":
+            self.gameObject.GetAbility("stateMashine").BindStates(self.currweaponname + ("bakr" if self.left else "bakl"),
+                                                                  name + ("lnkl" if self.left else "lnkr"))
+            self.currweaponname = name
             self.gameObject.GetAbility("stateMashine").SetState(self.currweaponname + ("bakr" if self.left else "bakl"))
-            return None
-        self.block = True
-        try:
-            self.gameObject.GetAbility("stateMashine").SetState("bazlnkl" if self.left else "bazlnkr")
-            self.weapon = 1
-        except Exception:pass
-        self.currweaponname = name
+            self.weapon = self.gui.selected
+        else:
+            if idx==-1 or name=="":
+                self.gameObject.GetAbility("stateMashine").SetState(
+                    self.currweaponname + ("bakr" if self.left else "bakl"))
+                self.currweaponname = ""
+                self.weapon = -1
+                self.armed = False
+                return None
+            self.currweaponname = name
+            self.gameObject.GetAbility("stateMashine").SetState(self.currweaponname + ("lnkl" if self.left else "lnkr"))
+        self.armed = True
+        self.weapon = idx
+
     def update(self,dt):
-        if self.gui.selected == 0 and self.currweaponname != "baz" and not self.jump:
-            self.LoadWeapon("baz")
-        if self.gui.selected == 1 and self.currweaponname != "grn" and not self.jump:
-            self.LoadWeapon("grn")
-        if self.gui.selected == 2 and self.currweaponname != "shg" and not self.jump:
-            self.LoadWeapon("shg")
-        if self.weapon == 1 and self.gameObject.GetAbility("spriteRenderer").played:
-            self.gameObject.GetAbility("stateMashine").SetState(self.currweaponname+"l" if self.left else self.currweaponname+"r")
-            self.block = False
+
+        # if self.weapon == 1 and self.gameObject.GetAbility("spriteRenderer").played:
+        #     self.gameObject.GetAbility("stateMashine").SetState(self.currweaponname+"l" if self.left else self.currweaponname+"r")
+        #     self.block = False
+
+
         if self.right_pressed and not self.jump: self.gameObject.GetAbility("physics").Walk(dt,True)
         if self.left_pressed and not self.jump: self.gameObject.GetAbility("physics").Walk(dt, False)
         if self.jump==1 and self.gameObject.GetAbility("spriteRenderer").played:
