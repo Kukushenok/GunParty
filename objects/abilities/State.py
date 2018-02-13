@@ -2,27 +2,15 @@ class State:
     def __init__(self,gameO):
         self.gameObject = gameO
         self.surfaces = {"u":None,"d":None,"n":None}
-        self.currOption = ""
-        self.currSurface = None
+        self.currentOption = ""
+        self.currentSurface = None
         self.speed = 20
         self.loop = True
 
-    def AddSurface(self,type,surface):
-        self.surfaces[type] = surface
+    def AddSurface(self, option, surface):
+        self.surfaces[option] = surface
 
-    def SetCurrentOption(self, type, start):
-        if start:
-            try:
-                self.currSurface = self.surfaces[type]
-                self.currOption = type
-                self.gameObject.GetAbility("spriteRenderer").load(self.currSurface, self.speed, self.loop)
-            except Exception:
-                pass
-        else:
-            if(self.currOption!= type):
-                self.currSurface = self.surfaces[type]
-                self.currOption = type
-                try:
-                    self.gameObject.GetAbility("spriteRenderer").loadOption(self.currSurface,self.speed, self.loop)
-                except Exception:
-                    pass
+    def SetCurrentOption(self, option):
+        self.currentSurface = self.surfaces[option]
+        self.currentOption = option
+

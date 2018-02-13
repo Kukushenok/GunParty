@@ -17,5 +17,7 @@ class StateMashine:
     def CurrentState(self):
         return  self.current_state
 
-    def SetState(self,name):
+    def SetState(self,name,option="n"):
         self.current_state = self.states[name]
+        self.current_state.SetCurrentOption(option)
+

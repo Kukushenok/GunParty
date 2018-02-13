@@ -3,37 +3,26 @@ from objects.engine.Global import LEVELS
 from objects.engine.Global import GAMECFG
 class SpriteRenderer(pygame.sprite.Sprite):
 
-    def __init__(self,group,gameO):
+    def __init__(self,group,gameObject):
         super().__init__(group)
         self.group = group
-        self.gameObject = gameO
-        self.speed = 20
+        self.gameObject = gameObject
         self.image = pygame.Surface([60, 60])
-        self.load(gameO.GetAbility("stateMashine").CurrentState().currSurface,gameO.GetAbility("stateMashine").current_state.speed,True)
-        self.frameCounter = 0
-        self.frameIndex = 0
-        self.loop = True
-        self.played=False
+        self.load(gameObject.GetAbility("stateMashine").CurrentState())
 
-    def load(self,image,speed,loop):
-        self.loop = loop
-        self.speed = speed
-        self.played = False
-        self.frameCounter = 0
-        self.frameIndex = 0
-        self.loadedImage = image
-        self.maxIndex = self.loadedImage.get_rect().height // 60
-
-    def loadOption(self,image, speed, loop):
-        self.loop = loop
-        self.speed = speed
-        self.played = False
-        self.loadedImage = image
+    def load(self, state, animationStart=True):
+        self.selectedState = state
+        self.selectedOption = state.currentOption
+        if animationStart :
+            self.played = False
+            self.frameCounter = 0
+            self.frameIndex = 0
+        self.loadedImage = state.currentSurface
         self.maxIndex = self.loadedImage.get_rect().height // 60
 
 
     def selectImage(self,index):
-        if self.loop: index = index % self.maxIndex
+        if self.selectedState.loop: index = index % self.maxIndex
         elif index >= self.maxIndex:
             index = self.maxIndex-1
             self.played = True
@@ -44,9 +33,16 @@ class SpriteRenderer(pygame.sprite.Sprite):
         self.mask = pygame.mask.from_surface(self.image)
 
     def update(self,dt):
+
+        currentState = self.gameObject.GetAbility("stateMashine").CurrentState()
+        if currentState!=self.selectedState:
+            self.load(currentState);
+        elif self.selectedOption != currentState.currentOption:
+            self.load(currentState, False);
+
         self.rect.x ,self.rect.y = self.gameObject.pos
         self.frameCounter+= 1
-        if self.frameCounter%(int)((1/dt)/self.speed)==0:
+        if self.frameCounter%(int)((1/dt)/self.selectedState.speed)==0:
             self.frameIndex +=1
         self.selectImage(self.frameIndex)
 
