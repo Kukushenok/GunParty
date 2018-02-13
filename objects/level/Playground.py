@@ -13,7 +13,7 @@ class Playground():
 
         self.tmpsurface = pygame.transform.scale(RESOURCES["blowmask.png"].convert_alpha(),(300,300))
         self.mask.blit(self.tmpsurface,(300,280),None,pygame.BLEND_RGBA_SUB)
-        LEVELS.currlevel.resources["GROUNDMASK"].image.blit(self.tmpsurface, (300, 280), None, pygame.BLEND_RGBA_SUB)
+        LEVELS.currlevel.resources["GROUNDMASK"].image.blit(self.tmpsurface, (3001, 280), None, pygame.BLEND_RGBA_SUB)
         LEVELS.currlevel.resources["GROUNDMASK"].update()
 
 

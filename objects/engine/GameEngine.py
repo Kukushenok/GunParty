@@ -11,6 +11,8 @@ import objects.gui.StartScreen as startScreen
 import objects.gui.Scroller as scroller
 import objects.gui.Text as text
 import objects.gui.LevelSubnail as levelSubnail
+import objects.gui.SwitchPageButton as swPageButton
+import objects.gui.ExitButton as exitButton
 class GameEngine:
     def __init__(self):
         pygame.init()
@@ -36,14 +38,25 @@ class GameEngine:
         cx = self.coeff[0]
         cy = self.coeff[1]
         i = 0
+        page = 0
         for e in LEVELS.levels.keys():
             if i == 0:
-                self.startScreen.AddComponent(levelSubnail.LevelSubnail(self.startScreen,e,pygame.Rect(20*cx,20*cy,640*cx,480*cy)))
+                self.startScreen.AddComponent(levelSubnail.LevelSubnail(self.startScreen,e,pygame.Rect(20*cx,20*cy,320*cx,200*cy),page))
             elif i == 1:
-                self.startScreen.AddComponent(levelSubnail.LevelSubnail(self.startScreen, e, pygame.Rect(680 * cx, 20 * cy, 640 * cx, 480 * cy)))
+                self.startScreen.AddComponent(levelSubnail.LevelSubnail(self.startScreen, e, pygame.Rect(360 * cx, 20 * cy, 320 * cx, 200 * cy),page))
+            elif i == 2:
+                self.startScreen.AddComponent(levelSubnail.LevelSubnail(self.startScreen, e, pygame.Rect(700 * cx, 20 * cy, 320 * cx, 200 * cy),page))
+            else:
+                i = -1
+                self.startScreen.AddComponent(levelSubnail.LevelSubnail(self.startScreen, e, pygame.Rect(1040 * cx, 20 * cy, 320 * cx, 200 * cy),page))
+                page +=1
             i+=1
-        self.startScreen.AddComponent(scroller.Scroller(self.startScreen,pygame.Rect(1000*cx,100*cy,240*cx,60*cy)))
-        self.startScreen.AddComponent(text.Text(self.startScreen,(1000*cx,30*cy),"Gravity",int(50*cy),pygame.Color("black")))
+        self.startScreen.maxPage = page
+        self.startScreen.AddComponent(swPageButton.SwitchPageButton(self.startScreen,-1,pygame.Rect(1500*cx,40*cy,120*cx,150*cy)))
+        self.startScreen.AddComponent(swPageButton.SwitchPageButton(self.startScreen,1,pygame.Rect(1700*cx,40*cy,120*cx,150*cy)))
+        self.startScreen.AddComponent(scroller.Scroller(self.startScreen,pygame.Rect(1500*cx,300*cy,240*cx,60*cy)))
+        self.startScreen.AddComponent(exitButton.ExitButton(self.startScreen,pygame.Rect(50*cx,800*cy,200*cx,200*cy)))
+        self.startScreen.AddComponent(text.Text(self.startScreen,(1500*cx,230*cy),"Gravity",int(50*cy),pygame.Color("black")))
         self.startScreen.run()
 
     def load_level(self,name):

@@ -7,6 +7,7 @@ class StartScreen():
         self.gameEngine = gameEngine
         self.components = []
         self.running = True
+        self.page = 0
     def AddComponent(self,comp):
         self.components.append(comp)
     def load_level(self,levelname):
