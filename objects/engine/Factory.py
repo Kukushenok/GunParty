@@ -8,6 +8,7 @@ import objects.gui.GUI as gui
 import objects.gui.Slot as slot
 from objects.engine.Global import GAMECFG
 from objects.engine.Global import OBJECTMANAGER
+import objects.gui.ForceIndicator as forseIndicator
 import pygame
 class Factory:
     def __init__(self,resources,group):
@@ -87,7 +88,7 @@ class Factory:
             s.SetCurrentOption("n")
             s.speed = 20
             s.loop = False
-            st.AddState("bazbakr",s)
+            st.AddState("bazbakl",s)
 
             s =state.State(cobject)
             s.AddSurface("n", pygame.transform.flip(self.resources["wbazbak.png"], True, False))
@@ -95,7 +96,7 @@ class Factory:
             s.AddSurface("d", pygame.transform.flip(self.resources["wbazbakd.png"], True, False))
             s.speed = 20
             s.loop = False
-            st.AddState("bazbakl", s)
+            st.AddState("bazbakr", s)
 
             s = state.State(cobject)
             s.AddSurface("n", self.resources["wbazlnk.png"])
@@ -104,7 +105,7 @@ class Factory:
             s.SetCurrentOption("n")
             s.speed = 20
             s.loop = False
-            st.AddState("bazlnkr",s)
+            st.AddState("bazlnkl",s)
 
             s =state.State(cobject)
             s.AddSurface("n", pygame.transform.flip(self.resources["wbazlnk.png"], True, False))
@@ -112,7 +113,7 @@ class Factory:
             s.AddSurface("d", pygame.transform.flip(self.resources["wbazlnkd.png"], True, False))
             s.speed = 20
             s.loop = False
-            st.AddState("bazlnkl", s)
+            st.AddState("bazlnkr", s)
 
             s = state.State(cobject)
             s.AddSurface("n", self.resources["wbaz.png"])
@@ -121,7 +122,8 @@ class Factory:
             s.SetCurrentOption("n")
             s.speed = 20
             s.loop = False
-            st.AddState("bazr",s)
+            s.ManualControl = True
+            st.AddState("bazl",s)
 
             s =state.State(cobject)
             s.AddSurface("n", pygame.transform.flip(self.resources["wbaz.png"], True, False))
@@ -129,7 +131,8 @@ class Factory:
             s.AddSurface("d", pygame.transform.flip(self.resources["wbazd.png"], True, False))
             s.speed = 20
             s.loop = False
-            st.AddState("bazl", s)
+            s.ManualControl = True
+            st.AddState("bazr", s)
 # Оружия.Граната
             s = state.State(cobject)
             s.AddSurface("n", self.resources["wgrnbak.png"])
@@ -138,7 +141,7 @@ class Factory:
             s.SetCurrentOption("n")
             s.speed = 20
             s.loop = False
-            st.AddState("grnbakr", s)
+            st.AddState("grnbakl", s)
 
             s = state.State(cobject)
             s.AddSurface("n", pygame.transform.flip(self.resources["wgrnbak.png"], True, False))
@@ -146,7 +149,7 @@ class Factory:
             s.AddSurface("d", pygame.transform.flip(self.resources["wgrnbakd.png"], True, False))
             s.speed = 20
             s.loop = False
-            st.AddState("grnbakl", s)
+            st.AddState("grnbakr", s)
 
             s = state.State(cobject)
             s.AddSurface("n", self.resources["wgrnlnk.png"])
@@ -155,7 +158,7 @@ class Factory:
             s.SetCurrentOption("n")
             s.speed = 20
             s.loop = False
-            st.AddState("grnlnkr", s)
+            st.AddState("grnlnkl", s)
 
             s = state.State(cobject)
             s.AddSurface("n", pygame.transform.flip(self.resources["wgrnlnk.png"], True, False))
@@ -163,7 +166,7 @@ class Factory:
             s.AddSurface("d", pygame.transform.flip(self.resources["wgrnlnkd.png"], True, False))
             s.speed = 20
             s.loop = False
-            st.AddState("grnlnkl", s)
+            st.AddState("grnlnkr", s)
 
             s = state.State(cobject)
             s.AddSurface("n", self.resources["wthrgrn.png"])
@@ -172,7 +175,8 @@ class Factory:
             s.SetCurrentOption("n")
             s.speed = 20
             s.loop = False
-            st.AddState("grnr", s)
+            s.ManualControl = True
+            st.AddState("grnl", s)
 
             s = state.State(cobject)
             s.AddSurface("n", pygame.transform.flip(self.resources["wthrgrn.png"], True, False))
@@ -180,7 +184,8 @@ class Factory:
             s.AddSurface("d", pygame.transform.flip(self.resources["wthrgrnd.png"], True, False))
             s.speed = 20
             s.loop = False
-            st.AddState("grnl", s)
+            s.ManualControl = True
+            st.AddState("grnr", s)
 
 # Оружия.Ружьё
             s = state.State(cobject)
@@ -190,7 +195,7 @@ class Factory:
             s.SetCurrentOption("n")
             s.speed = 20
             s.loop = False
-            st.AddState("shgbakr", s)
+            st.AddState("shgbakl", s)
 
             s = state.State(cobject)
             s.AddSurface("n", pygame.transform.flip(self.resources["wshgbak.png"], True, False))
@@ -198,7 +203,7 @@ class Factory:
             s.AddSurface("d", pygame.transform.flip(self.resources["wshgbakd.png"], True, False))
             s.speed = 20
             s.loop = False
-            st.AddState("shgbakl", s)
+            st.AddState("shgbakr", s)
 
             s = state.State(cobject)
             s.AddSurface("n", self.resources["wshglnk.png"])
@@ -207,7 +212,7 @@ class Factory:
             s.SetCurrentOption("n")
             s.speed = 20
             s.loop = False
-            st.AddState("shglnkr", s)
+            st.AddState("shglnkl", s)
 
             s = state.State(cobject)
             s.AddSurface("n", pygame.transform.flip(self.resources["wshglnk.png"], True, False))
@@ -215,7 +220,7 @@ class Factory:
             s.AddSurface("d", pygame.transform.flip(self.resources["wshglnkd.png"], True, False))
             s.speed = 20
             s.loop = False
-            st.AddState("shglnkl", s)
+            st.AddState("shglnkr", s)
 
             s = state.State(cobject)
             s.AddSurface("n", self.resources["wshotg.png"])
@@ -224,7 +229,8 @@ class Factory:
             s.SetCurrentOption("n")
             s.speed = 20
             s.loop = False
-            st.AddState("shgr", s)
+            s.ManualControl = True
+            st.AddState("shgl", s)
 
             s = state.State(cobject)
             s.AddSurface("n", pygame.transform.flip(self.resources["wshotg.png"], True, False))
@@ -232,7 +238,8 @@ class Factory:
             s.AddSurface("d", pygame.transform.flip(self.resources["wshotgd.png"], True, False))
             s.speed = 20
             s.loop = False
-            st.AddState("shgl", s)
+            s.ManualControl = True
+            st.AddState("shgr", s)
 
             s = state.State(cobject)
             s.AddSurface("n", self.resources["wshotf.png"])
@@ -241,7 +248,8 @@ class Factory:
             s.SetCurrentOption("n")
             s.speed = 20
             s.loop = False
-            st.AddState("shgfr", s)
+            s.ManualControl = True
+            st.AddState("shgfl", s)
 
             s = state.State(cobject)
             s.AddSurface("n", pygame.transform.flip(self.resources["wshotf.png"], True, False))
@@ -249,7 +257,8 @@ class Factory:
             s.AddSurface("d", pygame.transform.flip(self.resources["wshotfd.png"], True, False))
             s.speed = 20
             s.loop = False
-            st.AddState("shgfl", s)
+            s.ManualControl = True
+            st.AddState("shgfr", s)
 # Оружия.Стоп
             st.SetState("blinkl")
             cobject.AddAbility("stateMashine",st)
@@ -259,6 +268,7 @@ class Factory:
             sp.selectImage(0)
             sp.rect = sp.image.get_rect()
             cobject.pos = [x,y]
+            cobject.gui = self.Get("gui",args[1][0],args[1][1],args[0])
             cobject.AddAbility("playerControl",pControl.PlayerControl(cobject,args[0]))
             ph = physics.Physics(cobject)
             ph.SetGravity(True)
@@ -269,5 +279,6 @@ class Factory:
             for i in range(len(weapons)):
                 slt = slot.Slot(cobject,weapons[i])
                 slt.pos[0]+=i*(self.resources["guislot.png"].get_rect()[3]*GAMECFG.GetScreenCoeff()[0]+3)
+            cobject.AddObject(forseIndicator.ForceIndicator(pygame.Rect(x,1020*GAMECFG.GetScreenCoeff()[1],600*GAMECFG.GetScreenCoeff()[0],60*GAMECFG.GetScreenCoeff()[1])))
         OBJECTMANAGER.AddObject(cobject)
         return cobject

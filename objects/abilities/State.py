@@ -7,6 +7,8 @@ class State:
         self.speed = 20
         self.loop = True
         self.nextState = None
+        self.ManualControl = False
+        self.IndManControl = 15
 
     def AddSurface(self, option, surface):
         self.surfaces[option] = surface

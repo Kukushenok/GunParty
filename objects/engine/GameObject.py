@@ -19,3 +19,6 @@ class GameObject:
             update = getattr(element, "update", None)
             if callable(update):
                 element.update(dt)
+    def destroy(self):
+        self.abilities = {}
+        self.pos = []

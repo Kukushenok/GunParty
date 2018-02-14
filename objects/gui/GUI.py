@@ -1,10 +1,13 @@
 import pygame
+import objects.gui.ForceIndicator as forceIndicator
 class GUI:
     def __init__(self,keymask):
         self.slots = []
         self.selected=2
         self.keymask = keymask
-    def AddSlot(self,obj):
+    def AddObject(self,obj):
+        if isinstance(obj,forceIndicator.ForceIndicator):
+            self.forceInd = obj
         self.slots.append(obj)
     def render(self,screen):
         for e in self.slots:
@@ -21,4 +24,6 @@ class GUI:
                 self.selected = 0
             elif self.selected < 0:
                 self.selected = len(self.slots) - 1
+    def destroy(self):
+        self.slots = []
 

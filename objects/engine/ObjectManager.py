@@ -7,3 +7,7 @@ class ObjectManager:
         for e in self.objects: e.update(dt)
     def get_event(self,event):
         for e in self.objects: e.get_event(event)
+    def clear(self):
+        for e in self.objects:
+            e.destroy()
+        self.objects = []

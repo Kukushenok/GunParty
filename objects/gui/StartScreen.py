@@ -19,6 +19,7 @@ class StartScreen():
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
+                    self.gameEngine.running = False
                 for e in self.components: e.get_event(event)
             self.screen.blit(pygame.transform.scale(RESOURCES["background2.jpg"],(GAMECFG.screenwidth,GAMECFG.screenheight)),(0,0))
             for e in self.components: e.render()

@@ -11,7 +11,7 @@ class Slot():
                                                           int(tmpCoeff[1] * tmpRect[3])))
         self.pos = [0,0]
         self.gui = gui
-        gui.AddSlot(self)
+        gui.AddObject(self)
 
         if weapon:
             #tmpRect = RESOURCES[weapon].get_rect()

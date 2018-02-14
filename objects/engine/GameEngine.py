@@ -16,7 +16,7 @@ import objects.gui.ExitButton as exitButton
 class GameEngine:
     def __init__(self):
         pygame.init()
-        self.all_sprites = pygame.sprite.Group()
+        #self.all_sprites = pygame.sprite.Group()
         cnf = config.Config()
         self.fps = float(cnf.get("fps"))
         self.size = int(cnf.get("width")), int(cnf.get("height"))
@@ -58,14 +58,21 @@ class GameEngine:
         self.startScreen.AddComponent(exitButton.ExitButton(self.startScreen,pygame.Rect(50*cx,800*cy,200*cx,200*cy)))
         self.startScreen.AddComponent(text.Text(self.startScreen,(1500*cx,230*cy),"Gravity",int(50*cy),pygame.Color("black")))
         self.startScreen.run()
+        self.exitButton = exitButton.ExitButton(self,pygame.Rect(885*cx,0,150*cx,150*cy))
+
+    def run_start_screen(self):
+        self.startScreen.running = True
+        self.startScreen.run()
 
     def load_level(self,name):
+        OBJECTMANAGER.clear()
+        self.all_sprites = pygame.sprite.Group()
         self.factory = factory.Factory(RESOURCES,self.all_sprites)
         LEVELS.loadLevel(name)
         self.i = 0
-        self.player = self.factory.Get("player",10,10,self.cnf.getAsDict("player2KeyScheme"))
-        self.gui = self.factory.Get("gui",10,10,self.cnf.getAsDict("player2KeyScheme"))
-        self.player.GetAbility("playerControl").gui = self.gui
+        self.player = self.factory.Get("player",10,10,self.cnf.getAsDict("player2KeyScheme"),(10,10))
+
+        #self.player.GetAbility("playerControl").gui = self.gui
         #RESOURCES["walkcompress.wav"].play(99)
         self.sr = self.player.GetAbility("spriteRenderer")
         # self.player2 = self.factory.Get("player",60,30,{"left":pygame.K_a,"right":pygame.K_d,"up":pygame.K_w,"down":pygame.K_s})
@@ -81,7 +88,8 @@ class GameEngine:
         self.screen.fill((0, 0, 0))
         self.playGround.render(self.screen)
         self.all_sprites.draw(self.screen)
-        self.gui.render(self.screen)
+        self.player.gui.render(self.screen)
+        self.exitButton.render()
         pygame.display.flip()
         pygame.display.update()
 
@@ -95,6 +103,7 @@ class GameEngine:
                 if event.type == pygame.QUIT:
                     self.running = False
                 OBJECTMANAGER.get_event(event)
+                self.exitButton.get_event(event)
             self.clock.tick(self.fps)
 
             self.on_loop()

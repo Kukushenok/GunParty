@@ -46,8 +46,11 @@ class SpriteRenderer(pygame.sprite.Sprite):
             self.load(currentState, False);
 
         self.rect.x ,self.rect.y = self.gameObject.pos
-        self.frameCounter+= 1
-        if self.frameCounter%(int)((1/dt)/self.selectedState.speed)==0:
-            self.frameIndex +=1
-        self.selectImage(self.frameIndex)
+        if self.selectedState.ManualControl:
+            self.selectImage(self.selectedState.IndManControl)
+        else:
+            self.frameCounter+= 1
+            if self.frameCounter%(int)((1/dt)/self.selectedState.speed)==0:
+                self.frameIndex +=1
+            self.selectImage(self.frameIndex)
 
