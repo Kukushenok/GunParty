@@ -17,5 +17,18 @@ class StateMashine:
     def CurrentState(self):
         return  self.current_state
 
-    def SetState(self,name):
+    def SetState(self,name,option="n"):
         self.current_state = self.states[name]
+        self.current_state.SetCurrentOption(option)
+
+    def BindStates(self, stateNameFirst, stateNameSecond, option="n"):
+        first_state = self.states[stateNameFirst]
+        second_state = self.states[stateNameSecond]
+        first_state.SetCurrentOption(option)
+        second_state.SetCurrentOption(option)
+        first_state.nextState = second_state
+
+    def SetStateAsIs(self, state, option="n"):
+        self.current_state = state
+        self.current_state.SetCurrentOption(option)
+
