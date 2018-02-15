@@ -7,9 +7,13 @@ class StateMashine:
         for e in args:
             self.AddState(e[0],e[1])
         self.current_state = None
+        self.subscribers = []
 
     def AddState(self,stateName,state):
         self.states[stateName] = state
+
+    def AddSubscriber(self,subscriber):
+        self.subscribers.append(subscriber)
 
     def GetState(self,name):
         return self.states[name]
@@ -18,8 +22,12 @@ class StateMashine:
         return  self.current_state
 
     def SetState(self,name,option="n"):
-        self.current_state = self.states[name]
+        state = self.states[name]
+        if self.current_state != state:
+            for e in self.subscribers: e.updateState(state)
+        self.current_state = state
         self.current_state.SetCurrentOption(option)
+
 
     def BindStates(self, stateNameFirst, stateNameSecond, option="n"):
         first_state = self.states[stateNameFirst]
@@ -29,6 +37,8 @@ class StateMashine:
         first_state.nextState = second_state
 
     def SetStateAsIs(self, state, option="n"):
+        if self.current_state != state:
+            for e in self.subscribers: e.updateState(state)
         self.current_state = state
         self.current_state.SetCurrentOption(option)
 

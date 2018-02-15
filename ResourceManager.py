@@ -14,8 +14,11 @@ class ResourceManager(object):
     #Экземпляр класса, инкапсулирующий данные об уровнях
     __levelsInstance = None
 
-    #Экземпляр класса, инкапсулирующий ресурсы игры
+    #Экземпляр класса, инкапсулирующий ресурсы (картинки) игры
     __resourcesInstance = None
+
+    #Экземпляр класса, инкапсулирующий звуковые ресурсы игры
+    __SFXResourcesInstance = None
 
     #Экземпляр класса, инкапсулирующего дерево объектов игры
     __objectManagerInstance = None
@@ -40,6 +43,12 @@ class ResourceManager(object):
         if ResourceManager.__resourcesInstance == None:
             ResourceManager.__resourcesInstance = objects.level.Resources.Resources(os.path.join(os.getcwd(), "resources", "images")).resources
         return ResourceManager.__resourcesInstance
+
+    @staticmethod
+    def instSFXResources():
+        if ResourceManager.__SFXResourcesInstance == None:
+            ResourceManager.__SFXResourcesInstance = objects.level.Resources.Resources(os.path.join(os.getcwd(), "resources", "sfx")).resources
+        return ResourceManager.__SFXResourcesInstance
 
     @staticmethod
     def instObjectManager():

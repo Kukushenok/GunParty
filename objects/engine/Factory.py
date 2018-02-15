@@ -10,6 +10,7 @@ import objects.engine.GameObject
 import objects.gui.ForceIndicator
 import objects.gui.GUI
 import objects.gui.Slot
+import objects.abilities.Audible
 
 
 class Factory:
@@ -27,16 +28,21 @@ class Factory:
 
         cobject = objects.engine.GameObject.GameObject()
         st = objects.abilities.StateMashine.StateMashine(cobject)
+        audible = objects.abilities.Audible.Audible(cobject)
+        st.AddSubscriber(audible)
+        cobject.AddAbility("audible",audible)
         s = objects.abilities.State.State(cobject)
         s.AddSurface("u", self.resources["wwalku.png"])
         s.AddSurface("d", self.resources["wwalkd.png"])
         s.AddSurface("n", self.resources["wwalk.png"])
+        s.sound = ResourceManager.ResourceManager.instSFXResources()["walk.wav"]
         st.AddState("movel", s)
 
         s = objects.abilities.State.State(cobject)
         s.AddSurface("u", pygame.transform.flip(self.resources["wwalku.png"], True, False))
         s.AddSurface("d", pygame.transform.flip(self.resources["wwalkd.png"], True, False))
         s.AddSurface("n", pygame.transform.flip(self.resources["wwalk.png"], True, False))
+        s.sound = ResourceManager.ResourceManager.instSFXResources()["walk.wav"]
         st.AddState("mover", s)
 
         s = objects.abilities.State.State(cobject)
@@ -61,6 +67,7 @@ class Factory:
         s.SetCurrentOption("n")
         s.speed = 10
         s.loop = False
+        s.sound = ResourceManager.ResourceManager.instSFXResources()["jump.wav"]
         st.AddState("flyl", s)
 
         s = objects.abilities.State.State(cobject)
@@ -69,6 +76,7 @@ class Factory:
         s.AddSurface("d", pygame.transform.flip(self.resources["wflylnk.png"], True, False))
         s.speed = 10
         s.loop = False
+        s.sound = ResourceManager.ResourceManager.instSFXResources()["jump.wav"]
         st.AddState("flyr", s)
 
         # Приседание
