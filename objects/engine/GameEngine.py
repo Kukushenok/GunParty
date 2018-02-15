@@ -34,20 +34,28 @@ class GameEngine:
         self.startScreen = objects.gui.StartScreen.StartScreen(self,self.screen)
         cx = self.coeff[0]
         cy = self.coeff[1]
-        i = 0
+        i = -1
         page = 0
+        rect = None
         for e in ResourceManager.ResourceManager.intsLevels().levels.keys():
+            i += 1
             if i == 0:
-                self.startScreen.AddComponent(objects.gui.LevelSubnail.LevelSubnail(self.startScreen,e,pygame.Rect(20*cx,20*cy,320*cx,200*cy),page))
+                rect = pygame.Rect(20 * cx, 20 * cy, 320 * cx, 200 * cy)
             elif i == 1:
-                self.startScreen.AddComponent(objects.gui.LevelSubnail.LevelSubnail(self.startScreen, e, pygame.Rect(360 * cx, 20 * cy, 320 * cx, 200 * cy),page))
+                rect = pygame.Rect(360 * cx, 20 * cy, 320 * cx, 200 * cy)
             elif i == 2:
-                self.startScreen.AddComponent(objects.gui.LevelSubnail.LevelSubnail(self.startScreen, e, pygame.Rect(700 * cx, 20 * cy, 320 * cx, 200 * cy),page))
+                rect = pygame.Rect(700 * cx, 20 * cy, 320 * cx, 200 * cy)
             else:
                 i = -1
-                self.startScreen.AddComponent(objects.gui.LevelSubnail.LevelSubnail(self.startScreen, e, pygame.Rect(1040 * cx, 20 * cy, 320 * cx, 200 * cy),page))
-                page +=1
-            i+=1
+                rect = pygame.Rect(1040 * cx, 20 * cy, 320 * cx, 200 * cy)
+                page += 1
+            levelsub = objects.gui.LevelSubnail.LevelSubnail(self.startScreen,e,rect,page if i!=-1 else page-1)
+            txt = objects.gui.Text.Text(self.startScreen,(rect[0],rect[1]+200*cy),levelsub.level.config.get("name"),int(40*cy),pygame.Color("black"))
+            txt.page = page if i!=-1 else page-1
+            self.startScreen.AddComponent(levelsub)
+            self.startScreen.AddComponent(txt)
+
+
         self.startScreen.maxPage = page
         self.startScreen.AddComponent(objects.gui.SwitchPageButton.SwitchPageButton(self.startScreen,-1,pygame.Rect(1500*cx,40*cy,120*cx,150*cy)))
         self.startScreen.AddComponent(objects.gui.SwitchPageButton.SwitchPageButton(self.startScreen,1,pygame.Rect(1700*cx,40*cy,120*cx,150*cy)))
@@ -67,9 +75,12 @@ class GameEngine:
         self.factory = ResourceManager.ResourceManager.instFactory()
         self.factory.initFactory(self.all_sprites)
         ResourceManager.ResourceManager.intsLevels().loadLevel(name)
+        self.levelConfig = ResourceManager.ResourceManager.intsLevels().currlevel.config
         self.i = 0
-        self.player = self.factory.get("player",10,10,self.cnf.getAsDict("player2KeyScheme"),(10,10))
-
+        self.player = self.factory.get("player",int(self.levelConfig.get("player1x"))*self.coeff[0],int(self.levelConfig.get("player1y"))*self.coeff[1],self.cnf.getAsDict("player2KeyScheme"),(10,10),self.screen)
+        self.player.GetAbility("physics").G = float(self.levelConfig.get("gravity"))
+        self.player.GetAbility("physics").SetGravity(True)
+        #print(self.player.pos)
         #self.player.GetAbility("playerControl").gui = self.gui
         #RESOURCES["walkcompress.wav"].play(99)
         self.sr = self.player.GetAbility("spriteRenderer")
