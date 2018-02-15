@@ -340,9 +340,8 @@ class Factory:
         missPhys.Sx = 0.2
         missPhys.Sy = 0.2
         missPhys.SetGravity(True)
-
         wc = objects.abilities.WeaponControl.WeaponControl(cobject)
-
+        cobject.AddAbility("weaponControl", wc)
         missPhys.addSubscriber(wc)
         cobject.AddAbility("physics", missPhys)
         cobject.AddAbility("spriteRenderer", objects.abilities.SpriteRenderer.SpriteRenderer(self.group, cobject))

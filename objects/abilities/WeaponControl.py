@@ -3,6 +3,8 @@ import math
 class WeaponControl:
     def __init__(self,gameObject):
         self.gameObject = gameObject
+        self.takeOFFCoeff = 20
+        self.blastForce = 1000
 
     def updatePhisics(self, V, onGround):
         len = math.sqrt(V[0]**2+V[1]**2)

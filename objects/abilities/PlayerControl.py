@@ -104,9 +104,10 @@ class PlayerControl:
                     missleObj = ResourceManager.ResourceManager.instFactory().get("missile",
                                                                                   self.gameObject.pos[0],
                                                                                   self.gameObject.pos[1])
+                    weaponControl =missleObj.GetAbility("weaponControl")
                     angle = 5.625*(angleIndex+1);
                     forseVector = self.rotateVector([0,1],angle*(1 if self.left else -1));
-                    forseVector=[forseVector[0]*20* self.gameObject.gui.forceInd.coeff, forseVector[1]*20* self.gameObject.gui.forceInd.coeff]
+                    forseVector=[forseVector[0]* weaponControl.takeOFFCoeff* self.gameObject.gui.forceInd.coeff, forseVector[1]*weaponControl.takeOFFCoeff* self.gameObject.gui.forceInd.coeff]
                     missleObj.GetAbility("physics").MissleFire(1/30,forseVector)
                 self.fire_pressed = False
 
