@@ -1,6 +1,8 @@
 import pygame
-from objects.engine.Global import RESOURCES
-from objects.engine.Global import LEVELS
+
+import ResourceManager
+
+
 class Playground():
     def __init__(self, images):
 
@@ -9,12 +11,11 @@ class Playground():
         self.sky = images[1].convert_alpha()
         self.ground = images[2].convert_alpha()
 
-
-
-        self.tmpsurface = pygame.transform.scale(RESOURCES["blowmask.png"].convert_alpha(),(300,300))
+        self.tmpsurface = pygame.transform.scale(
+            ResourceManager.ResourceManager.instResources()["blowmask.png"].convert_alpha(), (300, 300))
         self.mask.blit(self.tmpsurface,(300,280),None,pygame.BLEND_RGBA_SUB)
-        LEVELS.currlevel.resources["GROUNDMASK"].image.blit(self.tmpsurface, (3001, 280), None, pygame.BLEND_RGBA_SUB)
-        LEVELS.currlevel.resources["GROUNDMASK"].update()
+        ResourceManager.ResourceManager.intsLevels().currlevel.resources["GROUNDMASK"].image.blit(self.tmpsurface, (3001, 280), None, pygame.BLEND_RGBA_SUB)
+        ResourceManager.ResourceManager.intsLevels().currlevel.resources["GROUNDMASK"].update()
 
 
     def render(self,screen):

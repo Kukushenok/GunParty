@@ -1,10 +1,10 @@
-from objects.engine.Global import LEVELS
-from objects.engine.Global import GAMECFG
+import ResourceManager
+
 class Physics:
 
     def __init__(self,gameO):
         self.gameObject = gameO
-        self.groundCollide = LEVELS.currlevel.resources["GROUNDMASK"]
+        self.groundCollide = ResourceManager.ResourceManager.intsLevels().currlevel.resources["GROUNDMASK"]
         self.M = 5
         self.G = 9.8
         self.coeff = 0.5
@@ -15,12 +15,12 @@ class Physics:
         self.GRNDFriction = [0,0]
         self.CurrForce = [0,0]
         self.V = [0,0]
-        self.ScaleMx = GAMECFG.screenwidth/20
-        self.ScaleMy = GAMECFG.screenheight/10
+        self.ScaleMx = ResourceManager.ResourceManager.instGameCFG().screenwidth / 20
+        self.ScaleMy = ResourceManager.ResourceManager.instGameCFG().screenheight / 10
         self.onGround = False
         self.walkSpeed = 1
-        self.xborders = [0, GAMECFG.screenwidth]
-        self.yborder = [0, GAMECFG.screenheight]
+        self.xborders = [0, ResourceManager.ResourceManager.instGameCFG().screenwidth]
+        self.yborder = [0, ResourceManager.ResourceManager.instGameCFG().screenheight]
 
     def SetGravity(self,gr):
         if gr: self.CurrForce = [0,self.M*self.G]

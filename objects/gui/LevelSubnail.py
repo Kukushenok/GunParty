@@ -1,10 +1,13 @@
 import pygame
-from objects.engine.Global import LEVELS
+
+import ResourceManager
+
+
 class LevelSubnail():
     def __init__(self,startScreen,levelname,size,page):
         self.page = page
         self.startScreen = startScreen
-        self.level = LEVELS.levels[levelname]
+        self.level = ResourceManager.ResourceManager.intsLevels().levels[levelname]
         self.levelname=levelname
         self.image = self.level.get_subnail(size)
         self.rect = size

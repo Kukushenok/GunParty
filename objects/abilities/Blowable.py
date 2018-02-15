@@ -1,4 +1,3 @@
-from objects.engine.Global import LEVELS
 class Blowable:
     def __init__(self,gameObject):
         self.gameObject = gameObject

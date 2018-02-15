@@ -1,5 +1,8 @@
 import pygame
-from objects.engine.Global import RESOURCES
+
+import ResourceManager
+
+
 class SwitchPageButton:
     def __init__(self,startScreen,dpage,rect):
         self.startScreen = startScreen
@@ -7,9 +10,10 @@ class SwitchPageButton:
         self.rect = rect
         self.work = True
         if dpage > 0:
-            self.image = pygame.transform.scale(RESOURCES["arrowR.png"],(rect[2],rect[3]))
+            self.image = pygame.transform.scale(ResourceManager.ResourceManager.instResources()["arrowR.png"], (rect[2], rect[3]))
         else:
-            self.image = pygame.transform.scale(pygame.transform.flip(RESOURCES["arrowR.png"],True,False), (rect[2], rect[3]))
+            self.image = pygame.transform.scale(pygame.transform.flip(
+                ResourceManager.ResourceManager.instResources()["arrowR.png"],True,False), (rect[2], rect[3]))
 
     def get_event(self,event):
         if not self.work: return None

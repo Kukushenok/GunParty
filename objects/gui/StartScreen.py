@@ -1,6 +1,7 @@
 import pygame
-from objects.engine.Global import GAMECFG
-from objects.engine.Global import RESOURCES
+
+import ResourceManager
+
 class StartScreen():
     def __init__(self,gameEngine,screen):
         self.screen = screen
@@ -21,6 +22,8 @@ class StartScreen():
                     self.running = False
                     self.gameEngine.running = False
                 for e in self.components: e.get_event(event)
-            self.screen.blit(pygame.transform.scale(RESOURCES["background2.jpg"],(GAMECFG.screenwidth,GAMECFG.screenheight)),(0,0))
+            self.screen.blit(pygame.transform.scale(ResourceManager.ResourceManager.instResources()["background2.jpg"],
+                                                    (ResourceManager.ResourceManager.instGameCFG().screenwidth,
+                                                     ResourceManager.ResourceManager.instGameCFG().screenheight)), (0, 0))
             for e in self.components: e.render()
             pygame.display.flip()

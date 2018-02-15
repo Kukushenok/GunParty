@@ -1,7 +1,8 @@
 import pygame
+
 class PlayerControl:
 
-    def __init__(self,gameO,scheme):
+    def __init__(self, gameO,scheme):
         self.scheme = scheme
         self.gameObject= gameO
         self.gui = self.gameObject.gui

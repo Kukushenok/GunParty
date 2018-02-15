@@ -1,17 +1,26 @@
 import pygame
-from objects.engine.Global import RESOURCES
+
+import ResourceManager
+
+
 class Scroller():
     def __init__(self,startScreen,size):
         self.startScreen = startScreen
         self.rect = size
-        self.image = pygame.transform.scale(pygame.transform.rotate(RESOURCES["textbox.png"],90) if size[2] < size[3] else RESOURCES["textbox.png"],(self.rect[2],self.rect[3]))
+        self.image = pygame.transform.scale(
+            pygame.transform.rotate(
+                ResourceManager.ResourceManager.instResources()["textbox.png"],90)
+            if size[2] < size[3] else ResourceManager.ResourceManager.instResources()["textbox.png"],
+            (self.rect[2],self.rect[3]))
         if size[2] > size[3]:
             self.scsize = self.rect[3]
-            self.scroller = pygame.transform.scale(RESOURCES["scroll.png"],(self.rect[3],self.rect[3]))
+            self.scroller = pygame.transform.scale(
+                ResourceManager.ResourceManager.instResources()["scroll.png"],(self.rect[3], self.rect[3]))
             self.vertical = False
         else:
             self.scsize = self.rect[2]
-            self.scroller = pygame.transform.scale(RESOURCES["scroll.png"], (self.rect[2], self.rect[2]))
+            self.scroller = pygame.transform.scale(
+                ResourceManager.ResourceManager.instResources()["scroll.png"], (self.rect[2], self.rect[2]))
             self.vertical = True
         self.scrollerpos = [size[0],size[1]]
         self.coeff = 0
