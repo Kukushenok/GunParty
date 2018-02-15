@@ -1,5 +1,6 @@
 import pygame
-
+import ResourceManager
+import math
 class PlayerControl:
 
     def __init__(self, gameO,scheme):
@@ -20,7 +21,7 @@ class PlayerControl:
         self.currweaponname = ""
         self.weapon = -1
         self.aim_speed = 10
-        self.fire_speed = 50
+        self.fire_speed = ResourceManager.ResourceManager.instGameCFG().fps
         self.armed = False
         self.frameCounter = 0
 
@@ -98,8 +99,22 @@ class PlayerControl:
             if event.key == self.scheme["aimdown"]:
                 self.aim_down_pressed = False
             if event.key == self.scheme["fire"]:
+                if self.armed:
+                    angleIndex = self.gameObject.GetAbility("stateMashine").CurrentState().IndManControl
+                    missleObj = ResourceManager.ResourceManager.instFactory().get("missile",
+                                                                                  self.gameObject.pos[0],
+                                                                                  self.gameObject.pos[1])
+                    angle = 5.625*(angleIndex+1);
+                    forseVector = self.rotateVector([0,1],angle*(1 if self.left else -1));
+                    forseVector=[forseVector[0]*20* self.gameObject.gui.forceInd.coeff, forseVector[1]*20* self.gameObject.gui.forceInd.coeff]
+                    missleObj.GetAbility("physics").MissleFire(1/30,forseVector)
                 self.fire_pressed = False
 
+    def rotateVector(self, vector, angle):
+        resultVector=[0,0]
+        resultVector[0] = vector[0] * math.cos(angle * math.pi/180) - vector[1] * math.sin(angle * math.pi / 180);
+        resultVector[1] = vector[1] * math.cos(angle * math.pi / 180) + vector[0] * math.sin(angle * math.pi / 180);
+        return resultVector
 
     def LoadWeapon(self,name="",idx=-1, nextState=""):
         if self.weapon==-1 and self.currweaponname!="" and name!="":

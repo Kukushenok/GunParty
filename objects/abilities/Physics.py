@@ -21,6 +21,10 @@ class Physics:
         self.walkSpeed = 1
         self.xborders = [0, ResourceManager.ResourceManager.instGameCFG().screenwidth]
         self.yborder = [0, ResourceManager.ResourceManager.instGameCFG().screenheight]
+        self.subscribers = []
+
+    def addSubscriber(self, subscriber):
+        self.subscribers.append(subscriber)
 
     def SetGravity(self,gr):
         if gr: self.CurrForce = [0,self.M*self.G]
@@ -62,6 +66,9 @@ class Physics:
             self.gameObject.pos[0] -= dsx
             self.gameObject.pos[1] -= dsy
             self.V = [0,0]
+        #Обновляем состояние наблюдателей
+        for e in self.subscribers:
+            e.updatePhisics(self.V, self.onGround)
 
     def SetOnGround(self, ground ):
         self.onGround = ground
@@ -109,4 +116,10 @@ class Physics:
         elif dir=="left":
             xForse = -450
         self.AddForce([xForse, -700], 1 / 30, True)
+        self.SetOnGround(False)
+
+
+    def MissleFire(self, dt, forceVector):
+        xForse = 0
+        self.AddForce(forceVector, 1 / 30)
         self.SetOnGround(False)

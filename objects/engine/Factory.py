@@ -6,6 +6,7 @@ import objects.abilities.PlayerControl
 import objects.abilities.SpriteRenderer
 import objects.abilities.State
 import objects.abilities.StateMashine
+import objects.abilities.WeaponControl
 import objects.engine.GameObject
 import objects.gui.ForceIndicator
 import objects.gui.GUI
@@ -324,16 +325,27 @@ class Factory:
         s.AddSurface("n", self.resources["missile.png"])
         s.AddSurface("u", self.resources["missile.png"])
         s.AddSurface("d", self.resources["missile.png"])
-        s.ManualControl = False
+        s.loop = False
+        s.ManualControl = True
         st.AddState("normal", s)
+        st.SetState("normal");
         cobject.AddAbility("stateMashine", st)
         missPhys = objects.abilities.Physics.Physics(cobject)
         missPhys.M = 2
         missPhys.coeff = 0.2
         missPhys.Sx = 0.2
         missPhys.Sy = 0.2
+        missPhys.SetGravity(True)
+
+        wc = objects.abilities.WeaponControl.WeaponControl(cobject)
+
+        missPhys.addSubscriber(wc)
         cobject.AddAbility("physics", missPhys)
         cobject.AddAbility("spriteRenderer", objects.abilities.SpriteRenderer.SpriteRenderer(self.group, cobject))
+        sp = cobject.GetAbility("spriteRenderer")
+        sp.selectImage(0)
+        sp.rect = sp.image.get_rect()
+        cobject.pos = [x, y]
         return cobject
 
 

@@ -1,4 +1,5 @@
 import pygame
+
 class SpriteRenderer(pygame.sprite.Sprite):
 
     def __init__(self,group,gameObject):

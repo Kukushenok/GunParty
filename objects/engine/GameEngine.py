@@ -10,7 +10,6 @@ import objects.gui.Text
 import objects.level.Playground
 import tools.config
 
-
 class GameEngine:
     def __init__(self):
         pygame.init()
@@ -18,7 +17,7 @@ class GameEngine:
         self.fps = float(cnf.get("fps"))
         self.size = int(cnf.get("width")), int(cnf.get("height"))
         if cnf.get("fullscreen") != "0":
-            self.screen = pygame.display.set_mode(self.size,pygame.FULLSCREEN)
+            self.screen = pygame.display.set_mode(self.size,pygame.FULLSCREEN|pygame.DOUBLEBUF)
         else:
             self.screen = pygame.display.set_mode(self.size)
         self.clock = pygame.time.Clock()
