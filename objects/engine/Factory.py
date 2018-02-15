@@ -12,7 +12,8 @@ import objects.gui.ForceIndicator
 import objects.gui.GUI
 import objects.gui.Slot
 import objects.abilities.Audible
-
+import objects.abilities.Damagable
+import objects.gui.PlayerInfo
 
 class Factory:
 
@@ -28,6 +29,8 @@ class Factory:
     def createPlayer(self, x, y, *args):
 
         cobject = objects.engine.GameObject.GameObject()
+        cobject.AddAbility("damagable",objects.abilities.Damagable.Damagable(cobject))
+        #cobject.GetAbility("damagable").lifetime = 5
         st = objects.abilities.StateMashine.StateMashine(cobject)
         audible = objects.abilities.Audible.Audible(cobject)
         st.AddSubscriber(audible)
@@ -285,6 +288,7 @@ class Factory:
         sp.rect = sp.image.get_rect()
         cobject.pos = [x, y]
         cobject.gui = self.get("gui", args[1][0], args[1][1], args[0])
+        cobject.gui.AddObject(objects.gui.PlayerInfo.PlayerInfo(cobject))
         cobject.AddAbility("playerControl", objects.abilities.PlayerControl.PlayerControl(cobject, args[0]))
         ph = objects.abilities.Physics.Physics(cobject)
         ph.SetGravity(True)

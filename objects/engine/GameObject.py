@@ -3,6 +3,8 @@ class GameObject:
     def __init__(self,*args):
         self.abilities = {}
         self.pos = [0,0]
+        self.screen = None
+        self.gui = None
         for e in args:
             self.AddAbility(e[0],e[1])
     def AddAbility(self,abilityName,ability):
