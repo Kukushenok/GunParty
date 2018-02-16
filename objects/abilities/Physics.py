@@ -5,12 +5,21 @@ class Physics:
     def __init__(self,gameO):
         self.gameObject = gameO
         self.groundCollide = ResourceManager.ResourceManager.intsLevels().currlevel.resources["GROUNDMASK"]
+        #Масса объекта
         self.M = 5
+        #Гравитационная постоянная
         self.G = 9.8
+        #Коэффициент обтекаемости
         self.coeff = 0.5
+        #Плотность воздуха
         self.AirRo = 1.2
+        #Горизонтальная площадь поверхности тела
         self.Sx = 1
+        #Вертикальная площадь поверхности тела
         self.Sy = 3
+        #Коэффициент упругости 0 - не упругое 1 - полностью упругое
+        self.elasticity=0
+        #Коэффициент трения
         self.KFriction = 0.95
         self.GRNDFriction = [0,0]
         self.CurrForce = [0,0]
@@ -65,7 +74,9 @@ class Physics:
             self.SetOnGround(True)
             self.gameObject.pos[0] -= dsx
             self.gameObject.pos[1] -= dsy
-            self.V = [0,0]
+            self.V = [self.V[0]*self.elasticity*-1,0]
+            if self.V[1]>=0:
+                self.onGround=True
         #Обновляем состояние наблюдателей
         for e in self.subscribers:
             e.updatePhisics(self.V, self.onGround)
@@ -119,7 +130,7 @@ class Physics:
         self.SetOnGround(False)
 
 
-    def MissleFire(self, dt, forceVector):
+    def weaponFire(self, dt, forceVector):
         xForse = 0
         self.AddForce(forceVector, 1 / 30)
         self.SetOnGround(False)

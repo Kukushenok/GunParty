@@ -14,5 +14,5 @@ class PlayerInfo():
         self.text = self.font.render(str(self.gameObject.GetAbility("damagable").hp),True,pygame.Color("red"))
         self.framerect = self.text.get_rect()
         #screen.blit(self.image,(self.gameObject.pos[0]+self.framerect.width,self.gameObject.pos[1]-10))
-        screen.blit(self.text,(self.gameObject.pos[0]+self.framerect.width,self.gameObject.pos[1]-10))
+        screen.blit(self.text,(self.gameObject.pos[0]+30-self.framerect.width//2,self.gameObject.pos[1]-10))
 

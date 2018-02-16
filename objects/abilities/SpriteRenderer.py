@@ -8,6 +8,7 @@ class SpriteRenderer(pygame.sprite.Sprite):
         self.gameObject = gameObject
         self.image = pygame.Surface([60, 60])
         self.load(gameObject.GetAbility("stateMashine").CurrentState())
+        self.stop = False
 
     def load(self, state, animationStart=True):
         self.selectedState = state
@@ -43,13 +44,13 @@ class SpriteRenderer(pygame.sprite.Sprite):
             self.load(currentState);
         elif self.selectedOption != currentState.currentOption:
             self.load(currentState, False);
-
         self.rect.x ,self.rect.y = self.gameObject.pos
         if self.selectedState.ManualControl:
             self.selectImage(self.selectedState.IndManControl)
-        else:
-            self.frameCounter+= 1
-            if self.frameCounter%(int)((1/dt)/self.selectedState.speed)==0:
-                self.frameIndex +=1
+        else :
+            if not self.stop:
+                self.frameCounter+= 1
+                if self.frameCounter%(int)((1/dt)/self.selectedState.speed)==0:
+                    self.frameIndex +=1
             self.selectImage(self.frameIndex)
 

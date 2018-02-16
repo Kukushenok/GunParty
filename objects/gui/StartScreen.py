@@ -22,7 +22,7 @@ class StartScreen():
                     self.running = False
                     self.gameEngine.running = False
                 for e in self.components: e.get_event(event)
-            self.screen.blit(pygame.transform.scale(ResourceManager.ResourceManager.instResources()["background2.jpg"],
+            self.screen.blit(pygame.transform.scale(ResourceManager.ResourceManager.instResources()["background.png"],
                                                     (ResourceManager.ResourceManager.instGameCFG().screenwidth,
                                                      ResourceManager.ResourceManager.instGameCFG().screenheight)), (0, 0))
             for e in self.components: e.render()

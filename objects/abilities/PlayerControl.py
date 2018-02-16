@@ -64,8 +64,19 @@ class PlayerControl:
                 self.aim_down_pressed = True
                 if not self.jump and self.armed:
                     self.gameObject.GetAbility("stateMashine").SetState(self.currweaponname+("l" if self.left else "r"))
-                    self.gameObject.GetAbility("stateMashine").CurrentState().IndManControl -=1
             if event.key == self.scheme["fire"]:
+                if self.armed and not self.jump:
+                    if self.gui.selected == 2:
+                        angleIndex = self.gameObject.GetAbility("stateMashine").CurrentState().IndManControl
+                        weaponObj = ResourceManager.ResourceManager.instFactory().get("bullet",
+                                                                                      self.gameObject.pos[0],
+                                                                                      self.gameObject.pos[1])
+                        weaponControl = weaponObj.GetAbility("weaponControl")
+                        angle = 5.625 * (angleIndex + 1)
+                        forseVector = self.rotateVector([0, 1], angle * (1 if self.left else -1))
+                        forseVector = [forseVector[0] * weaponControl.takeOFFCoeff*2,
+                                       forseVector[1] * weaponControl.takeOFFCoeff*2]
+                        weaponObj.GetAbility("physics").weaponFire(1 / 30, forseVector)
                 self.fire_pressed = True
 
         if event.type == pygame.KEYUP:
@@ -89,26 +100,43 @@ class PlayerControl:
                 self.down_pressed = False
             if event.key == self.scheme["switchweaponl"] or event.key == self.scheme["switchweaponr"]:
                 if self.gui.selected == 0 and self.currweaponname != "baz" and not self.block_anim:
+                    self.gui.forceInd.enabled = True
                     self.LoadWeapon("baz", self.gui.selected)
                 if self.gui.selected == 1 and self.currweaponname != "grn" and not self.block_anim:
+                    self.gui.forceInd.enabled = True
                     self.LoadWeapon("grn", self.gui.selected)
                 if self.gui.selected == 2 and self.currweaponname != "shg" and not self.block_anim:
                     self.LoadWeapon("shg", self.gui.selected)
+                    self.gui.forceInd.enabled = False
             if event.key == self.scheme["aimup"]:
                 self.aim_up_pressed = False
             if event.key == self.scheme["aimdown"]:
                 self.aim_down_pressed = False
             if event.key == self.scheme["fire"]:
-                if self.armed:
-                    angleIndex = self.gameObject.GetAbility("stateMashine").CurrentState().IndManControl
-                    missleObj = ResourceManager.ResourceManager.instFactory().get("missile",
-                                                                                  self.gameObject.pos[0],
-                                                                                  self.gameObject.pos[1])
-                    weaponControl =missleObj.GetAbility("weaponControl")
-                    angle = 5.625*(angleIndex+1);
-                    forseVector = self.rotateVector([0,1],angle*(1 if self.left else -1));
-                    forseVector=[forseVector[0]* weaponControl.takeOFFCoeff* self.gameObject.gui.forceInd.coeff, forseVector[1]*weaponControl.takeOFFCoeff* self.gameObject.gui.forceInd.coeff]
-                    missleObj.GetAbility("physics").MissleFire(1/30,forseVector)
+                if self.armed and not self.jump:
+                    if self.gui.selected == 0:
+                        angleIndex = self.gameObject.GetAbility("stateMashine").CurrentState().IndManControl
+                        weaponObj = ResourceManager.ResourceManager.instFactory().get("missile",
+                                                                                      self.gameObject.pos[0],
+                                                                                      self.gameObject.pos[1])
+                        weaponControl =weaponObj.GetAbility("weaponControl")
+                        angle = 5.625*(angleIndex+1)
+                        forseVector = self.rotateVector([0,1],angle*(1 if self.left else -1))
+                        forseVector=[forseVector[0]* weaponControl.takeOFFCoeff* self.gameObject.gui.forceInd.coeff, forseVector[1]*weaponControl.takeOFFCoeff* self.gameObject.gui.forceInd.coeff]
+                        weaponObj.GetAbility("physics").weaponFire(1/30,forseVector)
+
+                    elif self.gui.selected == 1:
+                        angleIndex = self.gameObject.GetAbility("stateMashine").CurrentState().IndManControl
+                        weaponObj = ResourceManager.ResourceManager.instFactory().get("grenade",
+                                                                                      self.gameObject.pos[0],
+                                                                                      self.gameObject.pos[1])
+                        weaponControl = weaponObj.GetAbility("weaponControl")
+                        angle = 5.625 * (angleIndex + 1)
+                        forseVector = self.rotateVector([0, 1], angle * (1 if self.left else -1))
+                        forseVector = [forseVector[0] * weaponControl.takeOFFCoeff * self.gameObject.gui.forceInd.coeff,
+                                       forseVector[1] * weaponControl.takeOFFCoeff * self.gameObject.gui.forceInd.coeff]
+                        weaponObj.GetAbility("physics").weaponFire(1 / 30, forseVector)
+
                 self.fire_pressed = False
 
     def rotateVector(self, vector, angle):
@@ -148,7 +176,7 @@ class PlayerControl:
         #     self.block = False
         if not self.jump and self.fire_pressed:
             self.frameCounter+=1
-            if self.frameCounter % int(((1 / dt) / self.fire_speed)) == 0:
+            if self.frameCounter % int(((1 / dt) / self.fire_speed)) == 0 and self.gameObject.gui.forceInd.coeff<100:
                 self.gameObject.gui.forceInd.coeff += 1
         else:
             self.gameObject.gui.forceInd.coeff = 0

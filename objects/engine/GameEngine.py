@@ -100,7 +100,7 @@ class GameEngine:
         self.screen.fill((0, 0, 0))
         self.playGround.render(self.screen)
         self.all_sprites.draw(self.screen)
-        self.player.gui.render(self.screen)
+        ResourceManager.ResourceManager.instObjectManager().renderGUIs(self.screen)
         self.exitButton.render()
         pygame.display.flip()
         pygame.display.update()

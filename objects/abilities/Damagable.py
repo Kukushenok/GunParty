@@ -8,5 +8,4 @@ class Damagable():
         if self.lifetime != -1:
             if self.lifetime >= 0:
                 self.lifetime -=dt
-            else:
-                self.hp = 0
+                self.hp = int(self.lifetime)

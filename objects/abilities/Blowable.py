@@ -5,4 +5,5 @@ class Blowable:
         self.blowOnTimer = None
         self.blowOnTouch = False
     def update(self):
-        if self.gameObject.GetAbility("physics").OnGround(): pass
+        if self.gameObject.GetAbility("physics").OnGround():
+            print("На земле")

@@ -24,6 +24,21 @@ class Factory:
     def initFactory(self, group ):
         self.resources = ResourceManager.ResourceManager.instResources()
         self.group = group
+    #Метод для получения обьектов нужного типа
+    def get(self,type,x,y,*args):
+        cobject = None
+        if type == "player":
+            cobject = self.createPlayer(x, y, *args)
+        elif type == "gui":
+            cobject = self.createGUI(x, y, *args)
+        elif type == "missile":
+            cobject = self.createBazMissile(x, y, *args)
+        elif type =="grenade":
+            cobject = self.createGrenade(x, y, *args)
+        elif type == "bullet":
+            cobject = self.createBullet(x, y, *args)
+        ResourceManager.ResourceManager.instObjectManager().AddObject(cobject)
+        return cobject
 
     #Создание объекта игрока
     def createPlayer(self, x, y, *args):
@@ -291,6 +306,7 @@ class Factory:
         cobject.gui.AddObject(objects.gui.PlayerInfo.PlayerInfo(cobject))
         cobject.AddAbility("playerControl", objects.abilities.PlayerControl.PlayerControl(cobject, args[0]))
         ph = objects.abilities.Physics.Physics(cobject)
+        ph.elasticity=0.3
         ph.SetGravity(True)
         cobject.AddAbility("physics", ph)
         return cobject
@@ -308,20 +324,6 @@ class Factory:
                         60 * ResourceManager.ResourceManager.instGameCFG().GetScreenCoeff()[1])))
         return cobject
 
-
-    def get(self,type,x,y,*args):
-
-        cobject = None
-        if type == "player":
-            cobject = self.createPlayer(x, y, *args)
-        elif type == "gui":
-            cobject = self.createGUI(x, y, *args)
-        elif type == "missile":
-            cobject = self.createBazMissile(x, y, *args)
-        ResourceManager.ResourceManager.instObjectManager().AddObject(cobject)
-        return cobject
-
-
     def createBazMissile(self, x, y, *args):
         cobject = objects.engine.GameObject.GameObject()
         st = objects.abilities.StateMashine.StateMashine(cobject)
@@ -332,7 +334,7 @@ class Factory:
         s.loop = False
         s.ManualControl = True
         st.AddState("normal", s)
-        st.SetState("normal");
+        st.SetState("normal")
         cobject.AddAbility("stateMashine", st)
         missPhys = objects.abilities.Physics.Physics(cobject)
         missPhys.M = 2
@@ -352,3 +354,69 @@ class Factory:
         return cobject
 
 
+    def createGrenade(self, x, y, *args):
+        cobject = objects.engine.GameObject.GameObject()
+        st = objects.abilities.StateMashine.StateMashine(cobject)
+        s = objects.abilities.State.State(cobject)
+        s.AddSurface("n", self.resources["grenade.png"])
+        s.AddSurface("u", self.resources["grenade.png"])
+        s.AddSurface("d", self.resources["grenade.png"])
+        s.loop = True
+        s.ManualControl = False
+        st.AddState("normal", s)
+        st.SetState("normal")
+        cobject.AddAbility("stateMashine", st)
+        grenagePhys = objects.abilities.Physics.Physics(cobject)
+        grenagePhys.M = 1
+        grenagePhys.coeff = 0.1
+        grenagePhys.Sx = 0.1
+        grenagePhys.Sy = 0.1
+        grenagePhys.SetGravity(True)
+        grenagePhys.elasticity=0.5
+        wc = objects.abilities.WeaponControl.WeaponControl(cobject)
+        wc.killOnGround = False
+        cobject.AddAbility("weaponControl", wc)
+        grenagePhys.addSubscriber(wc)
+        cobject.AddAbility("physics", grenagePhys)
+        cobject.AddAbility("spriteRenderer", objects.abilities.SpriteRenderer.SpriteRenderer(self.group, cobject))
+        sp = cobject.GetAbility("spriteRenderer")
+        sp.selectImage(0)
+        sp.rect = sp.image.get_rect()
+        cobject.pos = [x, y]
+        damagable = objects.abilities.Damagable.Damagable(cobject)
+        damagable.lifetime = 6
+        cobject.AddAbility("damagable",damagable)
+        cobject.gui = objects.gui.GUI.GUI(None)
+        cobject.gui.AddObject(objects.gui.PlayerInfo.PlayerInfo(cobject))
+        return cobject
+
+    def createBullet(self, x, y, *args):
+        cobject = objects.engine.GameObject.GameObject()
+        st = objects.abilities.StateMashine.StateMashine(cobject)
+        s = objects.abilities.State.State(cobject)
+        s.AddSurface("n", self.resources["bullet.png"])
+        s.AddSurface("u", self.resources["bullet.png"])
+        s.AddSurface("d", self.resources["bullet.png"])
+        s.loop = False
+        s.ManualControl = False
+        st.AddState("normal", s)
+        st.SetState("normal")
+        cobject.AddAbility("stateMashine", st)
+        bulletPhys = objects.abilities.Physics.Physics(cobject)
+        bulletPhys.M = 0.1
+        bulletPhys.coeff = 0.01
+        bulletPhys.Sx = 0.01
+        bulletPhys.Sy = 0.01
+        bulletPhys.SetGravity(True)
+        bulletPhys.elasticity=0
+        wc = objects.abilities.WeaponControl.WeaponControl(cobject)
+        wc.takeOFFCoeff = 40
+        cobject.AddAbility("weaponControl", wc)
+        bulletPhys.addSubscriber(wc)
+        cobject.AddAbility("physics", bulletPhys)
+        cobject.AddAbility("spriteRenderer", objects.abilities.SpriteRenderer.SpriteRenderer(self.group, cobject))
+        sp = cobject.GetAbility("spriteRenderer")
+        sp.selectImage(0)
+        sp.rect = sp.image.get_rect()
+        cobject.pos = [x, y]
+        return cobject

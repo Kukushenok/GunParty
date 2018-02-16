@@ -15,6 +15,7 @@ class GUI:
     def update(self,dt):
         pass
     def get_event(self,event):
+        if not self.keymask: return None
         if event.type == pygame.KEYDOWN:
             if event.key == self.keymask["switchweaponl"]:
                 self.selected-=1
