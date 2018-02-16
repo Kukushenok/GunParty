@@ -26,6 +26,8 @@ class ResourceManager(object):
     #Экземпляр класса фабрики объектов игры
     __factoryInstance = None
 
+    playground = None
+
     @staticmethod
     def instGameCFG():
         if ResourceManager.__gameCFGinstance == None:

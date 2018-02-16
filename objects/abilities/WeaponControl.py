@@ -1,11 +1,13 @@
 import pygame
 import math
+import ResourceManager
 class WeaponControl:
     def __init__(self,gameObject):
         self.gameObject = gameObject
         self.takeOFFCoeff = 20
-        self.blastForce = 1000
+        self.blastForce = 300
         self.killOnGround = True
+        self.hp = -1
 
     def updatePhisics(self, V, onGround):
         len = math.sqrt(V[0]**2+V[1]**2)
@@ -19,7 +21,20 @@ class WeaponControl:
             elif V[0]<0:
                 self.gameObject.GetAbility("stateMashine").CurrentState().IndManControl =32-(int)((alpha / 360) * 32)
                 pass
-        if onGround and  self.killOnGround:
+        try:
+            self.hp = self.gameObject.GetAbility("damagable").hp
+        except Exception: pass
+        if (onGround and  self.killOnGround) or (self.hp !=-1 and self.hp < 1):
+            blowd = int(self.blastForce*min(ResourceManager.ResourceManager.instGameCFG().GetScreenCoeff()))
+            pos = self.gameObject.pos[0]-blowd//2+30,self.gameObject.pos[1]-blowd//2+30
+            self.tmpsurface = pygame.transform.scale(
+                ResourceManager.ResourceManager.instResources()["blowmask.png"].convert_alpha(), (blowd,blowd ))
+            ResourceManager.ResourceManager.playground.mask.blit(self.tmpsurface, (pos), None, pygame.BLEND_RGBA_SUB)
+
+            ResourceManager.ResourceManager.intsLevels().currlevel.resources["GROUNDMASK"].image.blit(self.tmpsurface,
+                                                                                                      pos, None,
+                                                                                                      pygame.BLEND_RGBA_SUB)
+            ResourceManager.ResourceManager.intsLevels().currlevel.resources["GROUNDMASK"].update()
             self.gameObject.kill()
         elif onGround:
             if V[0]<0.1 or V[1]<0.1 :

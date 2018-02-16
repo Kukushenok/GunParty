@@ -317,6 +317,7 @@ class Factory:
         weapons = ["bazookaIcon.png", "grenadeIcon.png", "shotgunIcon.png"]
         for i in range(len(weapons)):
             slt = objects.gui.Slot.Slot(cobject, weapons[i])
+            slt.pos = [x,y]
             slt.pos[0] += i * (self.resources["guislot.png"].get_rect()[3] * ResourceManager.ResourceManager.instGameCFG().GetScreenCoeff()[0] + 3)
         cobject.AddObject(objects.gui.ForceIndicator.ForceIndicator(
             pygame.Rect(x, 1020 * ResourceManager.ResourceManager.instGameCFG().GetScreenCoeff()[1], 600 *
@@ -411,6 +412,7 @@ class Factory:
         bulletPhys.elasticity=0
         wc = objects.abilities.WeaponControl.WeaponControl(cobject)
         wc.takeOFFCoeff = 40
+        wc.blastForce = 150
         cobject.AddAbility("weaponControl", wc)
         bulletPhys.addSubscriber(wc)
         cobject.AddAbility("physics", bulletPhys)

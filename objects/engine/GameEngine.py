@@ -76,9 +76,12 @@ class GameEngine:
         ResourceManager.ResourceManager.intsLevels().loadLevel(name)
         self.levelConfig = ResourceManager.ResourceManager.intsLevels().currlevel.config
         self.i = 0
-        self.player = self.factory.get("player",int(self.levelConfig.get("player1x"))*self.coeff[0],int(self.levelConfig.get("player1y"))*self.coeff[1],self.cnf.getAsDict("player2KeyScheme"),(10,10),self.screen)
+        self.player = self.factory.get("player",int(self.levelConfig.get("player2x"))*self.coeff[0],int(self.levelConfig.get("player2y"))*self.coeff[1],self.cnf.getAsDict("player2KeyScheme"),(10*self.coeff[0],10*self.coeff[1]),self.screen)
         self.player.GetAbility("physics").G = float(self.levelConfig.get("gravity"))
         self.player.GetAbility("physics").SetGravity(True)
+        self.player2 = self.factory.get("player",int(self.levelConfig.get("player1x"))*self.coeff[0],int(self.levelConfig.get("player1y"))*self.coeff[1],self.cnf.getAsDict("player1KeyScheme"),(1600*self.coeff[0],10*self.coeff[1]),self.screen)
+        self.player2.GetAbility("physics").G = float(self.levelConfig.get("gravity"))
+        self.player2.GetAbility("physics").SetGravity(True)
         #print(self.player.pos)
         #self.player.GetAbility("playerControl").gui = self.gui
         #RESOURCES["walkcompress.wav"].play(99)
@@ -92,6 +95,7 @@ class GameEngine:
                 ResourceManager.ResourceManager.intsLevels().currlevel.resources["background.png"],self.size),
              pygame.transform.scale(
                  ResourceManager.ResourceManager.intsLevels().currlevel.resources["ground_mask.png"],self.size)])
+        ResourceManager.ResourceManager.playground = self.playGround
 
     def on_loop(self):
         ResourceManager.ResourceManager.instObjectManager().update(1 / self.fps)
