@@ -21,13 +21,6 @@ class GameObject:
                 ability.get_event(event)
             i+=1
 
-
-
-
-        # for element in self.abilities.values():
-        #     get_event = getattr(element, "get_event", None)
-        #     if callable(get_event):
-        #         element.get_event(event)
     def renderGUI(self,screen):
         if not self.gui: return None
         self.gui.render(screen)
@@ -41,10 +34,6 @@ class GameObject:
                 ability.update(dt)
             i+=1
 
-        # for element in self.abilities.values():
-        #     update = getattr(element, "update", None)
-        #     if callable(update):
-        #         element.update(dt)
     def destroy(self):
         self.abilities = {}
         self.pos = []

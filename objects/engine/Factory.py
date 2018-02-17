@@ -412,7 +412,7 @@ class Factory:
         bulletPhys.elasticity=0
         wc = objects.abilities.WeaponControl.WeaponControl(cobject)
         wc.takeOFFCoeff = 40
-        wc.blastForce = 150
+        wc.blastForce = 200
         cobject.AddAbility("weaponControl", wc)
         bulletPhys.addSubscriber(wc)
         cobject.AddAbility("physics", bulletPhys)

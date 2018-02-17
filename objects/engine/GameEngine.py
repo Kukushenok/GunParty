@@ -82,12 +82,7 @@ class GameEngine:
         self.player2 = self.factory.get("player",int(self.levelConfig.get("player1x"))*self.coeff[0],int(self.levelConfig.get("player1y"))*self.coeff[1],self.cnf.getAsDict("player1KeyScheme"),(1600*self.coeff[0],10*self.coeff[1]),self.screen)
         self.player2.GetAbility("physics").G = float(self.levelConfig.get("gravity"))
         self.player2.GetAbility("physics").SetGravity(True)
-        #print(self.player.pos)
-        #self.player.GetAbility("playerControl").gui = self.gui
-        #RESOURCES["walkcompress.wav"].play(99)
         self.sr = self.player.GetAbility("spriteRenderer")
-        # self.player2 = self.factory.Get("player",60,30,{"left":pygame.K_a,"right":pygame.K_d,"up":pygame.K_w,"down":pygame.K_s})
-        # self.sr2 = self.player2.GetAbility("spriteRenderer")
         self.playGround = objects.level.Playground.Playground(
             [pygame.transform.scale(
                 ResourceManager.ResourceManager.intsLevels().currlevel.resources["ground.png"],self.size),

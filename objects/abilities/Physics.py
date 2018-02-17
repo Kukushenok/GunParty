@@ -29,8 +29,9 @@ class Physics:
         self.onGround = False
         self.walkSpeed = 1
         self.xborders = [0, ResourceManager.ResourceManager.instGameCFG().screenwidth]
-        self.yborder = [0, ResourceManager.ResourceManager.instGameCFG().screenheight]
+        self.yborders = [0, ResourceManager.ResourceManager.instGameCFG().screenheight]
         self.subscribers = []
+        self.maxSpeed =[100,100]
 
     def addSubscriber(self, subscriber):
         self.subscribers.append(subscriber)
@@ -40,15 +41,16 @@ class Physics:
         else: self.CurrForce = [0,0]
 
     def TouchBorders(self,futpos):
-        if futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0] or futpos[1]<=self.yborder[0] or \
-                        futpos[1]+60 >= self.yborder[1]:
-            if all([futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0],futpos[1]<=self.yborder[0] or
-                            futpos[1]+60 >= self.yborder[1]]):
+        if futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0] or futpos[1]<=self.yborders[0] or \
+                        futpos[1]+60 >= self.yborders[1]:
+            if all([futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0], futpos[1]<=self.yborders[0] or
+                            futpos[1]+60 >= self.yborders[1]]):
                 return "xy"
             return "x" if futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0] else "y"
         return ""
 
     def update(self,dt):
+        self.V=[min(self.V[0],self.maxSpeed[0]), min(self.V[1], self.maxSpeed[1])]
         self.AirForse = [0.5 * self.coeff * self.AirRo * self.Sy * self.V[0] ** 2 * (-1 if self.V[0] > 0 else 1),
                          0.5 * self.coeff * self.AirRo * self.Sx * self.V[1] ** 2 * (-1 if self.V[1] > 0 else 1)]
         self.GRNDFriction = [abs(self.GRNDFriction[0]) * (-1 if self.V[0] > 0 else 1),
@@ -69,7 +71,6 @@ class Physics:
                 self.gameObject.pos[1] -= dsy
         else:
             self.TouchingBorders = ""
-
         if self.GroundCollide(self.gameObject.pos):
             self.SetOnGround(True)
             self.gameObject.pos[0] -= dsx
@@ -77,6 +78,7 @@ class Physics:
             self.V = [self.V[0]*self.elasticity*-1,0]
             if self.V[1]>=0:
                 self.onGround=True
+        self.V = [min(self.V[0], self.maxSpeed[0]), min(self.V[1], self.maxSpeed[1])]
         #Обновляем состояние наблюдателей
         for e in self.subscribers:
             e.updatePhisics(self.V, self.onGround)
@@ -131,6 +133,5 @@ class Physics:
 
 
     def weaponFire(self, dt, forceVector):
-        xForse = 0
         self.AddForce(forceVector, 1 / 30)
         self.SetOnGround(False)
