@@ -101,9 +101,21 @@ class Physics:
 
     def GroundCollide(self,futpos):
         offset_x, offset_y = futpos
-        if (self.groundCollide.mask.overlap(self.gameObject.GetAbility("spriteRenderer").mask, (int(offset_x), int(offset_y))) != None):
+        spriteRendererMask = self.gameObject.GetAbility("spriteRenderer").mask
+        if (self.groundCollide.mask.overlap(spriteRendererMask, (int(offset_x), int(offset_y))) != None):
             return True
+
+        objects = ResourceManager.ResourceManager.instObjectManager().objects
+        for e in objects:
+            if e.__class__.__name__ == "GameObject" and e!=self.gameObject:
+                if 'physics' in e.abilities:
+                    if 'spriteRenderer' in e.abilities:
+                        anotherSpriteRendererMask =e.GetAbility("spriteRenderer").mask
+                        if(spriteRendererMask.overlap(anotherSpriteRendererMask,(int(e.pos[0])-int(offset_x),int(e.pos[1])-int(offset_y)))!=None):
+                            return True
         return False
+
+
 
     def WalkCheck(self,futpos):
         if self.GroundCollide(futpos) or self.TouchBorders([futpos[0],futpos[1]]): return True

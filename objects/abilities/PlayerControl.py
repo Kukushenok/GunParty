@@ -113,30 +113,30 @@ class PlayerControl:
             if event.key == self.scheme["aimdown"]:
                 self.aim_down_pressed = False
             if event.key == self.scheme["fire"]:
-                if self.armed and not self.jump:
+                if (self.armed and not self.jump) and (self.gui.selected == 0 or self.gui.selected == 1):
+                    angleIndex = self.gameObject.GetAbility("stateMashine").CurrentState().IndManControl
+                    angle = 5.625 * (angleIndex + 1)
+                    takeOffVector = self.rotateVector([0, -30], angle)
+
                     if self.gui.selected == 0:
-                        angleIndex = self.gameObject.GetAbility("stateMashine").CurrentState().IndManControl
-                        weaponObj = ResourceManager.ResourceManager.instFactory().get("missile",
-                                                                                      self.gameObject.pos[0],
-                                                                                      self.gameObject.pos[1])
-                        weaponControl =weaponObj.GetAbility("weaponControl")
-                        angle = 5.625*(angleIndex+1)
-                        forseVector = self.rotateVector([0,1],angle*(1 if self.left else -1))
-                        forseVector=[forseVector[0]* weaponControl.takeOFFCoeff* self.gameObject.gui.forceInd.coeff, forseVector[1]*weaponControl.takeOFFCoeff* self.gameObject.gui.forceInd.coeff]
-                        weaponObj.GetAbility("physics").weaponFire(1/30,forseVector)
-
-                    elif self.gui.selected == 1:
-                        angleIndex = self.gameObject.GetAbility("stateMashine").CurrentState().IndManControl
-                        weaponObj = ResourceManager.ResourceManager.instFactory().get("grenade",
-                                                                                      self.gameObject.pos[0],
-                                                                                      self.gameObject.pos[1])
-                        weaponControl = weaponObj.GetAbility("weaponControl")
-                        angle = 5.625 * (angleIndex + 1)
-                        forseVector = self.rotateVector([0, 1], angle * (1 if self.left else -1))
-                        forseVector = [forseVector[0] * weaponControl.takeOFFCoeff * self.gameObject.gui.forceInd.coeff,
-                                       forseVector[1] * weaponControl.takeOFFCoeff * self.gameObject.gui.forceInd.coeff]
-                        weaponObj.GetAbility("physics").weaponFire(1 / 30, forseVector)
-
+                        weaponName = "missile"
+                    else:
+                        weaponName = "grenade"
+                    if self.left:
+                        weaponObj = ResourceManager.ResourceManager.instFactory().get(weaponName,
+                                                                                      self.gameObject.pos[0] - takeOffVector[0],
+                                                                                      self.gameObject.pos[1]- takeOffVector[1])
+                    else:
+                        weaponObj = ResourceManager.ResourceManager.instFactory().get(weaponName,
+                                                                                      self.gameObject.pos[0] +
+                                                                                      takeOffVector[0],
+                                                                                      self.gameObject.pos[1] -
+                                                                                      takeOffVector[1])
+                    weaponControl = weaponObj.GetAbility("weaponControl")
+                    forseVector = self.rotateVector([0, 1], angle * (1 if self.left else -1))
+                    forseVector = [forseVector[0] * weaponControl.takeOFFCoeff * self.gameObject.gui.forceInd.coeff,
+                                   forseVector[1] * weaponControl.takeOFFCoeff * self.gameObject.gui.forceInd.coeff]
+                    weaponObj.GetAbility("physics").weaponFire(1 / 30, forseVector)
                 self.fire_pressed = False
 
     def rotateVector(self, vector, angle):
