@@ -183,7 +183,9 @@ class PlayerControl:
         self.weapon = idx
 
     def update(self,dt):
-
+        if self.disable:
+            self.resetKeyButtons()
+            return None
         # if self.weapon == 1 and self.gameObject.GetAbility("spriteRenderer").played:
         #     self.gameObject.GetAbility("stateMashine").SetState(self.currweaponname+"l" if self.left else self.currweaponname+"r")
         #     self.block = False

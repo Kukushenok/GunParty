@@ -1,12 +1,16 @@
 import pygame
 import objects.level.Resources
 import tools.config
+import os
+import ResourceManager
 class Level:
-    def __init__(self, path):
+    def __init__(self, levelRoot, path):
         self.path = path
+        self.levelRoot = levelRoot
     def load(self):
         self.resources = objects.level.Resources.Resources(self.path).resources
-        self.config = tools.config.Config(self.path)
+        self.config = tools.config.Config(self.levelRoot,self.path)
+
     def get_subnail(self,rect):
         self.load()
         self.resources["background.png"] = self.resources["background.png"].convert_alpha()
