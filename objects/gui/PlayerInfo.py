@@ -10,6 +10,8 @@ class PlayerInfo():
 
 
     def render(self,screen):
+        if self.gameObject.GetAbility("stateMashine").current_state.name == "died":
+            return None
         #self.image = pygame.transform.scale(self.frame.copy(), (self.framerect[2], self.framerect[3]))
         self.text = self.font.render(str(self.gameObject.GetAbility("damagable").hp),True,pygame.Color("red"))
         self.framerect = self.text.get_rect()

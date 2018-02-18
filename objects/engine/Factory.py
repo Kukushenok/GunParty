@@ -114,6 +114,22 @@ class Factory:
         s.loop = False
         st.AddState("jumpr", s)
 
+        #Мёртв
+        s = objects.abilities.State.State(cobject)
+        s.AddSurface("n", self.resources["grave1.png"])
+        s.AddSurface("u", self.resources["grave1.png"])
+        s.AddSurface("d", self.resources["grave1.png"])
+        s.speed = 30
+        st.AddState("died", s)
+
+        #Победа!
+        s = objects.abilities.State.State(cobject)
+        s.AddSurface("n", self.resources["wwinner.png"])
+        s.AddSurface("u", self.resources["wwinner.png"])
+        s.AddSurface("d", self.resources["wwinner.png"])
+        s.speed = 30
+        st.AddState("win", s)
+
         # Оружия.Базука
         s = objects.abilities.State.State(cobject)
         s.AddSurface("n", self.resources["wbazbak.png"])
@@ -319,6 +335,8 @@ class Factory:
             slt = objects.gui.Slot.Slot(cobject, weapons[i])
             slt.pos = [x,y]
             slt.pos[0] += i * (self.resources["guislot.png"].get_rect()[3] * ResourceManager.ResourceManager.instGameCFG().GetScreenCoeff()[0] + 3)
+        if 600 + x > 1920:
+            x = 1920-550
         cobject.AddObject(objects.gui.ForceIndicator.ForceIndicator(
             pygame.Rect(x, 1020 * ResourceManager.ResourceManager.instGameCFG().GetScreenCoeff()[1], 600 *
                         ResourceManager.ResourceManager.instGameCFG().GetScreenCoeff()[0],

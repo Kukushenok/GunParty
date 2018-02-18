@@ -13,6 +13,7 @@ class Physics:
         self.coeff = 0.5
         #Плотность воздуха
         self.AirRo = 1.2
+        #self.AirRo = 10
         #Горизонтальная площадь поверхности тела
         self.Sx = 1
         #Вертикальная площадь поверхности тела
@@ -32,6 +33,7 @@ class Physics:
         self.yborders = [0, ResourceManager.ResourceManager.instGameCFG().screenheight]
         self.subscribers = []
         self.maxSpeed =[100,100]
+        #self.maxSpeed = [20,20]
 
     def addSubscriber(self, subscriber):
         self.subscribers.append(subscriber)

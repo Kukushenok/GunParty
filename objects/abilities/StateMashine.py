@@ -10,6 +10,7 @@ class StateMashine:
         self.subscribers = []
 
     def AddState(self,stateName,state):
+        state.name = stateName
         self.states[stateName] = state
 
     def AddSubscriber(self,subscriber):

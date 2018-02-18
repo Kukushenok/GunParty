@@ -17,13 +17,23 @@ class PlayerControl:
         self.jump = 0
         self.left = False
         self.block_anim = False
-        self.block = False
+        self.disable = False
         self.currweaponname = ""
         self.weapon = -1
         self.aim_speed = 10
         self.fire_speed = ResourceManager.ResourceManager.instGameCFG().fps
         self.armed = False
         self.frameCounter = 0
+
+    def resetKeyButtons(self):
+        self.right_pressed = False
+        self.left_pressed = False
+        self.up_pressed = False
+        self.down_pressed = False
+        self.aim_up_pressed = False
+        self.aim_down_pressed = False
+        self.fire_pressed = False
+        self.jump = 0
 
     def WalkControl(self, event):
         if event.type == pygame.KEYDOWN:
@@ -44,6 +54,9 @@ class PlayerControl:
                 self.LoadWeapon("",-1,nextState)
 
     def get_event(self,event):
+        if self.disable:
+            self.resetKeyButtons()
+            return None
         self.WalkControl(event)
         if event.type == pygame.KEYDOWN:
             if event.key == self.scheme["up"]:
