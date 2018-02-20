@@ -59,10 +59,13 @@ class GameEngine:
         self.startScreen.AddComponent(objects.gui.SwitchPageButton.SwitchPageButton(self.startScreen,-1,pygame.Rect(1500*cx,40*cy,120*cx,150*cy)))
         self.startScreen.AddComponent(objects.gui.SwitchPageButton.SwitchPageButton(self.startScreen,1,pygame.Rect(1700*cx,40*cy,120*cx,150*cy)))
         self.startScreen.AddComponent(objects.gui.Scroller.Scroller(self.startScreen,pygame.Rect(1500*cx,300*cy,240*cx,60*cy)))
-        self.startScreen.AddComponent(objects.gui.ExitButton.ExitButton(self.startScreen,pygame.Rect(50*cx,800*cy,200*cx,200*cy)))
+        self.startScreen.AddComponent(objects.gui.ExitButton.ExitButton(self.startScreen,
+                                                                        pygame.Rect(530 * cx, 320 * cy, 860 * cx,
+                                                                                    440 * cy),"Are you sure to want to exit?"))
         self.startScreen.AddComponent(objects.gui.Text.Text(self.startScreen,(1500*cx,230*cy),"Gravity",int(50*cy),pygame.Color("black")))
         self.startScreen.run()
-        self.exitButton = objects.gui.ExitButton.ExitButton(self,pygame.Rect(885*cx,0,150*cx,150*cy))
+        self.exitButton = objects.gui.ExitButton.ExitButton(self,pygame.Rect(530*cx,320*cy,860*cx,440*cy),
+                                                            "Are you sure to want to exit?")
 
     def run_start_screen(self):
         self.startScreen.running = True
@@ -113,9 +116,11 @@ class GameEngine:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
-                ResourceManager.ResourceManager.instObjectManager().get_event(event)
                 self.exitButton.get_event(event)
+                if not self.exitButton.show:
+                    ResourceManager.ResourceManager.instObjectManager().get_event(event)
             self.clock.tick(self.fps)
-            self.on_loop()
+            if not self.exitButton.show:
+                self.on_loop()
             self.on_render()
         self.on_cleanup()
