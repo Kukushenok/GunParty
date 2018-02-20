@@ -16,7 +16,9 @@ class WeaponControl:
         except Exception: pass
 
         if (onGround and self.killOnGround) or (self.hp != -1 and self.hp < 1):
-
+            try:
+                self.gameObject.GetAbility("audible").playSound("explode")
+            except KeyError:pass
             blowd = int(self.blastForce * min(ResourceManager.ResourceManager.instGameCFG().GetScreenCoeff()))
             pos = self.gameObject.pos[0] - blowd // 2 + 30, self.gameObject.pos[1] - blowd // 2 + 30
             self.tmpsurface = pygame.transform.scale(

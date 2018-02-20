@@ -135,6 +135,8 @@ class PlayerControl:
 
                     if self.gui.selected == 0:
                         weaponName = "missile"
+                        self.gameObject.GetAbility("audible").stopSound("rocketPowerUp")
+                        self.gameObject.GetAbility("audible").playSound("rocketRelease")
                     else:
                         weaponName = "grenade"
                     if self.left:
@@ -194,10 +196,15 @@ class PlayerControl:
         #     self.gameObject.GetAbility("stateMashine").SetState(self.currweaponname+"l" if self.left else self.currweaponname+"r")
         #     self.block = False
         if not self.jump and self.fire_pressed:
+
             self.frameCounter+=1
             if self.frameCounter % int(((1 / dt) / self.fire_speed)) == 0 and self.gui.forceInd.coeff<100:
                 self.gui.forceInd.coeff += 1
+                self.gameObject.GetAbility("audible").playSound("rocketPowerUp")
+
         else:
+            if self.gui.forceInd.coeff != 0:
+                self.gameObject.GetAbility("audible").stopSound("rocketPowerUp")
             self.gui.forceInd.coeff = 0
 
         if not self.jump and self.aim_up_pressed:

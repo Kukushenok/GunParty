@@ -49,6 +49,10 @@ class Factory:
         st = objects.abilities.StateMashine.StateMashine(cobject)
         audible = objects.abilities.Audible.Audible(cobject)
         st.AddSubscriber(audible)
+        audible.addSound("rocketRelease",ResourceManager.ResourceManager.instSFXResources()["rocketRelease.wav"])
+
+        audible.addSound("rocketPowerUp",ResourceManager.ResourceManager.instSFXResources()["rocketPowerUp.wav"])
+        audible.getSound("rocketPowerUp").set_volume(0.1)
         cobject.AddAbility("audible",audible)
         s = objects.abilities.State.State(cobject)
         s.AddSurface("u", self.resources["wwalku.png"])
@@ -345,6 +349,9 @@ class Factory:
 
     def createBazMissile(self, x, y, *args):
         cobject = objects.engine.GameObject.GameObject()
+        audible = objects.abilities.Audible.Audible(cobject)
+        audible.addSound("explode",ResourceManager.ResourceManager.instSFXResources()["bazookaExplosion.wav"])
+        cobject.AddAbility("audible",audible)
         st = objects.abilities.StateMashine.StateMashine(cobject)
         s = objects.abilities.State.State(cobject)
         s.AddSurface("n", self.resources["missile.png"])
