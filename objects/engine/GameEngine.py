@@ -1,7 +1,7 @@
 import pygame
 
 import ResourceManager
-import objects.gui.ExitButton
+import objects.gui.ExitDialog
 import objects.gui.LevelSubnail
 import objects.gui.Scroller
 import objects.gui.StartScreen
@@ -55,16 +55,16 @@ class GameEngine:
             self.startScreen.AddComponent(txt)
 
 
-        self.startScreen.maxPage = page
+        self.startScreen.maxPage = page-1 if i==-1 else page
         self.startScreen.AddComponent(objects.gui.SwitchPageButton.SwitchPageButton(self.startScreen,-1,pygame.Rect(1500*cx,40*cy,120*cx,150*cy)))
         self.startScreen.AddComponent(objects.gui.SwitchPageButton.SwitchPageButton(self.startScreen,1,pygame.Rect(1700*cx,40*cy,120*cx,150*cy)))
         self.startScreen.AddComponent(objects.gui.Scroller.Scroller(self.startScreen,pygame.Rect(1500*cx,300*cy,240*cx,60*cy)))
-        self.startScreen.AddComponent(objects.gui.ExitButton.ExitButton(self.startScreen,
+        self.startScreen.AddComponent(objects.gui.ExitDialog.ExitDialog(self.startScreen,
                                                                         pygame.Rect(530 * cx, 320 * cy, 860 * cx,
                                                                                     440 * cy),"Are you sure to want to exit?"))
         self.startScreen.AddComponent(objects.gui.Text.Text(self.startScreen,(1500*cx,230*cy),"Gravity",int(50*cy),pygame.Color("black")))
         self.startScreen.run()
-        self.exitButton = objects.gui.ExitButton.ExitButton(self,pygame.Rect(530*cx,320*cy,860*cx,440*cy),
+        self.exitButton = objects.gui.ExitDialog.ExitDialog(self, pygame.Rect(530 * cx, 320 * cy, 860 * cx, 440 * cy),
                                                             "Are you sure to want to exit?")
 
     def run_start_screen(self):

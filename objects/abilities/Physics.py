@@ -29,8 +29,8 @@ class Physics:
         self.ScaleMy = ResourceManager.ResourceManager.instGameCFG().screenheight / 10
         self.onGround = False
         self.walkSpeed = 1
-        self.xborders = [0, ResourceManager.ResourceManager.instGameCFG().screenwidth]
-        self.yborders = [0, ResourceManager.ResourceManager.instGameCFG().screenheight]
+        self.xborders = [-30, ResourceManager.ResourceManager.instGameCFG().screenwidth]
+        self.yborders = [-30, ResourceManager.ResourceManager.instGameCFG().screenheight]
         self.subscribers = []
         self.maxSpeed =[100,100]
         #self.maxSpeed = [20,20]
@@ -44,8 +44,8 @@ class Physics:
 
     def TouchBorders(self,futpos):
         if futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0] or futpos[1]<=self.yborders[0] or \
-                        futpos[1]+60 >= self.yborders[1]:
-            if all([futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0], futpos[1]<=self.yborders[0] or
+                        futpos[1]+30 >= self.yborders[1]:
+            if all([futpos[0]+30 >= self.xborders[1] or futpos[0] <= self.xborders[0], futpos[1]<=self.yborders[0] or
                             futpos[1]+60 >= self.yborders[1]]):
                 return "xy"
             return "x" if futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0] else "y"

@@ -1,5 +1,5 @@
 import pygame
-import objects.gui.ExitButton
+import objects.gui.ExitDialog
 import ResourceManager
 
 class StartScreen():
@@ -12,7 +12,7 @@ class StartScreen():
         self.exitButton = None
     def AddComponent(self,comp):
         self.components.append(comp)
-        if isinstance(comp,objects.gui.ExitButton.ExitButton):
+        if isinstance(comp, objects.gui.ExitDialog.ExitDialog):
             self.exitButton = comp
     def load_level(self,levelname):
         self.gameEngine.load_level(levelname)

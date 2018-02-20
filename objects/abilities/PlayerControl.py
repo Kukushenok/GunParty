@@ -90,6 +90,8 @@ class PlayerControl:
                         forseVector = [forseVector[0] * weaponControl.takeOFFCoeff*2,
                                        forseVector[1] * weaponControl.takeOFFCoeff*2]
                         weaponObj.GetAbility("physics").weaponFire(1 / 30, forseVector)
+                        weaponObj.GetAbility("physics").G = self.gameObject.GetAbility("physics").G
+                        weaponObj.GetAbility("physics").SetGravity(True)
                 self.fire_pressed = True
 
         if event.type == pygame.KEYUP:
@@ -147,9 +149,11 @@ class PlayerControl:
                                                                                       takeOffVector[1])
                     weaponControl = weaponObj.GetAbility("weaponControl")
                     forseVector = self.rotateVector([0, 1], angle * (1 if self.left else -1))
-                    forseVector = [forseVector[0] * weaponControl.takeOFFCoeff * self.gameObject.gui.forceInd.coeff,
-                                   forseVector[1] * weaponControl.takeOFFCoeff * self.gameObject.gui.forceInd.coeff]
+                    forseVector = [forseVector[0] * weaponControl.takeOFFCoeff * self.gui.forceInd.coeff,
+                                   forseVector[1] * weaponControl.takeOFFCoeff * self.gui.forceInd.coeff]
                     weaponObj.GetAbility("physics").weaponFire(1 / 30, forseVector)
+                    weaponObj.GetAbility("physics").G = self.gameObject.GetAbility("physics").G
+                    weaponObj.GetAbility("physics").SetGravity(True)
                 self.fire_pressed = False
 
     def rotateVector(self, vector, angle):
@@ -191,10 +195,10 @@ class PlayerControl:
         #     self.block = False
         if not self.jump and self.fire_pressed:
             self.frameCounter+=1
-            if self.frameCounter % int(((1 / dt) / self.fire_speed)) == 0 and self.gameObject.gui.forceInd.coeff<100:
-                self.gameObject.gui.forceInd.coeff += 1
+            if self.frameCounter % int(((1 / dt) / self.fire_speed)) == 0 and self.gui.forceInd.coeff<100:
+                self.gui.forceInd.coeff += 1
         else:
-            self.gameObject.gui.forceInd.coeff = 0
+            self.gui.forceInd.coeff = 0
 
         if not self.jump and self.aim_up_pressed:
             self.frameCounter+= 1

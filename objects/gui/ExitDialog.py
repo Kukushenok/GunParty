@@ -4,7 +4,7 @@ import ResourceManager
 import objects.gui.StartScreen
 
 
-class ExitButton():
+class ExitDialog():
     def __init__(self,holder,rect,log):
         self.log = log
         self.holder = holder
@@ -19,6 +19,13 @@ class ExitButton():
             self.type = "SS"
         else:
             self.type = "GE"
+    def exit(self):
+        self.show = False
+        if self.type == "SS":
+            self.holder.running = False
+            self.holder.gameEngine.running = False
+        else:
+            self.holder.run_start_screen()
     def render(self):
         if not self.show: return False
         self.holder.screen.blit(self.image, (self.rect[0], self.rect[1]))
@@ -26,14 +33,11 @@ class ExitButton():
     def get_event(self,event):
         if event.type == pygame.MOUSEBUTTONDOWN:
             if event.button == 1 and self.yesRect.collidepoint(event.pos):
-                self.show = False
-                if self.type == "SS":
-                    self.holder.running = False
-                    self.holder.gameEngine.running = False
-                else:
-                    self.holder.run_start_screen()
+                self.exit()
             if event.button == 1 and self.noRect.collidepoint(event.pos):
                 self.show = False
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_ESCAPE:
-                self.show = True
+                self.show = not self.show
+            if event.key == pygame.K_KP_ENTER and self.show:
+                self.exit()
