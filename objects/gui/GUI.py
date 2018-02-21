@@ -17,7 +17,8 @@ class GUI:
         for e in self.objects:
             e.render(screen)
     def update(self,dt):
-        pass
+        for e in self.slots:
+            e.update(dt)
     def get_event(self,event):
         if not self.keymask: return None
         if event.type == pygame.KEYDOWN:

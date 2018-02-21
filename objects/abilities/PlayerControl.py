@@ -160,6 +160,7 @@ class PlayerControl:
                     weaponObj.GetAbility("physics").weaponFire(1 / 30, forseVector)
                     weaponObj.GetAbility("physics").G = self.gameObject.GetAbility("physics").G
                     weaponObj.GetAbility("physics").SetGravity(True)
+                    self.gui.slots[self.gui.selected].delay = 10
                 self.fire_pressed = False
 
     def rotateVector(self, vector, angle):
@@ -169,6 +170,10 @@ class PlayerControl:
         return resultVector
 
     def LoadWeapon(self,name="",idx=-1, nextState=""):
+        if self.gui.slots[self.gui.selected].delay != 0:
+            self.gameObject.GetAbility("stateMashine").SetState("blinkl" if self.left else "blinkr")
+            self.armed = -1
+            return False
         if self.weapon==-1 and self.currweaponname!="" and name!="":
             self.gameObject.GetAbility("stateMashine").BindStates(self.currweaponname + ("bakr" if self.left else "bakl"),
                                                                   name + ("lnkl" if self.left else "lnkr"))
