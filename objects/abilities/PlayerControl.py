@@ -24,6 +24,7 @@ class PlayerControl:
         self.fire_speed = ResourceManager.ResourceManager.instGameCFG().fps
         self.armed = False
         self.frameCounter = 0
+        self.shotGunFire = -1
 
     def resetKeyButtons(self):
         self.right_pressed = False
@@ -80,6 +81,7 @@ class PlayerControl:
             if event.key == self.scheme["fire"]:
                 if self.armed and not self.jump:
                     if self.gui.selected == 2:
+                        self.gameObject.GetAbility("audible").playSound("shotgunFire")
                         angleIndex = self.gameObject.GetAbility("stateMashine").CurrentState().IndManControl
                         weaponObj = ResourceManager.ResourceManager.instFactory().get("bullet",
                                                                                       self.gameObject.pos[0],
@@ -139,6 +141,8 @@ class PlayerControl:
                         self.gameObject.GetAbility("audible").playSound("rocketRelease")
                     else:
                         weaponName = "grenade"
+                        self.gameObject.GetAbility("audible").stopSound("rocketPowerUp")
+                        self.gameObject.GetAbility("audible").playSound("throwRelease")
                     if self.left:
                         weaponObj = ResourceManager.ResourceManager.instFactory().get(weaponName,
                                                                                       self.gameObject.pos[0] - takeOffVector[0],
@@ -160,8 +164,8 @@ class PlayerControl:
 
     def rotateVector(self, vector, angle):
         resultVector=[0,0]
-        resultVector[0] = vector[0] * math.cos(angle * math.pi/180) - vector[1] * math.sin(angle * math.pi / 180);
-        resultVector[1] = vector[1] * math.cos(angle * math.pi / 180) + vector[0] * math.sin(angle * math.pi / 180);
+        resultVector[0] = vector[0] * math.cos(angle * math.pi/180) - vector[1] * math.sin(angle * math.pi / 180)
+        resultVector[1] = vector[1] * math.cos(angle * math.pi / 180) + vector[0] * math.sin(angle * math.pi / 180)
         return resultVector
 
     def LoadWeapon(self,name="",idx=-1, nextState=""):
@@ -200,11 +204,14 @@ class PlayerControl:
             self.frameCounter+=1
             if self.frameCounter % int(((1 / dt) / self.fire_speed)) == 0 and self.gui.forceInd.coeff<100:
                 self.gui.forceInd.coeff += 1
-                self.gameObject.GetAbility("audible").playSound("rocketPowerUp")
+                if self.gui.forceInd.enabled:
+                    self.gameObject.GetAbility("audible").playSound("rocketPowerUp")
+                    self.gameObject.GetAbility("audible").disableSound("rocketPowerUp")
 
         else:
             if self.gui.forceInd.coeff != 0:
                 self.gameObject.GetAbility("audible").stopSound("rocketPowerUp")
+                self.gameObject.GetAbility("audible").enableSound("rocketPowerUp")
             self.gui.forceInd.coeff = 0
 
         if not self.jump and self.aim_up_pressed:

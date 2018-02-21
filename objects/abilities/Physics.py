@@ -46,9 +46,9 @@ class Physics:
         if futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0] or futpos[1]<=self.yborders[0] or \
                         futpos[1]+30 >= self.yborders[1]:
             if all([futpos[0]+30 >= self.xborders[1] or futpos[0] <= self.xborders[0], futpos[1]<=self.yborders[0] or
-                            futpos[1]+60 >= self.yborders[1]]):
+                            futpos[1]+30 >= self.yborders[1]]):
                 return "xy"
-            return "x" if futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0] else "y"
+            return "x" if futpos[0]+30 >= self.xborders[1] or futpos[0] <= self.xborders[0] else "y"
         return ""
 
     def update(self,dt):
@@ -65,6 +65,9 @@ class Physics:
         self.gameObject.pos[1] += dsy
         if self.TouchBorders([self.gameObject.pos[0],self.gameObject.pos[1]]):
             self.TouchingBorders = self.TouchBorders(self.gameObject.pos)
+            try:
+                self.gameObject.GetAbility("audible").playSound("ricoshet")
+            except Exception:pass
             if "x" in self.TouchingBorders:
                 self.V[0]*=-1
                 self.gameObject.pos[0] -= dsx

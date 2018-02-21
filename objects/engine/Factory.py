@@ -52,6 +52,8 @@ class Factory:
         audible.addSound("rocketRelease",ResourceManager.ResourceManager.instSFXResources()["rocketRelease.wav"])
 
         audible.addSound("rocketPowerUp",ResourceManager.ResourceManager.instSFXResources()["rocketPowerUp.wav"])
+        audible.addSound("throwRelease", ResourceManager.ResourceManager.instSFXResources()["throwRelease.wav"])
+        audible.addSound("shotgunFire", ResourceManager.ResourceManager.instSFXResources()["shotGunFire.wav"])
         audible.getSound("rocketPowerUp").set_volume(0.1)
         cobject.AddAbility("audible",audible)
         s = objects.abilities.State.State(cobject)
@@ -351,6 +353,7 @@ class Factory:
         cobject = objects.engine.GameObject.GameObject()
         audible = objects.abilities.Audible.Audible(cobject)
         audible.addSound("explode",ResourceManager.ResourceManager.instSFXResources()["bazookaExplosion.wav"])
+        audible.addSound("ricoshet",ResourceManager.ResourceManager.instSFXResources()["ricoshet.wav"])
         cobject.AddAbility("audible",audible)
         st = objects.abilities.StateMashine.StateMashine(cobject)
         s = objects.abilities.State.State(cobject)
@@ -382,6 +385,9 @@ class Factory:
 
     def createGrenade(self, x, y, *args):
         cobject = objects.engine.GameObject.GameObject()
+        audible = objects.abilities.Audible.Audible(cobject)
+        audible.addSound("explode",ResourceManager.ResourceManager.instSFXResources()["bazookaExplosion.wav"])
+        cobject.AddAbility("audible",audible)
         st = objects.abilities.StateMashine.StateMashine(cobject)
         s = objects.abilities.State.State(cobject)
         s.AddSurface("n", self.resources["grenade.png"])
@@ -418,6 +424,9 @@ class Factory:
 
     def createBullet(self, x, y, *args):
         cobject = objects.engine.GameObject.GameObject()
+        audible = objects.abilities.Audible.Audible(cobject)
+        audible.addSound("ricoshet",ResourceManager.ResourceManager.instSFXResources()["ricoshet.wav"])
+        cobject.AddAbility("audible",audible)
         st = objects.abilities.StateMashine.StateMashine(cobject)
         s = objects.abilities.State.State(cobject)
         s.AddSurface("n", self.resources["bullet.png"])
