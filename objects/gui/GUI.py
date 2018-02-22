@@ -7,6 +7,7 @@ class GUI:
         self.selected=2
         self.keymask = keymask
         self.objects = []
+        self.gameObject = None
     def AddObject(self,obj):
         if isinstance(obj,objects.gui.ForceIndicator.ForceIndicator):
             self.forceInd = obj

@@ -94,6 +94,8 @@ class PlayerControl:
                         weaponObj.GetAbility("physics").weaponFire(1 / 30, forseVector)
                         weaponObj.GetAbility("physics").G = self.gameObject.GetAbility("physics").G
                         weaponObj.GetAbility("physics").SetGravity(True)
+                        self.gui.slots[self.gui.selected].delay = 2
+                        self.LoadWeapon()
                 self.fire_pressed = True
 
         if event.type == pygame.KEYUP:
@@ -161,6 +163,7 @@ class PlayerControl:
                     weaponObj.GetAbility("physics").G = self.gameObject.GetAbility("physics").G
                     weaponObj.GetAbility("physics").SetGravity(True)
                     self.gui.slots[self.gui.selected].delay = 10
+                    self.LoadWeapon()
                 self.fire_pressed = False
 
     def rotateVector(self, vector, angle):
@@ -172,14 +175,16 @@ class PlayerControl:
     def LoadWeapon(self,name="",idx=-1, nextState=""):
         if self.gui.slots[self.gui.selected].delay != 0:
             self.gameObject.GetAbility("stateMashine").SetState("blinkl" if self.left else "blinkr")
-            self.armed = -1
+            self.weapon = -1
+            self.armed = False
             return False
         if self.weapon==-1 and self.currweaponname!="" and name!="":
-            self.gameObject.GetAbility("stateMashine").BindStates(self.currweaponname + ("bakr" if self.left else "bakl"),
+            self.gameObject.GetAbility("stateMashine").BindStates(self.currweaponname + ("bakl" if self.left else "bakr"),
                                                                   name + ("lnkl" if self.left else "lnkr"))
             self.currweaponname = name
-            self.gameObject.GetAbility("stateMashine").SetState(self.currweaponname + ("bakr" if self.left else "bakl"))
+            self.gameObject.GetAbility("stateMashine").SetState(self.currweaponname + ("bakl" if self.left else "bakr"))
             self.weapon = self.gui.selected
+
         else:
             if idx==-1 or name=="":
                 if nextState!="":
@@ -196,14 +201,24 @@ class PlayerControl:
             self.gameObject.GetAbility("stateMashine").SetState(self.currweaponname + ("lnkl" if self.left else "lnkr"))
         self.armed = True
         self.weapon = idx
-
+        if self.weapon == 2: self.gameObject.GetAbility("audible").playSound("shotgunReload")
     def update(self,dt):
         if self.disable:
             self.resetKeyButtons()
             return None
+        if self.gameObject.GetAbility("stateMashine").current_state.name in ("blinkr","blinkl") and self.gui.slots[self.gui.selected].delay == 0:
+            self.currweaponname = ""
+            if self.gui.selected == 0  and not self.block_anim:
+                self.LoadWeapon("baz", self.gui.selected)
+            if self.gui.selected == 1 and not self.block_anim:
+                self.LoadWeapon("grn", self.gui.selected)
+            if self.gui.selected == 2 and not self.block_anim:
+                self.LoadWeapon("shg", self.gui.selected)
+            print("blink!")
         # if self.weapon == 1 and self.gameObject.GetAbility("spriteRenderer").played:
         #     self.gameObject.GetAbility("stateMashine").SetState(self.currweaponname+"l" if self.left else self.currweaponname+"r")
         #     self.block = False
+        self.gui.forceInd.enabled = False if self.gui.slots[self.gui.selected].delay != 0 or self.gui.selected ==2 else True
         if not self.jump and self.fire_pressed:
 
             self.frameCounter+=1

@@ -18,6 +18,7 @@ class Slot():
         self.rect= self.selected.get_rect()
         self.pos = [0,0]
         self.gui = gui
+        self.ready = 0
         gui.AddObject(self)
 
         if weapon:
@@ -35,5 +36,10 @@ class Slot():
             text = pygame.font.SysFont("comicsansms",self.rect[3]//4).render("Ready" if self.delay == 0 else str(int(self.delay)+1), True, color)
             screen.blit(text,(self.rect[0]+self.rect[2]//2-text.get_rect()[2]//2,self.rect[1]+self.rect[3]))
     def update(self,dt):
-        if self.delay > 0: self.delay-=dt
-        else: self.delay = 0
+        if self.delay > 0:
+            self.delay-=dt
+            self.ready = False
+            if self.ready == 2: self.ready = 0
+        else:
+            self.delay = 0
+            if self.ready == 0: self.ready = 1

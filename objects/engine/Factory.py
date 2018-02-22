@@ -54,6 +54,7 @@ class Factory:
         audible.addSound("rocketPowerUp",ResourceManager.ResourceManager.instSFXResources()["rocketPowerUp.wav"])
         audible.addSound("throwRelease", ResourceManager.ResourceManager.instSFXResources()["throwRelease.wav"])
         audible.addSound("shotgunFire", ResourceManager.ResourceManager.instSFXResources()["shotGunFire.wav"])
+        audible.addSound("shotgunReload", ResourceManager.ResourceManager.instSFXResources()["shotGunReload.wav"])
         audible.getSound("rocketPowerUp").set_volume(0.1)
         cobject.AddAbility("audible",audible)
         s = objects.abilities.State.State(cobject)
@@ -325,6 +326,7 @@ class Factory:
         sp.rect = sp.image.get_rect()
         cobject.pos = [x, y]
         cobject.gui = self.get("gui", args[1][0], args[1][1], args[0])
+        cobject.gui.gameObject = cobject
         cobject.gui.AddObject(objects.gui.PlayerInfo.PlayerInfo(cobject))
         cobject.AddAbility("playerControl", objects.abilities.PlayerControl.PlayerControl(cobject, args[0]))
         ph = objects.abilities.Physics.Physics(cobject)
@@ -341,8 +343,8 @@ class Factory:
             slt = objects.gui.Slot.Slot(cobject, weapons[i])
             slt.pos = [x,y]
             slt.pos[0] += i * (self.resources["guislot.png"].get_rect()[3] * ResourceManager.ResourceManager.instGameCFG().GetScreenCoeff()[0] + 3)
-        if 600 + x > 1920:
-            x = 1920-550
+        if 600 + x / ResourceManager.ResourceManager.instGameCFG().GetScreenCoeff()[0] > 1920:
+            x = (1920 - 600) *ResourceManager.ResourceManager.instGameCFG().GetScreenCoeff()[0]
         cobject.AddObject(objects.gui.ForceIndicator.ForceIndicator(
             pygame.Rect(x, 1020 * ResourceManager.ResourceManager.instGameCFG().GetScreenCoeff()[1], 600 *
                         ResourceManager.ResourceManager.instGameCFG().GetScreenCoeff()[0],
