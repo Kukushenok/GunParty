@@ -68,6 +68,7 @@ class GameEngine:
                                                             "Are you sure to want to exit?")
 
     def run_start_screen(self):
+        ResourceManager.ResourceManager.intsLevels().currlevel.resources["backgroundMusic.wav"].stop()
         self.startScreen.running = True
         self.startScreen.run()
 
@@ -85,6 +86,8 @@ class GameEngine:
         self.player2 = self.factory.get("player",int(self.levelConfig.get("player1x"))*self.coeff[0],int(self.levelConfig.get("player1y"))*self.coeff[1],self.cnf.getAsDict("player1KeyScheme"),(10*self.coeff[0],10*self.coeff[1]),self.screen)
         self.player2.GetAbility("physics").G = float(self.levelConfig.get("gravity"))
         self.player2.GetAbility("physics").SetGravity(True)
+        ResourceManager.ResourceManager.intsLevels().currlevel.resources["backgroundMusic.wav"].set_volume(0.2)
+        ResourceManager.ResourceManager.intsLevels().currlevel.resources["backgroundMusic.wav"].play(-1)
         self.sr = self.player.GetAbility("spriteRenderer")
         self.playGround = objects.level.Playground.Playground(
             [pygame.transform.scale(
