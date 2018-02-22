@@ -214,7 +214,6 @@ class PlayerControl:
                 self.LoadWeapon("grn", self.gui.selected)
             if self.gui.selected == 2 and not self.block_anim:
                 self.LoadWeapon("shg", self.gui.selected)
-            print("blink!")
         # if self.weapon == 1 and self.gameObject.GetAbility("spriteRenderer").played:
         #     self.gameObject.GetAbility("stateMashine").SetState(self.currweaponname+"l" if self.left else self.currweaponname+"r")
         #     self.block = False
