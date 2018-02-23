@@ -389,6 +389,7 @@ class Factory:
         cobject = objects.engine.GameObject.GameObject()
         audible = objects.abilities.Audible.Audible(cobject)
         audible.addSound("explode",ResourceManager.ResourceManager.instSFXResources()["bazookaExplosion.wav"])
+        audible.addSound("ricoshet",ResourceManager.ResourceManager.instSFXResources()["grenadeImpact.wav"])
         cobject.AddAbility("audible",audible)
         st = objects.abilities.StateMashine.StateMashine(cobject)
         s = objects.abilities.State.State(cobject)

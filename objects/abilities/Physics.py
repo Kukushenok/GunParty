@@ -43,10 +43,10 @@ class Physics:
         else: self.CurrForce = [0,0]
 
     def TouchBorders(self,futpos):
-        if futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0] or futpos[1]<=self.yborders[0] or \
+        if futpos[0]+30 >= self.xborders[1] or futpos[0] <= self.xborders[0] or futpos[1]<=self.yborders[0] or \
                         futpos[1]+30 >= self.yborders[1]:
-            if all([futpos[0]+30 >= self.xborders[1] or futpos[0] <= self.xborders[0], futpos[1]<=self.yborders[0] or
-                            futpos[1]+30 >= self.yborders[1]]):
+            if all([futpos[0]+60 >= self.xborders[1] or futpos[0] <= self.xborders[0], futpos[1]<=self.yborders[0] or
+                            futpos[1]+60 >= self.yborders[1]]):
                 return "xy"
             return "x" if futpos[0]+30 >= self.xborders[1] or futpos[0] <= self.xborders[0] else "y"
         return ""

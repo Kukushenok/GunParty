@@ -12,8 +12,6 @@ class Playground():
         self.ground = images[2].convert_alpha()
 
 
-
-
     def render(self,screen):
         masked = self.ground.copy()
         masked.blit(self.mask, (0, 0), None, pygame.BLEND_RGBA_MULT)
