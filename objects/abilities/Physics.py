@@ -86,7 +86,7 @@ class Physics:
         self.V = [min(self.V[0], self.maxSpeed[0]), min(self.V[1], self.maxSpeed[1])]
         #Обновляем состояние наблюдателей
         for e in self.subscribers:
-            e.updatePhisics(self.V, self.onGround)
+            e.updatePhysics(self.V, self.onGround)
 
     def SetOnGround(self, ground ):
         self.onGround = ground
