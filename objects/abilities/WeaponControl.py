@@ -1,6 +1,7 @@
 import pygame
 import math
 import ResourceManager
+import random
 class WeaponControl:
     def __init__(self,gameObject):
         self.gameObject = gameObject
@@ -19,6 +20,7 @@ class WeaponControl:
             try:
                 self.gameObject.GetAbility("audible").playSound("explode")
             except KeyError:pass
+
             blowd = int(self.blastForce * min(ResourceManager.ResourceManager.instGameCFG().GetScreenCoeff()))
             pos = self.gameObject.pos[0] - blowd // 2 + 30, self.gameObject.pos[1] - blowd // 2 + 30
             self.tmpsurface = pygame.transform.scale(
@@ -29,7 +31,11 @@ class WeaponControl:
                                                                                                       pos, None,
                                                                                                       pygame.BLEND_RGBA_SUB)
             ResourceManager.ResourceManager.intsLevels().currlevel.resources["GROUNDMASK"].update()
-
+            ResourceManager.ResourceManager.playground.update = True
+            for e in range(5):
+                ResourceManager.ResourceManager.instFactory().get("particle", self.gameObject.pos[0]+random.randint(-30,30),
+                                                                  self.gameObject.pos[1] + random.randint(-30, 30),
+                                                                  self.gameObject.GetAbility("physics").G)
             objects = ResourceManager.ResourceManager.instObjectManager().objects
             for e in objects:
                 if e.__class__.__name__ == "GameObject":

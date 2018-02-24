@@ -4,6 +4,7 @@ class State:
         self.surfaces = {"u":None,"d":None,"n":None}
         self.currentOption = ""
         self.currentSurface = None
+        self.transparentColour = (0, 255, 0, 0)
         self.speed = 20
         self.loop = True
         self.nextState = None

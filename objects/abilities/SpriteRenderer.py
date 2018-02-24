@@ -10,6 +10,7 @@ class SpriteRenderer(pygame.sprite.Sprite):
         self.load(gameObject.GetAbility("stateMashine").CurrentState())
         self.stop = False
         self.selectedImageIndex=-1
+        self.transparentColour = (0, 255, 0, 0)
 
     def load(self, state, animationStart=True):
         self.selectedState = state
@@ -19,6 +20,7 @@ class SpriteRenderer(pygame.sprite.Sprite):
             self.frameCounter = 0
             self.frameIndex = 0
         self.loadedImage = state.currentSurface
+        self.transparentColour = state.transparentColour
         self.maxIndex = self.loadedImage.get_rect().height // 60
 
 
@@ -37,16 +39,16 @@ class SpriteRenderer(pygame.sprite.Sprite):
             else: self.played = False
             self.image = pygame.Surface([60, 60])
             self.image.blit(self.loadedImage, (0, 0), pygame.Rect(0, index * 60, 60, 60))
-            self.image.set_colorkey((0,255,0,0))
+            self.image.set_colorkey(self.transparentColour)
             self.mask = pygame.mask.from_surface(self.image)
             self.selectedImageIndex = index
 
     def update(self,dt):
         currentState = self.gameObject.GetAbility("stateMashine").CurrentState()
         if currentState!=self.selectedState:
-            self.load(currentState);
+            self.load(currentState)
         elif self.selectedOption != currentState.currentOption:
-            self.load(currentState, False);
+            self.load(currentState, False)
         self.rect.x ,self.rect.y = self.gameObject.pos
         if self.selectedState.ManualControl:
             self.selectImage(self.selectedState.IndManControl)

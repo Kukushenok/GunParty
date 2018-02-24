@@ -11,6 +11,7 @@ class Damagable():
         self.maxDamage = 50
         #Сила максимального повреждения
         self.maxForce = 500
+        self.kill = False
 
     #Расчёт ущерба. На вход подаётся длина вектора приложенной силы
     def applyDamage(self,forceDamage):
@@ -31,6 +32,7 @@ class Damagable():
                 if len(activePlayers)==1:
                     activePlayers[0].GetAbility("stateMashine").SetState("win")
                     activePlayers[0].GetAbility("playerControl").disable = True
+                    activePlayers[0].GetAbility("audible").playSound("victory")
             except Exception: pass
 
     def update(self,dt):
@@ -38,3 +40,5 @@ class Damagable():
             if self.lifetime >= 0:
                 self.lifetime -=dt
                 self.hp = int(self.lifetime)
+        if self.hp == 0 and self.kill:
+            self.gameObject.kill()

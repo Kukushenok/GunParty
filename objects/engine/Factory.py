@@ -1,5 +1,5 @@
 import pygame
-
+import random
 import ResourceManager
 import objects.abilities.Physics
 import objects.abilities.PlayerControl
@@ -37,6 +37,8 @@ class Factory:
             cobject = self.createGrenade(x, y, *args)
         elif type == "bullet":
             cobject = self.createBullet(x, y, *args)
+        elif type == "particle":
+            cobject = self.createParticle(x, y, *args)
         ResourceManager.ResourceManager.instObjectManager().AddObject(cobject)
         return cobject
 
@@ -55,6 +57,7 @@ class Factory:
         audible.addSound("throwRelease", ResourceManager.ResourceManager.instSFXResources()["throwRelease.wav"])
         audible.addSound("shotgunFire", ResourceManager.ResourceManager.instSFXResources()["shotGunFire.wav"])
         audible.addSound("shotgunReload", ResourceManager.ResourceManager.instSFXResources()["shotGunReload.wav"])
+        audible.addSound("victory", ResourceManager.ResourceManager.instSFXResources()["victory.wav"])
         audible.getSound("rocketPowerUp").set_volume(0.1)
         cobject.AddAbility("audible",audible)
         s = objects.abilities.State.State(cobject)
@@ -425,6 +428,50 @@ class Factory:
         cobject.gui.AddObject(objects.gui.PlayerInfo.PlayerInfo(cobject))
         return cobject
 
+    def createParticle(self,x,y,*args):
+        cobject = objects.engine.GameObject.GameObject()
+        st = objects.abilities.StateMashine.StateMashine(cobject)
+        s = objects.abilities.State.State(cobject)
+
+        ground = ResourceManager.ResourceManager.intsLevels().currlevel.resources["ground.png"].convert_alpha()
+        image = pygame.Surface([60, 300], pygame.SRCCOLORKEY, 24)
+        for i in range(0,5):
+            image.blit(ground,(0,i*60,60,60),pygame.Rect(x,y,60,60))
+        surface = self.resources["groundParticlesMask4.png"].copy()
+        image.blit(surface,(0,0),None, pygame.BLEND_RGB_MULT)
+
+        s.AddSurface("n", image)
+        s.AddSurface("u", image)
+        s.AddSurface("d", image)
+        s.transparentColour =(0,0,0,0)
+        s.loop = False
+        s.ManualControl = True
+        s.IndManControl = random.randint(0,4)
+        st.AddState("normal", s)
+        st.SetState("normal")
+        cobject.AddAbility("stateMashine", st)
+        Phys = objects.abilities.Physics.Physics(cobject)
+        Phys.M = 1
+        Phys.coeff = 1
+        Phys.Sx = 1
+        Phys.Sy = 1
+        Phys.G = args[0]
+        Phys.SetGravity(True)
+        Phys.elasticity=0
+        cobject.AddAbility("physics", Phys)
+        cobject.AddAbility("spriteRenderer", objects.abilities.SpriteRenderer.SpriteRenderer(self.group, cobject))
+        damagable = objects.abilities.Damagable.Damagable(cobject)
+        damagable.lifetime = 10
+        damagable.maxDamage = 1
+        damagable.kill = True
+        cobject.AddAbility("damagable",damagable)
+        sp = cobject.GetAbility("spriteRenderer")
+        sp.transparentColour = (0, 0, 0, 0)
+        sp.selectImage(0)
+        sp.rect = sp.image.get_rect()
+        cobject.pos = [x, y]
+        return cobject
+
     def createBullet(self, x, y, *args):
         cobject = objects.engine.GameObject.GameObject()
         audible = objects.abilities.Audible.Audible(cobject)
@@ -449,7 +496,7 @@ class Factory:
         bulletPhys.elasticity=0
         wc = objects.abilities.WeaponControl.WeaponControl(cobject)
         wc.takeOFFCoeff = 40
-        wc.blastForce = 200
+        wc.blastForce = 100
         cobject.AddAbility("weaponControl", wc)
         bulletPhys.addSubscriber(wc)
         cobject.AddAbility("physics", bulletPhys)
