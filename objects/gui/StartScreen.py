@@ -10,6 +10,7 @@ class StartScreen():
         self.running = True
         self.page = 0
         self.exitButton = None
+        self.sound = ResourceManager.ResourceManager.instSFXResources()["startScreen.wav"]
     def AddComponent(self,comp):
         self.components.append(comp)
         if isinstance(comp, objects.gui.ExitDialog.ExitDialog):
@@ -18,6 +19,7 @@ class StartScreen():
         self.gameEngine.load_level(levelname)
         self.running = False
     def run(self):
+        self.sound.play(-1)
         while self.running:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -33,3 +35,4 @@ class StartScreen():
                                                      ResourceManager.ResourceManager.instGameCFG().screenheight)), (0, 0))
             for e in self.components: e.render()
             pygame.display.flip()
+        self.sound.stop()

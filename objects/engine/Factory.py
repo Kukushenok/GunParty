@@ -461,7 +461,7 @@ class Factory:
         cobject.AddAbility("physics", Phys)
         cobject.AddAbility("spriteRenderer", objects.abilities.SpriteRenderer.SpriteRenderer(self.group, cobject))
         damagable = objects.abilities.Damagable.Damagable(cobject)
-        damagable.lifetime = 10
+        damagable.lifetime = random.randint(10,50)
         damagable.maxDamage = 1
         damagable.kill = True
         cobject.AddAbility("damagable",damagable)
